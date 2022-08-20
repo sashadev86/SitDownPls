@@ -1,0 +1,32 @@
+.choices__inner {
+  background-color: transparent;
+  border: none;
+}
+
+.choices[data-type*=select-one]:after {
+  margin-top: -6px;
+  border: 0;
+  width: 8px;
+  height: 8px;
+  border-width: 0px;
+  border-right: 1px solid #A65CF0;
+  border-top: 1px solid #A65CF0;
+  transform: rotate(135deg);
+}
+
+.choices[data-type*=select-one].is-open:after {
+  margin-top: -2px;
+  border-width: 0px;
+  border-left: 1px solid #A65CF0;
+  border-bottom: 1px solid #A65CF0;
+}
+
+/*Убираем надпись Press to select*/
+.choices__list--dropdown .choices__item--selectable.is-highlighted:after {
+  display: none;
+}
+
+/*Названия в option стали горизонтальными*/
+.choices__list--dropdown .choices__item--selectable {
+  padding: 10px;
+}

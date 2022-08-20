@@ -1,3 +1,76 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="container header__container">
+    <div class="header__region-phone">
+      <div class="header__region-wrap">
+        <p class="header__region-title">Ваш регион:</p>
+        <div class="header__city">
+          <select class="header__city-select" aria-label="Выбрать город">
+            <option value="Москва">Москва</option>
+            <option value="Казань">Казань</option>
+            <option value="Пермь">Пермь</option>
+            <option value="Уфа">Уфа</option>
+          </select>
+        </div>
+      </div>
+      <a href="tel:+749542423532" class="header__phone-link">
+        <svg class="header__phone-img">
+          <use xlink:href="img/sprite.svg#phone"></use>
+        </svg>+7 495 424-23-532</a>
+    </div>
+    <ul class="list-reset header__list-about">
+      <li class="header__item-about">
+        <a href="#" class="header__link-about">О компании</a>
+      </li>
+      <li class="header__item-about">
+        <a href="#" class="header__link-about">Гарантия и возврат</a>
+      </li>
+      <li class="header__item-about">
+        <a href="#" class="header__link-about">Корпоративным клиентам</a>
+      </li>
+      <li class="header__item-about">
+        <a href="#" class="header__link-about">Дизайн-решение</a>
+      </li>
+    </ul>
+
+    <a href="#" class="header__link-logo"><img loading="lazy" src="img/logo.svg" class="header__img-logo" width="187" height="27" alt="Логотип сети магазинов SitDownPls"></a>
+
+    <div class="header__wrap-nav">
+      <nav class="header__nav" title="Навигация по сайту">
+        <ul class="list-reset header__nav-list">
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Каталог</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Магазины</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Шоу-рум</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Доставка и оплата</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Дисконт</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <form action="#" class="header__form">
+      <label class="header__form-label">
+        <svg class="header__form-search">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+        <input type="text" name="Имя" class="input-reset header__form-input" placeholder="Я хочу купить...">
+        <button class="btn-reset header__form-btn">
+          <svg class="header__form-btn-img">
+            <use xlink:href="img/sprite.svg#arrowSearch"></use>
+          </svg>
+        </button>
+      </label>
+      <select class="header__сategories-select" aria-label="Выбрать мебель">
+        <option value="">Категория</option>
+        <option><a>Диваны</a></option>
+        <option><a>Кресла</a></option>
+        <option><a>Пуфы</a></option>
+        <option><a>Кровати</a></option>
+        <option><a>Тумбы</a></option>
+        <option><a>Комоды</a></option>
+        <option><a>Стулья</a></option>
+        <option><a>Столы</a></option>
+        <option><a>Аксессуары</a></option>
+      </select>
+    </form>
+  </div>
 </header>
