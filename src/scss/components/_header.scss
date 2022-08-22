@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 
   &::after {
     content: '';
@@ -44,13 +44,50 @@
     font-size: 16px;
     line-height: 22px;
     color: var(--primary-color);
-    transition: color .4s ease-in-out, background-color .4s ease-in-out;
+    transition: color .3s ease-in-out;
     z-index: 2;
+
+    @include hover {
+      +& {
+        color: var(--primary-light-color);
+      }
+    }
+
+    &:active {
+      color: var(--primary-shade-color);
+    }
   }
 
-  &__city .choices[data-type*=select-one]:after {
+  &__city .choices {
+    outline: none;
+  }
+
+  &__city .choices::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    right: 0;
+    bottom: 0;
+    left: 2px;
+    width: 96%;
+    height: 61%;
+    transform: translate(0, 0) scaleX(0);
+    transform-origin: center;
+    transition: transform .3s ease-in-out;
+    background-color: var(--pink-violet-color);
+  }
+
+  &__city .choices:focus-visible:not(:active):not(:hover)::before {
+    transform: translate(0, 0) scaleX(1);
+  }
+
+  &__city .choices[data-type*=select-one]::after {
     top: 20px;
     right: 5px;
+  }
+
+  &__city .choices[data-type*=select-one]:active:not(:focus-visible)::after {
+    border-color: var(--primary-shade-color);
   }
 
   &__city .choices__list--dropdown .choices__item--selectable {
@@ -81,6 +118,7 @@
   &__phone {
 
     &-link {
+      position: relative;
       display: flex;
       align-items: center;
       padding-bottom: 2px;
@@ -88,12 +126,57 @@
       font-size: 14px;
       line-height: 100%;
       color: var(--secondary-color);
+      transition: color .3s ease-in-out;
+      outline: none;
+
+      & span {
+        z-index: 1;
+      }
+
+      @include hover {
+        +& {
+          color: var(--secondary-light-color);
+        }
+
+        +& .header__phone-img {
+          fill: var(--secondary-light-color);
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translate(0, 0) scaleX(0);
+        transform-origin: center;
+        transition: transform .3s ease-in-out;
+        background-color: var(--bone-color);
+      }
+
+      &:focus-visible:not(:active):not(:hover)::before {
+        transform: translate(0, 0) scaleX(1);
+      }
+
+      &:active {
+        color: var(--secondary-shade-color);
+      }
+
+      &:active .header__phone-img {
+        fill: var(--secondary-shade-color);
+      }
     }
 
     &-img {
       width: 22px;
       height: 22px;
       fill: var(--secondary-color);
+      transition: fill .3s ease-in-out;
+      z-index: 1;
     }
   }
 
@@ -106,9 +189,47 @@
   }
 
   &__link-about {
+    position: relative;
     font-size: 14px;
     line-height: 100%;
     color: var(--grey-color);
+    transition: color .3s ease-in-out;
+    z-index: 1;
+    outline: none;
+
+    @include hover {
+      +& {
+        color: var(--primary-color);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -10px;
+      bottom: 0;
+      right: 0;
+      width: calc(100% + 20px);
+      height: 100%;
+      background-color: var(--pink-violet-color);
+      transform: translate(0, 0) scaleX(0);
+      transform-origin: center;
+      transition: transform .3s ease-in-out;
+      z-index: -1;
+    }
+
+    &:focus-visible:not(:active):not(:hover)::before {
+      transform: translate(0, 0) scaleX(1);
+    }
+
+    &:focus-visible:not(:active):not(:hover) {
+      color: var(--primary-shade-color);
+    }
+
+    &:active {
+      color: var(--primary-shade-color-color);
+    }
   }
 
   &__link-logo {
@@ -124,7 +245,45 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 5px 3px 5px 7px;
+      padding: 3px 3px 5px 7px;
+    }
+
+    &-link {
+      position: relative;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--night-rider-color);
+      transition: color .3s ease-in-out;
+
+      @include hover {
+        +& {
+          color: var(--primary-color);
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -10px;
+        bottom: 0;
+        right: 0;
+        width: calc(100% + 20px);
+        height: 100%;
+        background-color: var(--pink-violet-color);
+        transform: translate(0, 0) scaleX(0);
+        transform-origin: center;
+        transition: transform .3s ease-in-out;
+        z-index: -1;
+      }
+
+      &:focus-visible:not(:active):not(:hover)::before {
+        transform: translate(0, 0) scaleX(1);
+      }
+
+      &:active {
+        color: var(--primary-shade-color);
+      }
     }
   }
 
@@ -134,6 +293,10 @@
 
     &-label {
       position: relative;
+
+      &:active .header__form-search .header__form-input {
+        fill: var(--primary-color);
+      }
     }
 
     &-search {
@@ -146,14 +309,34 @@
     }
 
     &-input {
+      padding-left: 59px;
       width: 761px;
       height: 60px;
+      font-size: 16px;
+      line-height: 120%;
+      color: var(--night-rider-color);
       background-color: var(--grey-light-color);
       border-radius: 10px 0px 0px 10px;
       outline: none;
+      transition: background-color .3s ease-in-out, border .1s ease-in-out;
 
       &::placeholder {
-        padding-left: 59px;
+        color: var(--grey-color);
+      }
+
+      @include hover {
+        +& {
+          background-color: var(--md-grey-color);
+        }
+      }
+
+      &:focus-visible:not(:active):not(:hover) {
+        background-color: var(--pink-light-color);
+        border: 2px solid #A65CF0;
+      }
+
+      &:focus + .header__form-search {
+        fill: var(--primary-color);
       }
     }
 
@@ -165,24 +348,58 @@
       height: 32px;
       border-radius: 100px;
       border: 2px solid var(--primary-color);
+      transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+      outline: none;
 
       &-img {
         width: 8px;
         height: 28px;
         fill: transparent;
         stroke: var(--primary-color);
+        transition: stroke .3s ease-in-out;
+      }
+
+      @include hover {
+        + & {
+          background-color: var(--primary-color);
+        }
+
+        +& .header__form-btn-img {
+          stroke: var(--white-color);
+        }
+      }
+
+      &:focus-visible:not(:active):not(:hover) {
+        background-color: var(--primary-light-color);
+      }
+
+      &:focus-visible:not(:active):not(:hover) .header__form-btn-img {
+        stroke: var(--white-color);
+      }
+
+      &:active {
+        background-color: var(--primary-shade-color);
+        border-color: var(--primary-shade-color);
       }
     }
   }
 
   &__categories {
     grid-column: 8/11;
-    max-width: 313px;
+    position: relative;
+    left: 13px;
+    max-width: 300px;
     border: 2px solid #F7F7F7;
     border-radius: 0px 10px 10px 0px;
+    outline: none;
+
+    & .choices {
+      max-width: 300px;
+      height: 56px;
+    }
 
     & .choices__list--single {
-      padding: 10px 0 0 36px;
+      padding: 10px 0 0 22px;
     }
 
     & .choices__inner {
@@ -193,7 +410,7 @@
 
     & .choices[data-type*=select-one]:after {
       right: 32px;
-      top: 58%;
+      top: 49%;
     }
 
     & .choices__list--dropdown .choices__list {
@@ -211,12 +428,35 @@
 
     & .choices__list--dropdown,
     .choices__list[area-expanded] {
-      top: 112%;
-      left: 10px;
+      top: 100%;
+      left: 0;
       max-width: 300px;
       border-radius: 0 0 10px 10px;
       border: 2px solid #F7F7F7;
       background-color: var(--white-color);
+    }
+
+    & .choices__list--dropdown .choices__item {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    @include hover {
+      +& {
+        border-color: var(--primary-color);
+        border-radius: 0px 10px 10px 0px;
+      }
+    }
+
+    & .choices:focus-visible:not(:active):not(:hover) {
+      border-radius: 0px 10px 10px 0px;
+      outline: 2px solid var(--primary-color);
+      background-color: var(--pink-light-color);
+    }
+
+    & .choices:active {
+      border-radius: 0px 10px 10px 0px;
+      outline: 2px solid var(--primary-shade-color);
     }
   }
 
@@ -228,6 +468,7 @@
   }
 
   &__user {
+    position: relative;
     margin-right: 43px;
     padding-top: 6px;
 
@@ -235,6 +476,42 @@
       width: 26px;
       height: 28px;
       fill: var(--primary-color);
+      transition: fill .3s ease-in-out;
+    }
+
+    @include hover {
+      +& .header__user-img {
+        fill: var(--primary-light-color);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: -4px;
+      width: calc(100% + 8px);
+      height: 100%;
+      background-color: var(--primary-light-color);
+      z-index: -1;
+      transform: translate(0, 0) scaleX(0);
+      transform-origin: center;
+      transition: transform .3s ease-in-out;
+      z-index: -1;
+    }
+
+    &:focus-visible:not(:active):not(:hover)::before {
+      transform: translate(0, 0) scaleX(1);
+    }
+
+    &:focus-visible:not(:active):not(:hover) .header__user-img {
+      fill: var(--white-color);
+    }
+
+    &:active .header__user-img {
+      fill: var(--primary-shade-color);
     }
   }
 
@@ -262,6 +539,42 @@
       width: 30px;
       height: 28px;
       fill: var(--primary-color);
+      transition: fill .3s ease-in-out;
+    }
+
+    @include hover {
+      +& .header__shop-img {
+        fill: var(--primary-light-color);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: -14px;
+      width: calc(100% + 18px);
+      height: 100%;
+      background-color: var(--primary-light-color);
+      z-index: -1;
+      transform: translate(0, 0) scaleX(0);
+      transform-origin: center;
+      transition: transform .3s ease-in-out;
+      z-index: -1;
+    }
+
+    &:focus-visible:not(:active):not(:hover)::before {
+      transform: translate(0, 0) scaleX(1);
+    }
+
+    &:focus-visible:not(:active):not(:hover) .header__shop-img  {
+      fill: var(--white-color);
+    }
+
+    &:active .header__shop-img  {
+      fill: var(--primary-shade-color);
     }
   }
 }
