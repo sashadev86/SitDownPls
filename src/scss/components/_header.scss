@@ -17,6 +17,12 @@
         top: 20%;
       }
     }
+
+    @include small-tablet {
+      & {
+        top: 34%;
+      }
+    }
   }
 
   &__container {
@@ -38,6 +44,12 @@
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 59px 45px 42px 60px;
         row-gap: 18px;
+      }
+    }
+
+    @include small-tablet {
+      & {
+        grid-template-rows: 59px 0 42px 60px;
       }
     }
   }
@@ -223,6 +235,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 0 4px 36px;
+    z-index: 0;
 
     @include big-desktop {
       & {
@@ -237,6 +250,12 @@
       & {
         grid-column: 1/7;
         padding: 0 1px 35px 0;
+      }
+    }
+
+    @include small-tablet {
+      & {
+        display: none;
       }
     }
   }
@@ -497,6 +516,12 @@
       @include high-tablet {
         & {
           padding: 9px 0 0 41px;
+        }
+      }
+
+      @include small-tablet {
+        & {
+          padding: 9px 0 0 5px;
         }
       }
     }
