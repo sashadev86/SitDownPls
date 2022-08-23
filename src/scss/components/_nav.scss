@@ -10,6 +10,38 @@
         padding: 2px 2px 0 39px;
       }
     }
+
+    @include high-tablet {
+      & {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 12% 53% 0 9.5%;
+      }
+    }
+
+    @include small-tablet {
+      & {
+        padding: 12% 39% 0 9.5%;
+      }
+    }
+
+    @include mobile {
+      & {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 63px 35% 0 3.8%;
+      }
+    }
+  }
+
+  &-item {
+
+    @include high-tablet {
+      & {
+        margin-bottom: 41px;
+      }
+    }
   }
 
   &-link {
@@ -51,17 +83,88 @@
   }
 
   @include high-tablet {
-    position: fixed;
+    & {
+      position: fixed;
+      left: 0;
+      top: 9%;
+      z-index: 500;
+      overflow-y: auto;
+      width: 100%;
+      height: 300px;
+      background-color: var(--white-color);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+    }
+  }
+
+  @include small-tablet {
+    & {
+      top: 7%;
+    }
+  }
+
+  @include mobile {
+    & {
+      top: 143px;
+      height: 533px;
+    }
+  }
+
+  &-img {
+    display: none;
+
+    @include high-tablet {
+      & {
+        display: block;
+        position: absolute;
+        top: 43.1%;
+        right: 9.44%;
+        width: 161px;
+        height: 112px;
+        fill: var(--grey-shade-color);
+      }
+    }
+
+    @include mobile {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  &-about {
+    display: none;
+
+    @include mobile {
+      & {
+        display: grid;
+        padding: 21px 0 14px 12px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  &-item-about {
+    margin-bottom: 9px;
+
+    &--ml {
+      margin-left: -9px;
+    }
+
+    &--pl {
+      padding-left: 23px;
+    }
+  }
+
+  &-about--bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
     left: 0;
-    top: 0;
-    z-index: 500;
-    overflow-y: auto;
     width: 100%;
-    height: 100vh;
-    background-color: var(--grey-color);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+    height: 108px;
+    background-color: var(--grey-light-color);
   }
 }
 
