@@ -8,6 +8,12 @@
     }
   }
 
+  @include mobile {
+    & {
+      padding: 13px 0 0 4px;
+    }
+  }
+
   &-img {
     width: 24px;
     height: 24px;
