@@ -38,14 +38,28 @@
         height="27" alt="Логотип сети магазинов SitDownPls"></a>
 
     <div class="header__wrap-nav">
-      <nav class="header__nav" title="Навигация по сайту">
+
+      <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+        <svg class="burger-img">
+          <use xlink:href="img/sprite.svg#burger"></use>
+        </svg>
+      </button>
+
+      <nav class="header__nav" title="Навигация по сайту" data-menu>
+
+        <button class="btn-reset burger-close" aria-label="Закрыть меню" data-menu-close>
+          <svg class="burger-close-img">
+            <use xlink:href="img/sprite.svg#burgerClose"></use>
+          </svg>
+        </button>
+
         <ul class="list-reset header__nav-list">
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Каталог</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Магазины</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Шоу-рум</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Доставка и оплата</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Дисконт</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link" data-menu-item data-scroll>Каталог</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link" data-menu-item data-scroll>Магазины</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link" data-menu-item data-scroll>Шоу-рум</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link" data-menu-item data-scroll>Доставка и оплата</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link" data-menu-item data-scroll>Дисконт</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link" data-menu-item data-scroll>Контакты</a></li>
         </ul>
       </nav>
     </div>

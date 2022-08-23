@@ -1,0 +1,29 @@
+.burger {
+  display: none;
+
+  @include high-tablet {
+    & {
+      display: block;
+    }
+  }
+
+  &-img {
+    width: 24px;
+    height: 24px;
+  }
+
+  &-close {
+    display: none;
+
+    @include high-tablet {
+      & {
+        display: block;
+      }
+    }
+
+    &-img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
