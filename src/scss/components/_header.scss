@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 33px;
 
   &::after {
     content: '';
@@ -657,6 +657,7 @@
       border-radius: 0 0 10px 10px;
       border: 2px solid var(--grey-light-color);
       background-color: var(--white-color);
+      z-index: 2;
     }
 
     & .choices__list--dropdown .choices__item {
