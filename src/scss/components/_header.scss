@@ -551,7 +551,7 @@
   &__categories {
     grid-column: 8/11;
     position: relative;
-    left: 9px;
+    left: 13px;
     max-width: 100%;
     margin-left: -15px;
     border: 2px solid #F7F7F7;
@@ -564,6 +564,7 @@
         grid-row: 4;
         order: 7;
         margin-left: -9px;
+        left: 9px;
       }
     }
 

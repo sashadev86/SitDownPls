@@ -43,38 +43,3 @@
     background-color: var(--primary-color);
   }
 }
-
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-  position: absolute;
-  bottom: 30px;
-  text-align: center;
-  width: calc(100% - 2 * 22px);
-  bottom: 22px;
-  left: 15px;
-  text-align: center;
-}
-
-.swiper-pagination-bullet {
-  position: relative;
-  opacity: 1;
-  margin: 0 14px;
-  width: 12px;
-  height: 12px;
-  box-shadow: none;
-  background-color: transparent;
-}
-
-.circular-pagination__bg {
-  stroke: var(--white-color);
-}
-
-.circular-pagination__progress {
-  stroke: var(--secondary-color);
-  stroke-linecap: round;
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
-}
