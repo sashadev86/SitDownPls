@@ -9,7 +9,8 @@ if (swiperHero) {
     loop: true,
     speed: 1000,
     autoplay: {
-      delay: 2000
+      delay: 2000,
+      disableOnInteraction: false,
     },
     keyboard: {
       enabled: true,
@@ -34,5 +35,14 @@ if (swiperHero) {
       }
     },
   });
+}
+
+let swiperSpecial = document.querySelector('.special__swiper');
+if (swiperSpecial) {
+  swiperSpecial - new Swiper('.special__swiper', {
+    spaceBetween: 32,
+    slidesPerGroup: 3,
+    slidesPerView: "auto",
+  })
 }
 
