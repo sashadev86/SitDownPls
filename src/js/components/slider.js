@@ -1,5 +1,5 @@
-import Swiper, { Pagination, Autoplay, Keyboard, A11y } from 'swiper';
-Swiper.use([Pagination, Autoplay, Keyboard, A11y]);
+import Swiper, { Pagination, Autoplay, Keyboard, A11y, Navigation } from 'swiper';
+Swiper.use([Pagination, Autoplay, Keyboard, A11y, Navigation]);
 
 let swiperHero = document.querySelector('.hero__swiper');
 if (swiperHero) {
@@ -43,6 +43,10 @@ if (swiperSpecial) {
     spaceBetween: 32,
     slidesPerGroup: 3,
     slidesPerView: "auto",
+    navigation: {
+      nextEl: '.special__controls--next',
+      prevEl: '.special__controls--prev',
+    },
   })
 }
 

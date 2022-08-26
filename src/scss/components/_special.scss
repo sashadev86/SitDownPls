@@ -2,6 +2,47 @@
   padding-top: 43px;
   padding-bottom: 35px;
 
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__controls {
+    width: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 100px;
+      border: 2px solid var(--primary-color);
+      transition: border-color .3s ease-in-out;
+    }
+
+    &-btn.swiper-button-disabled {
+      border-color: var(--grey-color);
+
+      & .special__controls-img {
+        stroke: var(--grey-color);
+      }
+    }
+
+    &-img {
+      width: 8px;
+      height: 28px;
+      fill: transparent;
+      stroke: var(--primary-color);
+      transition: stroke .3s ease-in-out;
+    }
+
+    &-prev-img {
+      transform: rotate(180deg);
+    }
+  }
+
   &__slide {
     position: relative;
     padding: 30px;
