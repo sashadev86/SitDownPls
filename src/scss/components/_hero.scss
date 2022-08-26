@@ -41,5 +41,22 @@
     line-height: 100%;
     color: var(--white-color);
     background-color: var(--primary-color);
+    transition: background-color .3s ease-in-out, border .3s ease-in-out;
+
+    @include hover {
+      +& {
+        background-color: var(--primary-light-color);
+      }
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      border: 2px solid var(--primary-shade-color);
+      border-radius: 10px;
+      background-color: var(--primary-light-color);
+    }
+
+    &:active {
+      background-color: var(--primary-shade-color);
+    }
   }
 }

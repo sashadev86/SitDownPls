@@ -19,11 +19,44 @@
       height: 32px;
       border-radius: 100px;
       border: 2px solid var(--primary-color);
-      transition: border-color .3s ease-in-out;
+      transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+      @include hover {
+        +& {
+          background-color: var(--primary-color);
+        }
+
+        +& .special__controls-img {
+          stroke: var(--white-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        background-color: var(--primary-light-color);
+      }
+
+      &:focus-visible:not(:hover):not(:active) .special__controls-img {
+        stroke: var(--white-color);
+      }
+
+      &:active {
+        background-color: var(--primary-shade-color);
+        border-color: var(--primary-shade-color);
+      }
+
+      &:active .special__controls-img {
+        stroke: var(--white-color);
+      }
     }
 
     &-btn.swiper-button-disabled {
       border-color: var(--grey-color);
+
+      @include hover {
+        +& {
+          background-color: transparent;
+        }
+      }
 
       & .special__controls-img {
         stroke: var(--grey-color);
@@ -143,6 +176,30 @@
       position: absolute;
       right: 30px;
       bottom: 30px;
+    }
+
+    &-link {
+      transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+
+      @include hover {
+        +& {
+          background-color: var(--primary-color);
+          color: var(--white-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        border: 2px solid var(--primary-color);
+        border-radius: 10px;
+        color: var(--white-color);
+        background-color: var(--primary-light-color);
+      }
+
+      &:active {
+        border-color: var(--primary-shade-color);
+        color: var(--white-color);
+        background-color: var(--primary-shade-color);
+      }
     }
   }
 }
