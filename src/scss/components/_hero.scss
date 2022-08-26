@@ -41,7 +41,7 @@
     line-height: 100%;
     color: var(--white-color);
     background-color: var(--primary-color);
-    transition: background-color .3s ease-in-out, border .3s ease-in-out;
+    transition: background-color .3s ease-in-out, outline .3s ease-in-out;
 
     @include hover {
       +& {
@@ -50,7 +50,7 @@
     }
 
     &:focus-visible:not(:hover):not(:active) {
-      border: 2px solid var(--primary-shade-color);
+      outline: 2px solid var(--primary-shade-color);
       border-radius: 10px;
       background-color: var(--primary-light-color);
     }
