@@ -17,6 +17,12 @@
 
   &__content {
     padding: 81px 36px 80px 36px;
+
+    @include tablet {
+      & {
+        padding: 79px 0 80px 0;
+      }
+    }
   }
 
   &__title {

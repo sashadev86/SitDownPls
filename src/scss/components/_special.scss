@@ -87,7 +87,7 @@
     z-index: 1;
 
     &--center {
-      width: 564px;
+      width: calc(100% - 716px);
     }
   }
 
@@ -127,7 +127,21 @@
     &-pic {
       display: block;
       align-self: center;
-      margin-bottom: 16px;
+      margin-bottom: 17px;
+
+      &--center {
+        margin-bottom: 18px;
+        padding-left: 6px;
+
+        @include big-desktop {
+          & {
+            margin-left: -16px;
+            margin-right: -9px;
+            margin-bottom: 49px;
+            z-index: -2;
+          }
+        }
+      }
     }
 
     &-title {
@@ -176,6 +190,12 @@
       position: absolute;
       right: 30px;
       bottom: 30px;
+
+      @include big-desktop {
+        & {
+          display: none;
+        }
+      }
     }
 
     &-link {
