@@ -78,16 +78,27 @@
 
   &__slide {
     position: relative;
-    padding: 30px;
-    width: 236px;
+    width: 296px;
     height: auto;
-    min-height: 451px;
+    min-height: 511px;
     border-radius: 10px;
     background-color: var(--grey-light-color);
     z-index: 1;
 
     &--center {
-      width: calc(100% - 716px);
+      width: 624px;
+    }
+
+    @include big-desktop {
+      & {
+        width: calc(32.7% - 1rem);
+      }
+    }
+
+    @include high-tablet {
+      & {
+        width: calc(50% - 1rem);
+      }
     }
   }
 
@@ -97,6 +108,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     height: 100%;
+    padding: 0 30px;
 
     &-discount {
       position: absolute;
@@ -199,6 +211,7 @@
     }
 
     &-link {
+      margin-bottom: 30px;
       transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
 
       @include hover {

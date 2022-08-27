@@ -40,12 +40,23 @@ if (swiperHero) {
 let swiperSpecial = document.querySelector('.special__swiper');
 if (swiperSpecial) {
   swiperSpecial - new Swiper('.special__swiper', {
-    spaceBetween: 32,
-    slidesPerGroup: 3,
+    spaceBetween: 12,
+    slidesPerGroup: 1,
     slidesPerView: "auto",
     navigation: {
       nextEl: '.special__controls--next',
       prevEl: '.special__controls--prev',
+    },
+    breakpoints: {
+      591: {
+        slidesPerGroup: 2,
+        spaceBetween: 32,
+      },
+
+     1440: {
+        slidesPerGroup: 3,
+        spaceBetween: 32,
+      },
     },
   })
 }
