@@ -8,13 +8,9 @@ if (swiperHero) {
     slidesPerView: 1,
     loop: true,
     speed: 1000,
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    // },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
     },
     a11y: {
       prevSlideMessage: 'Предыдущий слайд',
@@ -45,6 +41,17 @@ if (swiperSpecial) {
     navigation: {
       nextEl: '.special__controls--next',
       prevEl: '.special__controls--prev',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    a11y: {
+      prevSlideMessage: 'Предыдущий слайд',
+      nextSlideMessage: 'Следующий слайд',
+      firstSlideMessage: 'Это первый слайд',
+      lastSlideMessage: 'Это последний слайд',
+      paginationBulletMessage: 'Перейти к слайду {{index}}',
     },
     breakpoints: {
       576: {
