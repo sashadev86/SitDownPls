@@ -96,7 +96,7 @@ a {
     }
   }
 
-  @include mobile {
+  @include small-tablet {
     & {
       padding: 0 12px;
     }

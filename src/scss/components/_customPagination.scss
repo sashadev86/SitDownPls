@@ -54,4 +54,10 @@
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   bottom: 40px;
+
+  @include mobile {
+    & {
+      bottom: 117px;
+    }
+  }
 }

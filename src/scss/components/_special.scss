@@ -1,6 +1,14 @@
 .special {
+  position: relative;
   padding-top: 43px;
   padding-bottom: 35px;
+
+  @include mobile {
+    & {
+      padding-top: 45px;
+      padding-bottom: 48px;
+    }
+  }
 
   &__wrapper {
     display: flex;
@@ -8,11 +16,23 @@
     justify-content: space-between;
   }
 
+  &__title {
+    font-size: 24px;
+  }
+
   &__controls {
     width: 77px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mobile {
+      & {
+        position: absolute;
+        left: 37.8%;
+        bottom: 0;
+      }
+    }
 
     &-btn {
       width: 32px;
@@ -100,6 +120,18 @@
         width: calc(50% - 1rem);
       }
     }
+
+    @include small-tablet {
+      & {
+        width: calc(50% - 8px);
+      }
+    }
+
+    @include mobile {
+      & {
+        width: 100%;
+      }
+    }
   }
 
   &__content {
@@ -114,6 +146,7 @@
       position: absolute;
       top: 36px;
       left: 0;
+      z-index: 1;
 
       &-text {
         padding: 6.2px 0 0 15px;
