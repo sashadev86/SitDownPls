@@ -1,0 +1,37 @@
+.rating {
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__items {
+    margin-bottom: 32px;
+
+    .card__list {
+      display: grid;
+      grid-auto-flow: dense;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    & .card__item:nth-child(n + 9) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    max-width: 298px;
+    padding: 20px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+  }
+}
