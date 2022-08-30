@@ -137,5 +137,22 @@
     line-height: 100%;
     color: var(--white-color);
     background-color: var(--primary-color);
+
+    @include hover {
+      +& {
+        border-color: var(--primary-light-color);
+        background-color: var(--primary-light-color);
+      }
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      border-color: var(--primary-shade-color);
+      background-color: var(--primary-light-color);
+    }
+
+    &:active {
+      border-color: var(--primary-shade-color);
+      background-color: var(--primary-shade-color);
+    }
   }
 }

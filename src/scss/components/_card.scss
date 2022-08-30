@@ -61,4 +61,23 @@
     line-height: 130%;
     color: var(--grey-shade-color);
   }
+
+  &__link {
+    @include hover {
+      +& {
+        color: var(--white-color);
+        background-color: var(--primary-color);
+      }
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      color: var(--white-color);
+      background-color: var(--primary-light-color);
+    }
+
+    &:active {
+      border-color: var(--primary-shade-color);
+      background-color: var(--primary-shade-color);
+    }
+  }
 }
