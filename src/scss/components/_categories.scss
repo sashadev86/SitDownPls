@@ -10,13 +10,29 @@
     }
 
     &-item {
-      padding: 27px 30px 30px;
+      padding: 27px 30px 31px;
       border-radius: 10px;
       background-color: var(--grey-light-color);
 
 
       &--sofas {
         grid-column: 1/7;
+      }
+
+      &--chairs {
+        grid-column: 7/13;
+      }
+
+      &--beds {
+        grid-column: 1/5;
+      }
+
+      &--curbstones {
+        grid-column: 5/9;
+      }
+
+      &--seat {
+        grid-column: 9/13;
       }
     }
 
@@ -29,15 +45,51 @@
       &-list {
         display: flex;
         column-gap: 30px;
-        margin-bottom: 14px;
+        margin-bottom: 13px;
+      }
+
+      &-item {
+        &-link {
+          font-size: 14px;
+          line-height: 100%;
+          color: var(--grey-color);
+        }
       }
 
       &-title {
-        margin-bottom: 30px;
+        margin-bottom: 29px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 33px;
+        color: var(--night-rider-color);
       }
 
       &-picture {
-        margin-bottom: 30px;
+        margin-bottom: 27px;
+        margin-left: -30px;
+      }
+
+      &-link {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 120%;
+        color: var(--primary-color);
+
+        &-circle {
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+          border-radius: 100px;
+          border: 2px solid var(--primary-color);
+        }
+
+        &-img {
+          width: 19px;
+          height: 11px;
+          fill: transparent;
+          stroke: var(--primary-color);
+          transition: stroke 0.3s ease-in-out;
+        }
       }
     }
   }
