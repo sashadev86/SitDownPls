@@ -61,12 +61,6 @@
       }
     }
 
-    // @include small-tablet {
-    //   & {
-    //     grid-template-rows: 59px 0 42px 60px;
-    //   }
-    // }
-
     @include mobile {
       & {
         grid-template-rows: 47px 68px 52px 62px 60px;
@@ -809,7 +803,6 @@
       width: calc(100% + 18px);
       height: 100%;
       background-color: var(--primary-light-color);
-      z-index: -1;
       transform: translate(0, 0) scaleX(0);
       transform-origin: center;
       transition: transform .3s ease-in-out;

@@ -8,10 +8,10 @@ if (swiperHero) {
     slidesPerView: 1,
     loop: true,
     speed: 1000,
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
     a11y: {
       prevSlideMessage: 'Предыдущий слайд',
       nextSlideMessage: 'Следующий слайд',
