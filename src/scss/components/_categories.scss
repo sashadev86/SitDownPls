@@ -11,6 +11,7 @@
       @include tablet {
         & {
           grid-template-columns: repeat(9, 1fr);
+          grid-template-rows: 511px 511px;
         }
       }
     }
@@ -83,7 +84,11 @@
       &-list {
         display: flex;
         column-gap: 30px;
-        margin-bottom: 13px;
+        margin-bottom: 14px;
+
+        @include tablet {
+          margin-bottom: 13px;
+        }
       }
 
       &-item {
@@ -105,10 +110,40 @@
       &-picture {
         margin-bottom: auto;
         margin-left: -30px;
+
+        @include tablet {
+          &--beds {
+            margin-right: -30px;
+            padding-top: 6px;
+          }
+
+          &--curbstones {
+            margin-right: 14px;
+            padding-top: 6px;
+          }
+
+          &--chairs {
+            margin-right: 5px;
+            padding-top: 6px;
+          }
+
+          &--seat {
+            padding-top: 6px;
+          }
+        }
+      }
+
+      &-image {
+        @include tablet {
+          &--seat {
+            width: 264px;
+          }
+        }
       }
 
       &-link {
         position: relative;
+        margin-top: 26px;
 
         &-text {
           margin-top: 27px;
