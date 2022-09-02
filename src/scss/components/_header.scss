@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  padding-bottom: 33px;
+  padding-bottom: 32px;
 
   &::after {
     content: '';
@@ -15,12 +15,6 @@
     @include big-desktop {
       & {
         top: 20%;
-      }
-    }
-
-    @include small-tablet {
-      & {
-        top: 34%;
       }
     }
 
@@ -67,11 +61,11 @@
       }
     }
 
-    @include small-tablet {
-      & {
-        grid-template-rows: 59px 0 42px 60px;
-      }
-    }
+    // @include small-tablet {
+    //   & {
+    //     grid-template-rows: 59px 0 42px 60px;
+    //   }
+    // }
 
     @include mobile {
       & {
@@ -306,7 +300,7 @@
       }
     }
 
-    @include small-tablet {
+    @include mobile {
       & {
         display: none;
       }
@@ -599,12 +593,6 @@
       @include high-tablet {
         & {
           padding: 9px 0 0 41px;
-        }
-      }
-
-      @include small-tablet {
-        & {
-          padding: 9px 0 0 5px;
         }
       }
 

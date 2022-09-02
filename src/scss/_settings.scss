@@ -90,15 +90,17 @@ a {
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
 
-  @include high-tablet {
+  @include tablet {
     & {
-      padding: 0 72px;
+      --content-width: 952px;
+      --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
     }
   }
 
   @include small-tablet {
     & {
-      padding: 0 12px;
+      --content-width: 624px;
+      --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
     }
   }
 }

@@ -115,19 +115,19 @@
 
     @include big-desktop {
       & {
-        width: calc(32.7% - 1rem);
+        width: calc(32.7% - 15.4px);
       }
     }
 
     @include high-tablet {
       & {
-        width: calc(50% - 1rem);
+        width: calc(50% - 16px);
       }
     }
 
     @include small-tablet {
       & {
-        width: calc(50% - 8px);
+        width: calc(50% - 16px);
       }
     }
 

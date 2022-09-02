@@ -98,11 +98,11 @@
     }
   }
 
-  @include small-tablet {
-    & {
-      top: 7%;
-    }
-  }
+  // @include small-tablet {
+  //   & {
+  //     top: 7%;
+  //   }
+  // }
 
   @include mobile {
     & {

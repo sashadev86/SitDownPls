@@ -2,12 +2,6 @@
   padding-top: 35px;
   padding-bottom: 70px;
 
-  @include tablet {
-    & {
-      padding-top: 36px;
-    }
-  }
-
   @include mobile {
     & {
       padding-top: 58px;
@@ -30,6 +24,12 @@
     @include tablet {
       & {
         margin-bottom: 33px;
+      }
+    }
+
+    @include mobile {
+      & {
+        margin-bottom: 32px;
       }
     }
 
@@ -71,7 +71,7 @@
 
       @include mobile {
         & {
-          padding: 16px;
+          padding: 16.4px 16px 16px 16px;
         }
 
         & .card__rating {
@@ -128,7 +128,7 @@
   &__btn {
     margin: 0 auto;
     max-width: 298px;
-    padding: 20px 34px;
+    padding: 20px 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,6 +153,12 @@
     &:active {
       border-color: var(--primary-shade-color);
       background-color: var(--primary-shade-color);
+    }
+
+    @include mobile {
+      & {
+        padding: 20px 34.5px;
+      }
     }
   }
 }
