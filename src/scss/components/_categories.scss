@@ -14,6 +14,19 @@
           grid-template-rows: 511px 511px;
         }
       }
+
+      @include high-tablet {
+        & {
+          grid-template-columns: repeat(6, 1fr);
+          grid-template-rows: 511px 511px 511px;
+        }
+      }
+
+      @include mobile {
+        & {
+          grid-template-rows: 332px 206px 206px;
+        }
+      }
     }
 
     &-item {
@@ -37,6 +50,13 @@
             order: 4;
           }
         }
+
+        @include high-tablet {
+          & {
+            grid-column: 4/7;
+            order: 3;
+          }
+        }
       }
 
       &--beds {
@@ -47,6 +67,12 @@
           & {
             grid-column: 7/10;
             order: 2;
+          }
+        }
+
+        @include high-tablet {
+          & {
+            grid-column: 1/4;
           }
         }
       }
@@ -61,6 +87,13 @@
             order: 3;
           }
         }
+
+        @include high-tablet {
+          & {
+            grid-column: 1/4;
+            order: 4;
+          }
+        }
       }
 
       &--seat {
@@ -70,6 +103,12 @@
         @include tablet {
           & {
             grid-column: 7/10;
+          }
+        }
+
+        @include high-tablet {
+          & {
+            grid-column: 4/7;
           }
         }
       }
@@ -137,6 +176,16 @@
         @include tablet {
           &--seat {
             width: 264px;
+          }
+        }
+
+        @include high-tablet {
+          &--chairs {
+            width: 260px;
+          }
+
+          &--curbstones {
+            width: 260px;
           }
         }
       }
