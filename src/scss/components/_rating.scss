@@ -21,12 +21,6 @@
   &__items {
     margin-bottom: 32px;
 
-    @include tablet {
-      & {
-        margin-bottom: 33px;
-      }
-    }
-
     @include mobile {
       & {
         margin-bottom: 32px;

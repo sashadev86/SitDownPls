@@ -1,5 +1,17 @@
 .categories {
-  padding-top: 66px;
+  padding-top: 67px;
+
+  @include mobile {
+    & {
+      padding-top: 70px;
+    }
+  }
+
+  &__title {
+    @include mobile {
+      font-size: 24px;
+    }
+  }
 
   &__card {
 
@@ -25,6 +37,8 @@
       @include mobile {
         & {
           grid-template-rows: 332px 206px 206px;
+          column-gap: 16px;
+          row-gap: 32px;
         }
       }
     }
@@ -33,6 +47,12 @@
       padding: 27px 30px 31px;
       border-radius: 10px;
       background-color: var(--grey-light-color);
+
+      @include mobile {
+        &--all {
+          padding: 10px 16px 16px 16px;
+        }
+      }
 
 
       &--sofas {
@@ -120,21 +140,54 @@
       align-items: flex-start;
       height: 100%;
 
+      @include mobile {
+        & {
+          position: relative;
+        }
+      }
+
       &-list {
         display: flex;
         column-gap: 30px;
         margin-bottom: 14px;
 
         @include tablet {
-          margin-bottom: 13px;
+          & {
+            margin-bottom: 13px;
+          }
+        }
+
+        @include mobile {
+          & {
+            column-gap: 21px;
+            flex-wrap: wrap;
+          }
+
+          &--2-5 {
+            margin-bottom: 14px;
+            row-gap: 4px;
+            max-width: 77px;
+          }
         }
       }
 
       &-item {
+        @include mobile {
+          &--2-5 {
+            height: 10px;
+          }
+        }
+
         &-link {
           font-size: 14px;
           line-height: 100%;
           color: var(--grey-color);
+
+          @include mobile {
+            &--2-5 {
+              font-size: 10px;
+            }
+          }
         }
       }
 
@@ -144,6 +197,23 @@
         font-size: 24px;
         line-height: 33px;
         color: var(--night-rider-color);
+
+        @include mobile {
+          & {
+            margin-bottom: 12.5px;
+          }
+
+          &--2-5 {
+            font-size: 16px;
+            line-height: 22px;
+          }
+
+          &--curbstones {
+            margin-bottom: 18px;
+            max-width: 100px;
+            line-height: 17px;
+          }
+        }
       }
 
       &-picture {
@@ -170,6 +240,18 @@
             padding-top: 6px;
           }
         }
+
+        @include mobile {
+          &--sofas {
+            margin-right: -30px;
+          }
+
+          &--2-5 {
+            margin-left: -16px;
+            margin-right: -16px;
+            padding-top: 3.5px;
+          }
+        }
       }
 
       &-image {
@@ -188,11 +270,51 @@
             width: 260px;
           }
         }
+
+        @include mobile {
+          & {
+            width: auto;
+          }
+
+          &--sofas {
+            width: 296px;
+          }
+        }
       }
 
       &-link {
         position: relative;
         margin-top: 26px;
+
+        @include mobile {
+          & {
+            margin-top: 0;
+            position: absolute;
+            top: 38px;
+          }
+
+          &--sofas {
+            top: 39px;
+            left: 98px;
+          }
+
+          &--beds {
+            left: 70px;
+          }
+
+          &--chairs {
+            left: 60px;
+          }
+
+          &--curbstones {
+            top: 55px;
+            left: 81px;
+          }
+
+          &--seat {
+            left: 59px;
+          }
+        }
 
         &-text {
           margin-top: 27px;
@@ -201,6 +323,12 @@
           line-height: 120%;
           color: var(--primary-color);
           transition: color .3s ease-in-out;
+
+          @include mobile {
+            & {
+              display: none;
+            }
+          }
         }
 
         &-text::before {

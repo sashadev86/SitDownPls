@@ -38,6 +38,7 @@ if (swiperSpecial) {
   swiperSpecial - new Swiper('.special__swiper', {
     slidesPerGroup: 1,
     slidesPerView: "auto",
+    spaceBetween: 12,
     navigation: {
       nextEl: '.special__controls--next',
       prevEl: '.special__controls--prev',
@@ -56,7 +57,7 @@ if (swiperSpecial) {
     breakpoints: {
       576: {
         slidesPerGroup: 2,
-        spaceBetween: 12,
+        spaceBetween: 32,
       },
 
       768: {
