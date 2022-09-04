@@ -35,7 +35,7 @@ if (swiperHero) {
 
 let swiperSpecial = document.querySelector('.special__swiper');
 if (swiperSpecial) {
-  swiperSpecial - new Swiper('.special__swiper', {
+  swiperSpecial = new Swiper('.special__swiper', {
     slidesPerGroup: 1,
     slidesPerView: "auto",
     spaceBetween: 12,
@@ -69,6 +69,32 @@ if (swiperSpecial) {
         spaceBetween: 32,
       },
     },
+  })
+}
+
+let swiperUseful = document.querySelector('.useful__swiper');
+if (swiperUseful) {
+  swiperUseful = new Swiper('.useful__swiper', {
+    slidesPerView: "auto",
+    spaceBetween: 32,
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+      1025: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+    }
   })
 }
 

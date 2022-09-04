@@ -1,0 +1,45 @@
+.useful {
+  padding-top: 34px;
+  padding-bottom: 35px;
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--grey-light-color);
+
+    &-picture {
+      display: block;
+    }
+
+    &-image {
+      vertical-align: bottom;
+      height: 426px;
+      max-width: 100%;
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    &-content {
+      display: flex;
+      flex: 1 0 auto;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px;
+      min-height: 190px;
+    }
+
+    &-text {
+      margin: 0 0 auto;
+      font-size: 24px;
+      line-height: 33px;
+      color: var(--night-rider-color);
+    }
+
+    &-link {
+      margin-top: 30px;
+    }
+  }
+
+
+}
