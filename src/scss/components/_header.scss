@@ -394,6 +394,7 @@
   }
 
   &__form {
+    position: relative;
     grid-column: 1/8;
     display: flex;
 
@@ -418,7 +419,6 @@
     }
 
     &-label {
-      position: relative;
       width: 100%;
 
       &:active .header__form-search .header__form-input {
