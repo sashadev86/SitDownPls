@@ -77,6 +77,21 @@ if (swiperUseful) {
   swiperUseful = new Swiper('.useful__swiper', {
     slidesPerView: "auto",
     spaceBetween: 32,
+    navigation: {
+      nextEl: '.useful__controls--next',
+      prevEl: '.useful__controls--prev',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    a11y: {
+      prevSlideMessage: 'Предыдущий слайд',
+      nextSlideMessage: 'Следующий слайд',
+      firstSlideMessage: 'Это первый слайд',
+      lastSlideMessage: 'Это последний слайд',
+      paginationBulletMessage: 'Перейти к слайду {{index}}',
+    },
     breakpoints: {
       576: {
         slidesPerView: 2,

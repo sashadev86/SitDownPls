@@ -2,6 +2,79 @@
   padding-top: 34px;
   padding-bottom: 35px;
 
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 77px;
+
+    &-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 100px;
+      border: 2px solid var(--primary-color);
+      transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+      &-img {
+        width: 8px;
+        height: 28px;
+        fill: transparent;
+        stroke: var(--primary-color);
+        transition: stroke .3s ease-in-out;
+      }
+
+      @include hover {
+        +& {
+          background-color: var(--primary-color);
+        }
+
+        +& .useful__controls-btn-img {
+          stroke: var(--white-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        background-color: var(--primary-light-color);
+      }
+
+      &:focus-visible:not(:hover):not(:active) .useful__controls-btn-img {
+        stroke: var(--white-color);
+      }
+
+      &:active {
+        background-color: var(--primary-shade-color);
+        border-color: var(--primary-shade-color);
+      }
+
+      &:active .useful__controls-btn-img {
+        stroke: var(--white-color);
+      }
+
+      &.swiper-button-disabled {
+        border-color: var(--grey-color);
+
+        & .useful__controls-btn-img {
+          stroke: var(--grey-color);
+        }
+
+        @include hover {
+          +& {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    &--prev {
+      transform: rotate(180deg);
+    }
+  }
+
   &__slide {
     display: flex;
     flex-direction: column;
@@ -40,6 +113,4 @@
       margin-top: 30px;
     }
   }
-
-
 }
