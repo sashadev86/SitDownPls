@@ -4,7 +4,22 @@
 
   &__wrapper {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
+
+    @include tablet {
+      & {
+        margin-bottom: 0.5px;
+      }
+    }
+  }
+
+  &__title {
+    @include tablet {
+      & {
+        margin-bottom: 26.2px;
+      }
+    }
   }
 
   &__controls {
@@ -91,6 +106,12 @@
       height: 426px;
       max-width: 100%;
       border-radius: 10px 10px 0px 0px;
+
+      @include tablet {
+        & {
+          height: 202px;
+        }
+      }
     }
 
     &-content {
@@ -107,10 +128,24 @@
       font-size: 24px;
       line-height: 33px;
       color: var(--night-rider-color);
+
+      @include tablet {
+        & {
+          max-width: 228px;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
     }
 
     &-link {
       margin-top: 30px;
+
+      @include tablet {
+        & {
+          padding: 17px 33.4px;
+        }
+      }
     }
   }
 }
