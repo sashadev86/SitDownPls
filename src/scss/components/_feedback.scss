@@ -7,13 +7,31 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 32px;
 
+    @include tablet {
+      & {
+        grid-template-columns: repeat(9, 1fr);
+      }
+    }
+
     &-content {
       grid-column: 1/7;
+
+      @include tablet {
+        & {
+          grid-column: 1/5;
+        }
+      }
     }
 
     &-picture {
       grid-column: 7/13;
       align-self: center;
+
+      @include tablet {
+        & {
+          grid-column: 5/10;
+        }
+      }
     }
 
     &-title {
