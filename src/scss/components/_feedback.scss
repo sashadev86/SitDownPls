@@ -11,6 +11,11 @@
       grid-column: 1/7;
     }
 
+    &-picture {
+      grid-column: 7/13;
+      align-self: center;
+    }
+
     &-title {
       margin-bottom: 9px;
     }
@@ -20,6 +25,12 @@
       font-size: 14px;
       line-height: 19px;
       color: var(--grey-shade-color);
+    }
+
+    &-image {
+      vertical-align: bottom;
+      height: auto;
+      max-width: 100%;
     }
   }
 
