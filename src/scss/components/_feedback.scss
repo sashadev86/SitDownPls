@@ -13,12 +13,24 @@
       }
     }
 
+    @include high-tablet {
+      & {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
     &-content {
       grid-column: 1/7;
 
       @include tablet {
         & {
           grid-column: 1/5;
+        }
+      }
+
+      @include mobile {
+        & {
+          grid-column: 1/7;
         }
       }
     }
@@ -30,6 +42,18 @@
       @include tablet {
         & {
           grid-column: 5/10;
+        }
+      }
+
+      @include high-tablet {
+        & {
+          grid-column: 5/7;
+        }
+      }
+
+      @include mobile {
+        & {
+          display: none;
         }
       }
     }
@@ -50,6 +74,13 @@
       vertical-align: bottom;
       height: auto;
       max-width: 100%;
+
+      @include high-tablet {
+        & {
+          width: 187px;
+          height: 444px;
+        }
+      }
     }
   }
 
