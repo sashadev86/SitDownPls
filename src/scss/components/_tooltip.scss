@@ -1,0 +1,81 @@
+.tooltip {
+
+  &__btn {
+    width: 14px;
+    height: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border: 2px solid var(--secondary-color);
+    transition: background-color .3s ease-in-out;
+
+    @include hover {
+      +& {
+        background-color: var(--secondary-color);
+      }
+
+      +& .tooltip__btn-image {
+        fill: var(--white-color);
+      }
+    }
+
+    &-image {
+      width: 6px;
+      height: 8px;
+      fill: var(--secondary-color);
+      transition: fill .3s ease-in-out;
+    }
+
+    @include hover {
+      +.tooltip__txt {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__txt {
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 147px;
+    font-size: 9px;
+    line-height: 14px;
+    text-align: center;
+    color: var(--white-color);
+    background: var(--night-rider-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+  }
+}
+
+.tooltip-hidden {
+  display: none;
+}
+
+.tippy-content {
+  padding: 0;
+}
+
+.tippy-box[data-animation='rotate'][data-state='hidden'] {
+  opacity: 0;
+  transform: rotate(360deg);
+}
+
+.tippy-box[data-theme~='night'] {
+  width: 170px;
+  padding: 5px;
+  background-color: var(--night-rider-color);
+  color: var(--white-color);
+  filter: drop-shadow(0px 4px 4px var(--black-025-color));
+  text-align: center;
+  border-radius: 0;
+  font-size: 9px;
+  line-height: 14px;
+}
+
+.tippy-box[data-placement^=top]>.tippy-arrow {
+  background-color: var(--night-rider-color);
+  filter: drop-shadow(0px 4px 4px var(--black-025-color));
+}
