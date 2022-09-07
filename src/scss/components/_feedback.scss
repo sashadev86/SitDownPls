@@ -104,11 +104,33 @@
       font-size: 16px;
       line-height: 40px;
       color: var(--night-rider-color);
+      outline: none;
+      border: 1px solid transparent;
+      transition: background-color .3s ease-in-out, border .3s ease-in-out;
 
       &::placeholder {
         font-size: 16px;
         line-height: 40px;
         color: var(--grey-color);
+      }
+
+      @include hover {
+        +& {
+          background-color: var(--md-grey-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        border-color: var(--primary-color);
+        background-color: var(---pink-light-color);
+      }
+
+      &.just-validate-success-field {
+        border-color: var(--green-input-color);
+      }
+
+      &.just-validate-error-field {
+        border-color: var(--red-input-color);
       }
     }
 
@@ -126,25 +148,46 @@
       padding: 17px 33.5px;
       background-color: var(--primary-color);
       color: var(--white-color);
+
+      @include hover {
+        +& {
+          border-color: var(--primary-light-color);
+          background-color: var(--primary-light-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        border-color: var(--primary-shade-color);
+        background-color: var(--primary-light-color);
+      }
+
+      &:active {
+        border-color: var(--primary-shade-color);
+        background-color: var(--primary-shade-color);
+      }
     }
 
     &-checkbox {
+      position: relative;
+
       &-text[for] {
         cursor: pointer;
       }
 
       &-text {
         position: relative;
-        padding-left: 22px;
         z-index: 0;
         outline: 2px solid transparent;
         outline-offset: 2px;
         font-size: 14px;
         line-height: 19px;
         color: var(--night-rider-color);
+        border-radius: 5px;
+        padding: 0 5px 0 27px;
+        margin-left: -5px;
       }
 
-      &-hidden:checked + .feedback__form-checkbox-text::before {
+      &-hidden:checked+.feedback__form-checkbox-text::before {
         border-color: var(--primary-color);
         background-image: url(../img/checkbox.svg);
         background-color: var(--primary-color);
@@ -153,7 +196,7 @@
       &-text::before {
         content: '';
         position: absolute;
-        left: 0;
+        left: 5px;
         top: 50%;
         display: inline-block;
         border: 1px solid var(--grey-color);
@@ -164,12 +207,31 @@
         background-size: 11px 9px;
         background-repeat: no-repeat;
         transform: translateY(-50%);
-        transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+        transition: border-color .3s ease-in-out, background-color .3s ease-in-out, box-shadow .3s ease-in-out;
       }
 
+      .feedback__form-checkbox-hidden:focus-visible:not(:active):not(:hover) + .feedback__form-checkbox-text {
+        box-shadow: 0px 0px 7px 3px var(--primary-light-color);
+      }
+
+
       &-link {
+        padding: 0 2px;
+        margin-left: -2px;
+        border-radius: 5px;
         text-decoration: underline;
         color: var(--primary-color);
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+        @include hover {
+          + & {
+            color: var(--primary-light-color);
+          }
+        }
+
+        &:focus-visible:not(:hover):not(:active) {
+          box-shadow: 0px 0px 7px 3px var(--primary-light-color);
+        }
       }
     }
   }
