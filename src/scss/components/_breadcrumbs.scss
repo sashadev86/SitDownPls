@@ -1,0 +1,87 @@
+.breadcrumbs {
+  &__container {
+    margin-bottom: 32px;
+  }
+
+  &__nav {
+
+    &-list {
+      display: flex;
+      gap: 16px;
+    }
+
+    &-item {
+      position: relative;
+
+      &:not(:last-child) {
+        color: var(--grey-color);
+      }
+
+      &:last-child {
+        color: var(--primary-shade-color);
+      }
+
+      &:not(:last-child)::before {
+        content: "/";
+        position: absolute;
+        right: -12px;
+        top: 50%;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 1;
+        color: var(--grey-color);
+        transform: translateY(-50%);
+      }
+    }
+
+    &-link {
+      position: relative;
+      font-size: 14px;
+      line-height: 100%;
+      color: inherit;
+      background-color: transparent;
+      transition: color .3s ease-in-out;
+      z-index: 0;
+
+      &[aria-current=location] {
+        cursor: default;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      @include hover {
+        +& {
+          color: var(--primary-light-color);
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: -5px;
+        width: calc(100% + 10px);
+        height: 100%;
+        background-color: var(--primary-light-color);
+        transform: translate(0, 0) scaleX(0);
+        transform-origin: center;
+        transition: transform .3s ease-in-out;
+        z-index: -1;
+      }
+
+      &:focus-visible:not(:active):not(:hover)::before {
+        transform: translate(0, 0) scaleX(1);
+      }
+
+      &:focus-visible:not(:active):not(:hover) {
+        color: var(--white-color);
+      }
+
+      &:active {
+        color: var(--primary-shade-color);
+      }
+    }
+  }
+}
