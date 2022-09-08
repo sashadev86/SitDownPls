@@ -1,0 +1,59 @@
+.guarantees {
+  padding-bottom: 70px;
+
+  &__subtitle {
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--night-rider-color);
+  }
+
+  &__list {
+    margin-bottom: 32px;
+    max-width: 843px;
+    counter-reset: numbering;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 26px;
+
+    &:before {
+      counter-increment: numbering;
+      content: counter(numbering) ".";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 600;
+      line-height: 1.8125;
+      color: var(--secondary-color);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 180%;
+    color: var(--grey-shade-color);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 624px;
+
+    &-image {
+      margin-right: 32px;
+    }
+
+    &-text {
+      font-size: 24px;
+      line-height: 150%;
+      color: var(--night-rider-color);
+    }
+  }
+}
