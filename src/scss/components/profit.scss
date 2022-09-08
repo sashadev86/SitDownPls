@@ -1,12 +1,8 @@
-.suppliers {
-
-  &__title {
-    margin-bottom: 32px;
-  }
+.profit {
 
   &__content {
     margin-bottom: 32px;
-    max-width: 842px;
+    max-width: 624px;
   }
 
   &__subtitle {
@@ -17,9 +13,24 @@
     color: var(--night-rider-color);
   }
 
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &-img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
   &__text {
+    max-width: 587px;
     font-size: 16px;
-    line-height: 180%;
+    line-height: 150%;
     color: var(--grey-shade-color);
   }
 }
