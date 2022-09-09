@@ -2,7 +2,7 @@
   padding-bottom: 70px;
 
   &__subtitle {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
     font-weight: 400;
     font-size: 24px;
     line-height: 33px;
@@ -11,7 +11,7 @@
 
   &__list {
     margin-bottom: 32px;
-    max-width: 843px;
+    max-width: 840px;
     counter-reset: numbering;
   }
 
@@ -31,7 +31,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 12px;
+      margin-bottom: 13px;
     }
   }
 
