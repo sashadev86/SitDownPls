@@ -181,14 +181,51 @@
         }
 
         &-link {
+          position: relative;
           font-size: 14px;
           line-height: 100%;
           color: var(--grey-color);
+          transition: color .3s ease-in-out;
+          z-index: 1;
 
           @include mobile {
             &--2-5 {
               font-size: 10px;
             }
+          }
+
+          @include hover {
+            +& {
+              color: var(--primary-color);
+            }
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -10px;
+            bottom: 0;
+            right: 0;
+            width: calc(100% + 20px);
+            height: 100%;
+            background-color: var(--pink-violet-color);
+            transform: translate(0, 0) scaleX(0);
+            transform-origin: center;
+            transition: transform .3s ease-in-out;
+            z-index: -1;
+          }
+
+          &:focus-visible:not(:hover):not(:active)::before {
+            transform: translate(0, 0) scaleX(1);
+          }
+
+          &:focus-visible:not(:hover):not(:active) {
+            color: var(--primary-shade-color);
+          }
+
+          &:active {
+            color: var(--primary-shade-color);
           }
         }
       }
