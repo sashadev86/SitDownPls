@@ -1,6 +1,7 @@
 .header {
   position: relative;
   padding-bottom: 20px;
+  z-index: 2;
 
   &::after {
     content: '';
@@ -404,7 +405,13 @@
         grid-column: 1/7;
         grid-row: 4;
         order: 6;
-        width: 104.8%;
+        width: 105%;
+      }
+    }
+
+    @include tablet {
+      & {
+        width: 103%;
       }
     }
 
@@ -528,7 +535,7 @@
       @include big-desktop {
         & {
           top: 14px;
-          right: 45px;
+          right: 34px;
         }
       }
 
@@ -562,7 +569,15 @@
         grid-row: 4;
         order: 7;
         margin-left: -9px;
-        left: 29px;
+        left: 42px;
+        width: 89%;
+      }
+    }
+
+    @include tablet {
+      & {
+        left: 28px;
+        width: 94%;
       }
     }
 
