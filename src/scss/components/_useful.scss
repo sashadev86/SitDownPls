@@ -6,7 +6,7 @@
     & {
       position: relative;
       padding-top: 38px;
-      padding-bottom: 48px;
+      padding-bottom: 60px;
     }
   }
 
@@ -46,7 +46,7 @@
     @include mobile {
       & {
         position: absolute;
-        bottom: 0px;
+        bottom: 12px;
         left: 38.2%;
       }
     }

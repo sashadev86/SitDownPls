@@ -2,6 +2,13 @@
   padding-top: 35px;
   padding-bottom: 69.5px;
 
+  @include mobile {
+    & {
+      padding-top: 58px;
+      padding-bottom: 70px;
+    }
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -60,6 +67,12 @@
 
     &-title {
       margin-bottom: 9px;
+
+      @include mobile {
+        & {
+          font-size: 24px;
+        }
+      }
     }
 
     &-text {
@@ -68,6 +81,12 @@
       font-size: 14px;
       line-height: 19px;
       color: var(--grey-shade-color);
+
+      @include mobile {
+        & {
+          margin-bottom: 15px;
+        }
+      }
     }
 
     &-image {
@@ -149,6 +168,12 @@
       background-color: var(--primary-color);
       color: var(--white-color);
 
+      @include mobile {
+        & {
+          margin-bottom: 10px;
+        }
+      }
+
       @include hover {
         +& {
           border-color: var(--primary-light-color);
@@ -185,6 +210,14 @@
         border-radius: 5px;
         padding: 0 5px 0 27px;
         margin-left: -5px;
+
+        @include mobile {
+          & {
+            padding: 0 5px 0 25px;
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
       }
 
       &-hidden:checked+.feedback__form-checkbox-text::before {
