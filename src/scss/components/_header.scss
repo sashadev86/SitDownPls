@@ -397,7 +397,7 @@
     position: relative;
     grid-column: 1/8;
     display: flex;
-    width: 102%;
+    width: 102.05%;
 
     @include big-desktop {
       & {
@@ -411,6 +411,7 @@
     @include high-tablet {
       & {
         grid-column: 1/5;
+        width: 105.3%;
       }
     }
 
@@ -485,7 +486,7 @@
     &-btn {
       position: absolute;
       top: 15px;
-      right: 32px;
+      right: 33px;
       width: 32.05px;
       height: 32px;
       border-radius: 100px;
@@ -527,13 +528,13 @@
       @include big-desktop {
         & {
           top: 14px;
-          right: 35px;
+          right: 45px;
         }
       }
 
       @include high-tablet {
         & {
-          right: 33px;
+          right: 35px;
         }
       }
 
