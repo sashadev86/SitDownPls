@@ -7,9 +7,12 @@
   }
 
   &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &__content {
+    grid-column: 1/4;
   }
 
   &__link {
@@ -80,18 +83,16 @@
   }
 
   &__nav {
-    width: 65.89%;
+    grid-column: 5/13;
 
     &-list {
       display: flex;
-      align-items: flex-start;
       justify-content: space-between;
-      column-gap: 30px;
-      row-gap: 20px;
     }
 
     &-item {
-      margin-top: -5px;
+      margin-top: -2px;
+      padding-left: 10px;
 
       &--column2 {
         margin-left: -34px;
