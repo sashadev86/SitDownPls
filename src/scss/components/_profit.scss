@@ -11,6 +11,14 @@
     font-size: 24px;
     line-height: 33px;
     color: var(--night-rider-color);
+
+    @include mobile {
+      & {
+        margin-bottom: 13px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
   }
 
   &__item {
@@ -32,5 +40,12 @@
     font-size: 16px;
     line-height: 150%;
     color: var(--grey-shade-color);
+
+    @include mobile {
+      & {
+        padding-left: 12px;
+        font-size: 14px;
+      }
+    }
   }
 }

@@ -1,6 +1,18 @@
 .breadcrumbs {
   &__container {
     margin-bottom: 32px;
+
+    @include tablet {
+      & {
+        margin-bottom: 31px;
+      }
+    }
+
+    @include mobile {
+      & {
+        display: none;
+      }
+    }
   }
 
   &__nav {
