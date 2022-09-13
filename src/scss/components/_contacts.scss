@@ -11,6 +11,84 @@
 
     &-input {
       grid-column: 1/7;
+      border: none;
+      outline: none;
+      padding-left: 18px;
+      border-radius: 10px;
+      font-size: 16px;
+      line-height: 40px;
+      color: var(--night-rider-color);
+      background-color: var(--grey-light-color);
+
+      &::placeholder {
+        font-size: 16px;
+        line-height: 40px;
+        color: var(--grey-color);
+      }
+
+      &::-webkit-input-placeholder {
+        opacity: 1;
+        transition: opacity .3s ease-in-out;
+      }
+
+      &:focus::-webkit-input-placeholder {
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+      }
+    }
+
+    ymaps.ymaps-2-1-79-search__suggest {
+      border: none;
+      border-radius: 10px;
+      top: 0;
+    }
+
+    .ymaps-2-1-79-search__suggest .ymaps-2-1-79-suggest-item {
+      height: 54px;
+      font-family: "Open Sans";
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--night-rider-color);
+      margin: 0;
+    }
+
+    ymaps.ymaps-2-1-79-suggest-item:last-of-type {
+      margin: 0;
+    }
+
+    ymaps.ymaps-2-1-79-search__suggest-item {
+      display: flex;
+      flex-direction: column;
+      padding: 15px 15px;
+      transition: all .3s ease-in-out;
+      border: 1px solid var(--md-grey-color);
+      border-radius: 10px 10px 0px 0px;
+      font-family: "Open Sans";
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--night-rider-color);
+
+      &:hover {
+        background-color: var(--grey-light-color);
+        border-color: transparent;
+      }
+
+      &:active {
+        background-color: var(--md-grey-color);
+      }
+    }
+
+    ymaps.ymaps-2-1-79-suggest-item-1 .ymaps-2-1-79-search__suggest-item {
+      border-radius: 0 0 10px 10px;
+    }
+
+    ymaps.ymaps-2-1-79-search__suggest-item_selected_yes {
+      background-color: var(--pink-light-color);
+      border-color: var(--primary-light-color);
+    }
+
+    ymaps.ymaps-2-1-79-suggest-item .ymaps-2-1-79-suggest-item-1 {
+      border-radius: 0px 0px 10px 10px;
     }
 
     &-btn {
