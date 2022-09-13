@@ -1,0 +1,25 @@
+.contacts {
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+
+    &-input {
+      grid-column: 1/7;
+    }
+
+    &-btn {
+      grid-column: 7/9;
+    }
+
+    &-map {
+      grid-column: 1/13;
+      height: 510px;
+    }
+  }
+}

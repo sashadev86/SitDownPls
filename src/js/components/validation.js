@@ -1,4 +1,5 @@
 import { validateForms } from '../functions/validate-forms';
+
 const rules = [
   {
     ruleSelector: '.input-name',
@@ -48,4 +49,7 @@ const afterForm = () => {
   console.log('Произошла отправка, тут можно писать любые действия');
 };
 
-validateForms('.feedback__form', rules, afterForm);
+let feedbackForm = document.querySelector('.feedback__form');
+if(feedbackForm) {
+  validateForms('.feedback__form', rules, afterForm);
+}
