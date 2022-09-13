@@ -1,22 +1,29 @@
 .contacts {
+  padding-bottom: 70px;
 
   &__title {
     margin-bottom: 16px;
   }
 
-  &__form {
+  &__wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 32px;
+  }
+
+  &__form {
+    grid-column: 1/9;
 
     &-input {
-      grid-column: 1/7;
-      border: none;
-      outline: none;
+      margin-right: 32px;
+      width: 624px;
+      height: 100%;
       padding-left: 18px;
       border-radius: 10px;
       font-size: 16px;
       line-height: 40px;
+      border: none;
+      outline: none;
       color: var(--night-rider-color);
       background-color: var(--grey-light-color);
 
@@ -91,9 +98,9 @@
       border-radius: 0px 0px 10px 10px;
     }
 
-    &-btn {
-      grid-column: 7/9;
-    }
+    // &-btn {
+    //   grid-column: 7/9;
+    // }
 
     &-map {
       grid-column: 1/13;
