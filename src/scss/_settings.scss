@@ -34,6 +34,13 @@ a {
 
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .is-hidden {
