@@ -9,10 +9,28 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 32px;
+
+    @include tablet {
+      & {
+        grid-template-columns: repeat(9, 1fr);
+      }
+    }
+
+    @include mobile {
+      & {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
   }
 
   &__form {
-    grid-column: 1/9;
+    grid-column: 1/13;
+
+    @include tablet {
+      & {
+        grid-column: 1/10;
+      }
+    }
 
     &-input {
       margin-right: 32px;
@@ -52,6 +70,12 @@
       &:focus::-webkit-input-placeholder {
         opacity: 0;
         transition: opacity .3s ease-in-out;
+      }
+
+      @include high-tablet {
+        & {
+          width: 64%;
+        }
       }
     }
 
@@ -135,6 +159,12 @@
     &-map {
       grid-column: 1/13;
       height: 510px;
+
+      @include tablet {
+        & {
+          grid-column: 1/10;
+        }
+      }
     }
   }
 }
