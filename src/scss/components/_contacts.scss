@@ -22,10 +22,21 @@
       border-radius: 10px;
       font-size: 16px;
       line-height: 40px;
-      border: none;
+      border: 1px solid transparent;
       outline: none;
       color: var(--night-rider-color);
       background-color: var(--grey-light-color);
+      transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+
+      @include hover {
+        +& {
+          background-color: var(--md-grey-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        border-color: var(--primary-color);
+      }
 
       &::placeholder {
         font-size: 16px;
@@ -98,9 +109,28 @@
       border-radius: 0px 0px 10px 10px;
     }
 
-    // &-btn {
-    //   grid-column: 7/9;
-    // }
+    &-btn {
+      color: var(--white-color);
+      background-color: var(--primary-color);
+      transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+      @include hover {
+        +& {
+          border-color: var(--primary-light-color);
+          background-color: var(--primary-light-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        border-color: var(--primary-shade-color);
+        background-color: var(--primary-light-color);
+      }
+
+      &:active {
+        border-color: var(--primary-shade-color);
+        background-color: var(--primary-shade-color);
+      }
+    }
 
     &-map {
       grid-column: 1/13;
