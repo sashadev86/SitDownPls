@@ -63,6 +63,13 @@
         border-radius: 10px;
         margin: 0;
         left: -147px !important;
+
+        @include mobile {
+          & {
+            left: 0 !important;
+            width: 232px;
+          }
+        }
       }
 
       .ymaps-2-1-79-balloon__close {
@@ -74,6 +81,12 @@
         overflow: visible;
         padding: 0;
         margin-right: 0;
+
+        @include mobile {
+          & {
+            width: 232px !important;
+          }
+        }
       }
 
       .ymaps-2-1-79-balloon_to_top .ymaps-2-1-79-balloon__tail {
@@ -82,11 +95,26 @@
         transform: rotate(-45deg) translateX(-50%);
       }
 
+      .ymaps-2-1-79-balloon-overlay {
+        @include mobile {
+          & {
+            left: 192px !important;
+          }
+        }
+      }
+
       .balloon {
         display: flex;
         flex-direction: column;
         max-width: 283px;
         padding: 30px;
+
+        @include mobile {
+          & {
+            width: 192px;
+            padding: 20px;
+          }
+        }
 
         &__top {
 
@@ -98,6 +126,14 @@
             font-size: 16px;
             line-height: 100%;
             color: var(--night-rider-color);
+
+            @include mobile {
+              & {
+                margin-bottom: 5px;
+                font-size: 14px;
+                line-height: 19px;
+              }
+            }
           }
 
           &-address {
@@ -108,6 +144,13 @@
             font-size: 14px;
             line-height: 180%;
             color: var(--night-rider-color);
+
+            @include mobile {
+              & {
+                font-size: 12px;
+                line-height: 16px;
+              }
+            }
           }
 
           &-link-svg {
@@ -128,6 +171,12 @@
             &-svg {
               fill: var(--secondary-color);
             }
+
+            @include mobile {
+              & {
+                margin-bottom: 12px;
+              }
+            }
           }
         }
 
@@ -136,6 +185,12 @@
           border-bottom: 1px solid var(--grey-light-color);
           padding: 13px 0;
           margin-bottom: 9px;
+
+          @include mobile {
+            & {
+              padding: 5px 0;
+            }
+          }
 
           &-clockwork {
             font-family: 'Open Sans';
@@ -147,6 +202,12 @@
 
             &-span {
               color: var(--grey-color);
+            }
+
+            @include mobile {
+              & {
+                font-size: 12px;
+              }
             }
           }
         }
@@ -162,6 +223,13 @@
 
             &-span {
               color: var(--grey-color);
+            }
+
+            @include mobile {
+              & {
+                font-size: 12px;
+                line-height: 140%;
+              }
             }
           }
         }
