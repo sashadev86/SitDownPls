@@ -32,7 +32,7 @@
       border: 1px solid var(--grey-color);
       border-radius: 2px;
       outline: none;
-      transition: border-color .3s ease-in-out;
+      transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
 
       @include hover {
         +& {
@@ -40,7 +40,10 @@
         }
       }
 
-      
+      &:focus-visible:not(:hover):not(:active) {
+        border-color: var(--primary-shade-color);
+        background-color: var(--pink-violet-color);
+      }
 
       &:active {
         border-color: var(--primary-shade-color);
