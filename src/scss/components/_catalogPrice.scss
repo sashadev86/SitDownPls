@@ -1,0 +1,50 @@
+.catalog {
+
+  &__price {
+
+    &-title {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__form {
+
+    &-price {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-label {
+
+      &-span {
+        margin-right: 9px;
+        font-size: 16px;
+        line-height: 130%;
+        color: var(--grey-shade-color);
+      }
+    }
+
+    &-input {
+      width: 86px;
+      height: 30px;
+      padding-left: 12px;
+      border: 1px solid var(--grey-color);
+      border-radius: 2px;
+      outline: none;
+      transition: border-color .3s ease-in-out;
+
+      @include hover {
+        +& {
+          border-color: var(--primary-color);
+        }
+      }
+
+      
+
+      &:active {
+        border-color: var(--primary-shade-color);
+      }
+    }
+  }
+}

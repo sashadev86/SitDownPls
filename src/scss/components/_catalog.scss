@@ -5,6 +5,11 @@
     grid-template-columns: repeat(12, 1fr);
   }
 
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__left {
     grid-column: 1/4;
 
@@ -15,6 +20,14 @@
       line-height: 130%;
       color: var(--night-rider-color);
     }
+  }
+
+  &-subtitle {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--grey-shade-color);
   }
 
   &__right {
