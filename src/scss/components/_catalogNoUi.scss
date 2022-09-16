@@ -49,15 +49,15 @@
     }
 
     &:hover {
-      border-bottom-color: var(--color-purple-hover);
+      border-bottom-color: var(--primary-light-color);
     }
 
-    &:focus-visible {
-      border-bottom-color: var(--color-dark-purple);
+    &:focus-visible:not(:hover):not(:active) {
+      border-bottom-color: var(--primary-shade-color);
     }
 
     &:active {
-      border-bottom-color: var(--color-dark-purple);
+      border-bottom-color: var(--primary-shade-color);
     }
   }
 
@@ -100,15 +100,15 @@
     }
 
     &:hover {
-      border-bottom-color: var(--color-purple-hover);
+      border-bottom-color: var(--primary-light-color);
     }
 
-    &:focus-visible {
-      border-bottom-color: var(--color-dark-purple);
+    &:focus-visible:not(:hover):not(:active) {
+      border-bottom-color: var(--primary-shade-color);
     }
 
     &:active {
-      border-bottom-color: var(--color-dark-purple);
+      border-bottom-color: var(--primary-shade-color);
     }
   }
 }
