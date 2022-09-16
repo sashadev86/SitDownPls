@@ -4,3 +4,4 @@ import './components/cardMore';
 import './components/validation';
 import './components/tooltip';
 import './components/map';
+import './components/furnitures';

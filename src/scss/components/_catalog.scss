@@ -1,0 +1,23 @@
+.catalog {
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &__left {
+    grid-column: 1/4;
+
+    &-title {
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 130%;
+      color: var(--night-rider-color);
+    }
+  }
+
+  &__right {
+    grid-column: 4/13;
+  }
+}
