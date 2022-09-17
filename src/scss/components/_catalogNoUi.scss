@@ -39,6 +39,7 @@
     box-shadow: none;
     cursor: pointer;
     transition: all .3s ease-in-out;
+    outline: none;
 
     &::before {
       display: none;
@@ -66,6 +67,10 @@
       transition: transform 100ms;
   }
 
+  &-origin {
+    outline: none;
+  }
+
   &-origin.noUi-state-tap{
     -webkit-transition: transform 100ms;
     transition: transform 100ms;
@@ -90,6 +95,7 @@
     box-shadow: none;
     cursor: pointer;
     transition: all .3s ease-in-out;
+    outline: none;
 
     &::before {
       display: none;
