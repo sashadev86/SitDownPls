@@ -1,0 +1,74 @@
+.catalog {
+
+  &__oksford {
+
+    &-picture {
+      display: flex;
+    }
+
+    &-content {
+      padding: 30px 30px 32px 30px;
+      border-radius: 0px 0px 10px 10px;
+      background-color: var(--night-rider-color);
+    }
+
+    &-title {
+      font-family: 'PlayfairDisplay-Black';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 32px;
+      color: var(--gold-color);
+    }
+
+    &-text {
+      margin-bottom: 12px;
+      max-width: 199px;
+      font-size: 16px;
+      line-height: 21.79px;
+      color: var(--grey-color);
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 120%;
+      color: var(--primary-color);
+      transition: color .3s ease-in-out;
+
+      &-text {
+        margin-right: 5px;
+      }
+
+      &-image {
+        padding: 0.5px 0 0 5.5px;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border-radius: 100px;
+        border: 2px solid var(--primary-color);
+        transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+
+        &-svg {
+          width: 7px;
+          height: 14px;
+          fill: transparent;
+          stroke: var(--primary-color);
+          transition: stroke .3s ease-in-out;
+        }
+      }
+
+      @include hover {
+        +& {
+          color: var(--primary-light-color);
+        }
+
+        +& .catalog__oksford-link-image {
+          border-color: var(--primary-light-color);
+        }
+      }
+    }
+  }
+}
