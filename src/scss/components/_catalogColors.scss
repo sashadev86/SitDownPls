@@ -1,0 +1,95 @@
+.catalog {
+
+  &__colors {
+
+    &-title {
+      margin-bottom: 9px;
+    }
+
+    &-form {
+
+      &-label {
+        margin-bottom: 11px;
+        position: relative;
+        font-size: 16px;
+        line-height: 130%;
+        color: var(--grey-shade-color);
+        cursor: pointer;
+      }
+
+      &-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        z-index: 2;
+        opacity: 0;
+
+        &-span {
+          position: relative;
+          padding-left: 32px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border: 1px solid var(--grey-color);
+            border-radius: 2px;
+            transition: all .3s ease-in-out;
+          }
+
+          @include hover {
+            +&::before {
+              border-color: var(--primary-color);
+            }
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 6px;
+            width: 8px;
+            height: 13px;
+            border-right: 2px solid var(--white-color);
+            border-bottom: 2px solid var(--white-color);
+            opacity: 0;
+            transform: rotate(45deg);
+            transition: all .3s ease-in-out;
+          }
+        }
+
+        &:checked + .catalog__colors-form-input-span::before {
+          background-color: var(--primary-color);
+        }
+
+        &:checked + .catalog__colors-form-input-span::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.color-hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.color-close-btn {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}
