@@ -15,6 +15,16 @@
         line-height: 130%;
         color: var(--grey-shade-color);
         cursor: pointer;
+
+        @include hover {
+          +& {
+            color: var(--primary-color);
+          }
+        }
+
+        &:active {
+          color: var(--primary-shade-color);
+        }
       }
 
       &-input {
@@ -30,6 +40,7 @@
         &-span {
           position: relative;
           padding-left: 32px;
+          transition: color .3s ease-in-out;
 
           &::before {
             content: "";
@@ -70,6 +81,14 @@
 
         &:checked + .catalog__colors-form-input-span::after {
           opacity: 1;
+        }
+
+        &:focus-visible:not(:hover):not(:active) + .catalog__colors-form-input-span {
+          color: var(--primary-light-color);
+        }
+
+        &:focus-visible:not(:hover):not(:active) + .catalog__colors-form-input-span::before {
+          background-color: var(--primary-light-color);
         }
       }
     }
