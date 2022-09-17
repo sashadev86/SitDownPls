@@ -3,6 +3,7 @@
   &__content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
   }
 
   &__form {
