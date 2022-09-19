@@ -30,6 +30,7 @@
     }
 
     &-link {
+      position: relative;
       display: flex;
       align-items: center;
       font-weight: 700;
@@ -40,6 +41,18 @@
 
       &-text {
         margin-right: 5px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: -1px;
+          width: 34%;
+          height: 2px;
+          background-color: var(--primary-color);
+          transform: translate(0, 0) scaleX(0);
+          transform-origin: center;
+          transition: transform .3s ease-in-out, background-color .3s ease-in-out;
+        }
       }
 
       &-image {
@@ -68,6 +81,26 @@
         +& .catalog__oksford-link-image {
           border-color: var(--primary-light-color);
         }
+
+        +& .catalog__oksford-link-image-svg {
+          stroke: var(--primary-light-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) .catalog__oksford-link-text::before {
+        transform: translate(0, 0) scaleX(1);
+      }
+
+      &:active {
+        color: var(--primary-shade-color);
+      }
+
+      &:active  .catalog__oksford-link-image {
+        border-color: var(--primary-shade-color);
+      }
+
+      &:active  .catalog__oksford-link-image-svg {
+        stroke: var(--primary-shade-color);
       }
     }
   }

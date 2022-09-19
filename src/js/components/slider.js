@@ -1,5 +1,5 @@
-import Swiper, { Pagination, Autoplay, Keyboard, A11y, Navigation } from 'swiper';
-Swiper.use([Pagination, Autoplay, Keyboard, A11y, Navigation]);
+import Swiper, { Pagination, Autoplay, Keyboard, A11y, Navigation, Grid } from 'swiper';
+Swiper.use([Pagination, Autoplay, Keyboard, A11y, Navigation, Grid]);
 
 let swiperHero = document.querySelector('.hero__swiper');
 if (swiperHero) {
@@ -64,12 +64,12 @@ if (swiperSpecial) {
         spaceBetween: 32,
       },
 
-     1440: {
+      1440: {
         slidesPerGroup: 3,
         spaceBetween: 32,
       },
     },
-  })
+  });
 }
 
 let swiperUseful = document.querySelector('.useful__swiper');
@@ -110,6 +110,23 @@ if (swiperUseful) {
         spaceBetween: 32,
       },
     }
-  })
+  });
+}
+
+let swiperCatalog = document.querySelector('.catalog__swiper');
+if (swiperCatalog) {
+  swiperCatalog = new Swiper('.catalog__swiper', {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 32,
+    grid: {
+      fill: 'row',
+      rows: 3,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 }
 

@@ -93,5 +93,13 @@
 
   &__right {
     grid-column: 4/13;
+
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: var(--night-rider-color);
+    }
   }
 }
