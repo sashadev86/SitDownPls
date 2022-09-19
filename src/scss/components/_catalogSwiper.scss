@@ -17,6 +17,27 @@
     line-height: 100%;
     color: var(--primary-color);
     outline: none;
+    transition: border-color .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out;
+
+    @include hover {
+      +& {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: var(--white-color);
+      }
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      background-color: var(--primary-light-color);
+      border-color: var(--primary-color);
+      color: var(--white-color);
+    }
+
+    &:active {
+      border-color: var(--primary-shade-color);
+      color: var(--white-color);
+      background-color: var(--primary-shade-color);
+    }
   }
 
   &__right .swiper-pagination-bullet-active {
