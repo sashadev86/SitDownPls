@@ -1,5 +1,6 @@
 import Swiper, { Pagination, Autoplay, Keyboard, A11y, Navigation, Grid } from 'swiper';
 Swiper.use([Pagination, Autoplay, Keyboard, A11y, Navigation, Grid]);
+import focusVisibleSlide from '../components/focus-visible-slide';
 
 let swiperHero = document.querySelector('.hero__swiper');
 if (swiperHero) {
@@ -119,9 +120,18 @@ if (swiperCatalog) {
     slidesPerView: 3,
     slidesPerGroup: 3,
     spaceBetween: 32,
+    watchSlidesProgress: true,
+    slideVisibleClass: 'ui-slide-visible',
     grid: {
       fill: 'row',
       rows: 3,
+    },
+    a11y: {
+      prevSlideMessage: 'Предыдущий слайд',
+      nextSlideMessage: 'Следующий слайд',
+      firstSlideMessage: 'Это первый слайд',
+      lastSlideMessage: 'Это последний слайд',
+      paginationBulletMessage: 'Перейти к слайду {{index}}',
     },
     pagination: {
       el: '.catalog__swiper-pagination',
@@ -136,6 +146,16 @@ if (swiperCatalog) {
             ${index + 1}
           </span>
         `;
+      },
+    },
+
+    on: {
+      init() {
+        focusVisibleSlide(this.slides, 'ui-slide-visible');
+      },
+
+      slideChange() {
+        focusVisibleSlide(this.slides, 'ui-slide-visible');
       },
     },
   });
