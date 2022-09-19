@@ -124,8 +124,19 @@ if (swiperCatalog) {
       rows: 3,
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: '.catalog__swiper-pagination',
       clickable: true,
+      renderBullet(index, className) {
+        return `
+          <span
+            class="${className}"
+            role="button"
+            aria-label="Перейти к слайду ${index + 1}"
+          >
+            ${index + 1}
+          </span>
+        `;
+      },
     },
   });
 }
