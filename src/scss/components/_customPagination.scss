@@ -2,7 +2,6 @@
 .circ {
   transform: scale(.5) rotate(-90deg);
   transition: transform .3s ease-in-out;
-  margin-left: 20px;
 }
 
 .circ1 {
@@ -15,13 +14,9 @@
   margin: 0;
 }
 
-.swiper-pagination {
-  position: relative;
-}
-
 .swiper-pagination-bullet {
-  width: auto;
-  height: auto;
+  width: 20px;
+  height: 20px;
   background: 0;
   outline: none
 }
@@ -43,21 +38,8 @@
   stroke: var(--white-color);
 }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.hero .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0px var(--swiper-pagination-bullet-horizontal-gap, 1px);
+  margin: 0px var(--swiper-pagination-bullet-horizontal-gap, 7px);
   opacity: 1;
-}
-
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  bottom: 40px;
-
-  @include mobile {
-    & {
-      bottom: 150px;
-    }
-  }
 }
