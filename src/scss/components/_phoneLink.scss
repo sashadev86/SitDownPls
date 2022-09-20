@@ -1,0 +1,19 @@
+.header {
+
+  & .phone__link {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--secondary-color);
+
+    & .phone__link-img {
+      width: 22px;
+      height: 22px;
+      fill: var(--secondary-color);
+      transition: fill .3s ease-in-out;
+      z-index: 1;
+    }
+  }
+}

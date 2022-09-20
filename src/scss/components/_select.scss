@@ -3,16 +3,23 @@
   border: none;
 }
 
+.choosing-region .choices__list--dropdown .choices__item.is-selected, .choosing-region .choices__list[aria-expanded] .choices__item.is-selected {
+  display: none;
+}
+
+.choices__list.choices__list--dropdown {
+  margin-top: 5px;
+}
+
 .choices[data-type*=select-one]:after {
-  margin-top: -3px;
+  margin-top: -5px;
   border: 0;
   width: 8px;
   height: 8px;
   border-width: 0px;
-  border-right: 1px solid #A65CF0;
-  border-top: 1px solid #A65CF0;
+  border-right: 1px solid var(--primary-color);
+  border-top: 1px solid var(--primary-color);
   transform: rotate(135deg);
-  transition: border-color .3s ease-in-out;
 }
 
 .choices[data-type*=select-one]:hover:not(:focus-visible)::after {
@@ -20,10 +27,10 @@
 }
 
 .choices[data-type*=select-one].is-open:after {
-  margin-top: 2px;
+  margin-top: 1px;
   border-width: 0px;
-  border-left: 1px solid #A65CF0;
-  border-bottom: 1px solid #A65CF0;
+  border-left: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
 }
 
 /*Убираем надпись Press to select*/

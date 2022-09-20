@@ -1,0 +1,27 @@
+.header {
+
+  .nav__info {
+    width: 55.46875%;
+
+    &-list {
+      display: flex;
+      align-items: center;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &-link {
+      position: relative;
+      font-size: 14px;
+      line-height: 100%;
+      color: var(--grey-color);
+      transition: color .3s ease-in-out;
+      outline: none;
+    }
+  }
+}

@@ -1,4 +1,25 @@
 <header class="header">
+  <div class="header__line header__line-first">
+    <div class="container header__container">
+      @include('logoLink.html')
+      <div class="choosing-region choosing__region-wrap choosing__region-wrap--first">
+        @include('selectRegion.html')
+      </div>
+      @include('phoneLink.html')
+      @include('navInfo.html')
+    </div>
+  </div>
+  <div class="header__line header__line-two">
+    <div class="container header__container">
+      @include('logoLink.html')
+      @include('navNavigation.html')
+    </div>
+  </div>
+  <div class="header__line header__line-tree"></div>
+  <div class="header__line header__line-four"></div>
+</header>
+
+<!--<header class="header">
   <div class="container header__container">
     <div class="header__region-phone">
       <div class="header__region-wrap">
@@ -106,4 +127,4 @@
       </button>
     </div>
   </div>
-</header>
+</header> -->

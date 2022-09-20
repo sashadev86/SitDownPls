@@ -1,0 +1,19 @@
+.header {
+  
+  &__line {
+
+    &-first {
+
+      & .logo__link {
+        display: none;
+      }
+    }
+
+    &-two {
+
+      & .logo__link {
+        margin-right: auto;
+      }
+    }
+  }
+}
