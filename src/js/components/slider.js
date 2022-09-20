@@ -6,6 +6,8 @@ let swiperHero = document.querySelector('.hero__swiper');
 if (swiperHero) {
   swiperHero = new Swiper('.hero__swiper', {
     watchOverflow: true,
+    watchSlidesProgress: true,
+    slideVisibleClass: 'ui-slide-visible',
     slidesPerView: 1,
     loop: true,
     speed: 1000,
@@ -30,6 +32,15 @@ if (swiperHero) {
         <circle class="circ1" r="10" cx="12" cy="12" stroke="var(--secondary-color)" stroke-width="2.3" fill="none"/>
         </svg></span>`;
       }
+    },
+    on: {
+      init() {
+        focusVisibleSlide(this.slides, 'ui-slide-visible');
+      },
+
+      slideChange() {
+        focusVisibleSlide(this.slides, 'ui-slide-visible');
+      },
     },
   });
 }
