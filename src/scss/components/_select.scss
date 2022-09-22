@@ -3,7 +3,7 @@
   border: none;
 }
 
-.choosing-region .choices__list--dropdown .choices__item.is-selected, .choosing-region .choices__list[aria-expanded] .choices__item.is-selected {
+.choices__list--dropdown .choices__item.is-selected, .choosing-region .choices__list[aria-expanded] .choices__item.is-selected {
   display: none;
 }
 

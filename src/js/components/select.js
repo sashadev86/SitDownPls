@@ -13,11 +13,18 @@ if (choosingRegionFirst) {
 }
 
 //Селект Диваны
-// const selector = document.querySelector(".header__сategories-select")
+const choosingCategory = document.querySelector('.choosing-category');
 
-// const choices = new Choices(selector, {
-//   searchEnabled: false,
-//   classNames: {
-//     containerOuter: 'choices header__сategories-form',
-//   },
-// });
+if (choosingCategory) {
+  const select = choosingCategory.querySelector('.form__search-сategories-select');
+
+  const choices = new Choices(select, {
+    allowHTML: false,
+    searchEnabled: false,
+    shouldSort: false,
+    itemSelectText: '',
+    classNames: {
+      flippedState: 'is-flip',
+    },
+  });
+}

@@ -17,7 +17,9 @@
     </div>
   </div>
   <div class="header__line header__line-fourth">
-    
+    <div class="container header__container">
+      @include('formSearch.html')
+    </div>
   </div>
 </header>
 
@@ -92,29 +94,10 @@
       <label class="header__form-label">
         <input type="text" name="Имя" class="input-reset header__form-input" placeholder="Я хочу купить...">
       </label>
-        <svg class="header__form-search">
-          <use xlink:href="img/sprite.svg#search"></use>
-        </svg>
-        <button class="btn-reset header__form-btn">
-          <svg class="header__form-btn-img">
-            <use xlink:href="img/sprite.svg#arrowSearch"></use>
-          </svg>
-        </button>
+
+
     </form>
-    <div class="header__categories">
-      <select class="header__сategories-select" aria-label="Выбрать мебель">
-        <option value="">Категория</option>
-        <option value="Диваны">Диваны</option>
-        <option value="Комоды">Комоды</option>
-        <option value="Кресла">Кресла</option>
-        <option value="Стулья">Стулья</option>
-        <option value="Пуфы">Пуфы</option>
-        <option value="Столы">Столы</option>
-        <option value="Кровати">Кровати</option>
-        <option value="Аксессуары">Аксессуары</option>
-        <option value="Тумбы">Тумбы</option>
-      </select>
-    </div>
+
     <div class="header__usershop">
       <button class="btn-reset header__user">
         <svg class="header__user-img">

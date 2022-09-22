@@ -1,5 +1,8 @@
 .hero {
-  padding-top: 12px;
+
+  &__swiper {
+    z-index: -2;
+  }
 
   &__slide {
     position: relative;
