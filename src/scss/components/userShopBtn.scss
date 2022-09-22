@@ -1,0 +1,47 @@
+.usershop {
+
+  &__wrapper {
+    width: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__user {
+    width: 26px;
+    height: 28px;
+
+    &-img {
+      width: 26px;
+      height: 28px;
+      fill: var(--primary-color);
+    }
+  }
+
+  &__shop {
+    position: relative;
+    width: 30px;
+    height: 28px;
+
+    &-count {
+      position: absolute;
+      top: 5px;
+      left: -10px;
+      padding-top: 2px;
+      width: 14px;
+      height: 15px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 100%;
+      color: var(--white-color);
+      background-color: var(--secondary-color);
+    }
+
+    &-img {
+      width: 30px;
+      height: 28px;
+      fill: var(--primary-color);
+    }
+  }
+}
