@@ -18,8 +18,44 @@
   }
 
   & .nav__navigation-link {
+    position: relative;
     font-size: 16px;
     line-height: 22px;
     color: var(--night-rider-color);
+    transition: color .3s ease-in-out;
+
+    @include hover {
+      +& {
+        color: var(--primary-color);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: 0;
+      bottom: 0;
+      left: -10px;
+      width: calc(100% + 20px);
+      height: calc(100% + 2px);
+      background-color: var(--pink-violet-color);
+      z-index: -1;
+      transform: translate(0, 0) scaleX(0);
+      transform-origin: center;
+      transition: transform .3s ease-in-out;
+    }
+
+    &:focus-visible:not(:hover):not(:active)::before {
+      transform: translate(0, 0) scaleX(1);
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      color: var(--night-rider-color);
+    }
+
+    &:active {
+      color: var(--primary-shade-color);
+    }
   }
 }
