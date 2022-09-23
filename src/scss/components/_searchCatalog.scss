@@ -25,6 +25,21 @@
       &::placeholder {
         color: var(--grey-color);
       }
+
+      @include hover {
+        +& {
+          background-color: var(--md-grey-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        background-color: var(--pink-light-color);
+        border-color: var(--primary-color);
+      }
+
+      &:focus + .form__search-search {
+        fill: var(--primary-color);
+      }
     }
 
     &-search {
@@ -34,6 +49,7 @@
       width: 20px;
       height: 20px;
       fill: var(--grey-color);
+      transition: fill .3s ease-in-out;
     }
 
     &-btn {
@@ -44,6 +60,7 @@
       height: 32px;
       border-radius: 100px;
       border: 2px solid var(--primary-color);
+      transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
 
       &-img {
         width: 8px;
@@ -51,6 +68,33 @@
         fill: transparent;
         stroke: var(--primary-color);
         transition: stroke 0.3s ease-in-out;
+      }
+
+      @include hover {
+        +& {
+          background-color: var(--primary-color);
+        }
+
+        +& .form__search-btn-img {
+          stroke: var(--white-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        background-color: var(--primary-light-color);
+
+        & .form__search-btn-img {
+          stroke: var(--white-color);
+        }
+      }
+
+      &:active {
+        background-color: var(--primary-shade-color);
+        border-color: var(--primary-shade-color);
+
+        & .form__search-btn-img {
+          stroke: var(--white-color);
+        }
       }
     }
   }
