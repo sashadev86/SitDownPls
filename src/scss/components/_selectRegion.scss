@@ -90,6 +90,22 @@
         }
       }
     }
+
+    & .choices[data-type*=select-one]:hover::after {
+      border-color: var(--primary-light-color);
+    }
+
+    & .choices[data-type*=select-one]:focus-visible:not(:hover):not(:active)::after {
+      border-color: var(--primary-shade-color);
+    }
+
+    & .choices[data-type*=select-one]:active::after {
+      border-color: var(--primary-shade-color);
+    }
+
+    & .choices[data-type*=select-one].is-open:active::after {
+      border-color: var(--primary-shade-color);
+    }
   }
 
   &__region {

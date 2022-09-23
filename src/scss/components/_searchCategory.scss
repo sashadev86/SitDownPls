@@ -19,6 +19,17 @@
     & .choices[data-type*=select-one] .choices__inner {
       padding-bottom: 0;
       height: 60px;
+
+      @include hover {
+        +& {
+          border: 2px solid var(--primary-color);
+        }
+      }
+    }
+
+    & .choices:focus-visible:not(:hover):not(:active) .choices__inner {
+      background-color: var(--pink-light-color);
+      border-color: var(--primary-color);
     }
 
     & .choices__list--single {

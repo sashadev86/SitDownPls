@@ -23,27 +23,11 @@
   transition: border-color .3s ease-in-out;
 }
 
-.choices[data-type*=select-one]:hover::after {
-  border-color: var(--primary-light-color);
-}
-
-.choices[data-type*=select-one]:focus-visible:not(:hover):not(:active)::after {
-  border-color: var(--primary-shade-color);
-}
-
-.choices[data-type*=select-one]:active::after {
-  border-color: var(--primary-shade-color);
-}
-
 .choices[data-type*=select-one].is-open::after {
   margin-top: 0;
   border-width: 0px;
   border-left: 1px solid var(--primary-color);
   border-bottom: 1px solid var(--primary-color);
-}
-
-.choices[data-type*=select-one].is-open:active::after {
-  border-color: var(--primary-shade-color);
 }
 
 /*Убираем надпись Press to select*/
