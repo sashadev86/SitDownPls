@@ -15,8 +15,10 @@
   </div>
   <div class="header__line header__line-third">
     <div class="container header__container">
+      @include('burger.html')
       @include('logoLink.html')
       @include('navNavigation.html')
+      @include('userShopBtn.html')
     </div>
   </div>
   <div class="header__line header__line-fourth">
@@ -26,82 +28,3 @@
     </div>
   </div>
 </header>
-
-<!--<header class="header">
-  <div class="container header__container">
-    <div class="header__region-phone">
-      <div class="header__region-wrap">
-        <p class="header__region-title">Ваш регион:</p>
-        <div class="header__city">
-          <select class="header__city-select" aria-label="Выбрать город">
-            <option value="Москва">Москва</option>
-            <option value="Казань">Казань</option>
-            <option value="Пермь">Пермь</option>
-            <option value="Уфа">Уфа</option>
-          </select>
-        </div>
-      </div>
-      <a   class="header__phone-link">
-        <svg class="header__phone-img">
-          <use xlink:href="img/sprite.svg#phone"></use>
-        </svg>
-        <span><no-typography>+7 (495) 885-45-47</no-typography></span>
-      </a>
-    </div>
-    <ul class="list-reset header__list-about">
-      <li class="header__item-about"><a href="#" class="header__link-about">О компании</a></li>
-      <li class="header__item-about"><a href="#" class="header__link-about">Гарантия и возврат</a></li>
-      <li class="header__item-about"><a href="#" class="header__link-about">Корпоративным клиентам</a></li>
-      <li class="header__item-about"><a href="#" class="header__link-about">Дизайн-решение</a>
-      </li>
-    </ul>
-
-    <a href="index.html" class="header__link-logo"><img loading="lazy" src="img/logo.svg" class="header__img-logo" width="187"
-        height="27" alt="Логотип сети магазинов SitDownPls"></a>
-
-    <div class="header__wrap-nav">
-      <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false"  data-burger>
-        <svg class="burger-img">
-          <use xlink:href="img/sprite.svg#burger"></use>
-        </svg>
-      </button>
-      <nav class="header__nav" title="Навигация по сайту" data-menu>
-        <button class="btn-reset burger-close" aria-label="Закрыть меню" data-menu-close>
-          <svg class="burger-close-img">
-            <use xlink:href="img/sprite.svg#burgerClose"></use>
-          </svg>
-        </button>
-        <ul class="list-reset header__nav-list">
-          <li class="header__nav-item"><a href="catalog.html" class="header__nav-link" data-menu-item data-scroll>Каталог</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link" data-menu-item data-scroll>Магазины</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link" data-menu-item data-scroll>Шоу-рум</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link" data-menu-item data-scroll>Доставка и оплата</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link" data-menu-item data-scroll>Дисконт</a></li>
-          <li class="header__nav-item"><a href="contacts.html" class="header__nav-link" data-menu-item data-scroll>Контакты</a></li>
-        </ul>
-
-        <svg class="header__nav-img">
-          <use xlink:href="img/sprite.svg#logoBurger"></use>
-        </svg>
-
-        <ul class="list-reset header__nav-about header__nav-about--bg">
-          <li class="header__item-about header__nav-item-about"><a href="#" class="header__link-about header__nav-about-link">О компании</a></li>
-          <li class="header__item-about header__nav-item-about header__nav-item-about--ml"><a href="#" class="header__link-about header__nav-about-link">Гарантия и возврат</a></li>
-          <li class="header__item-about header__nav-item-about"><a href="#" class="header__link-about header__nav-about-link">Корпоративным клиентам</a></li>
-          <li class="header__item-about header__nav-item-about header__nav-item-about--pl"><a href="#" class="header__link-about header__nav-about-link">Дизайн-решение</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <form action="#" class="header__form">
-      <label class="header__form-label">
-        <input type="text" name="Имя" class="input-reset header__form-input" placeholder="Я хочу купить...">
-      </label>
-
-
-    </form>
-
-
-  </div>
-</header> -->

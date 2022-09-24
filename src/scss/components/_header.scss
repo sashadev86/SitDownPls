@@ -27,6 +27,16 @@
         }
       }
 
+      @include small-tablet {
+        & {
+          padding-bottom: 19px;
+        }
+      }
+
+      & .logo__link {
+        display: none;
+      }
+
       & .nav__info {
         width: 55.46875%;
 
@@ -55,6 +65,13 @@
         }
       }
 
+      @include small-tablet {
+        & {
+          padding-top: 15px;
+          padding-bottom: 16.5px;
+        }
+      }
+
       & .nav__info {
         & {
           display: none;
@@ -64,6 +81,13 @@
           & {
             display: block;
             width: 74.5798319328%;
+          }
+        }
+
+        @include small-tablet {
+          & {
+            width: 100%;
+            padding-right: 2px;
           }
         }
       }
@@ -78,6 +102,12 @@
             display: flex;
           }
         }
+
+        @include small-tablet {
+          & {
+            display: none;
+          }
+        }
       }
     }
 
@@ -87,6 +117,44 @@
       @include tablet {
         & {
           margin-bottom: 30px;
+        }
+      }
+
+      & .logo__link {
+        margin-right: auto;
+
+        @include small-tablet {
+          & {
+            margin-right: 0;
+          }
+        }
+      }
+
+      & .nav__navigation {
+        width: 74.35%;
+        padding-right: 3px;
+
+        @include tablet {
+          & {
+            width: 73.65%;
+            padding-right: 2px;
+            padding-bottom: 4px;
+          }
+        }
+
+        @include small-tablet {
+          & {
+            width: 100%;
+          }
+        }
+      }
+
+      & .usershop__wrapper {
+        display: none;
+
+        @include small-tablet {
+          display: flex;
+          margin-top: -2px;
         }
       }
     }

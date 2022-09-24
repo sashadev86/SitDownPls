@@ -1,0 +1,15 @@
+.burger {
+  display: none;
+
+  @include small-tablet {
+    & {
+      display: block;
+    }
+  }
+
+  &__img {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-color);
+  }
+}

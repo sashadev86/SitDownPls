@@ -12,6 +12,12 @@
           width: 68.5%;
         }
       }
+
+      @include small-tablet {
+        & {
+          width: 72.5%;
+        }
+      }
     }
 
     &-input {
