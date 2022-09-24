@@ -11,6 +11,12 @@
     transition: color .3s ease-in-out;
     z-index: 0;
 
+    @include tablet {
+      & {
+        margin-right: 0;
+      }
+    }
+
     &-img {
       width: 22px;
       height: 22px;

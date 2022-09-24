@@ -4,6 +4,12 @@
   &__container {
     display: flex;
     align-items: center;
+
+    @include tablet {
+      & {
+        justify-content: space-between;
+      }
+    }
   }
 
   &__line {
@@ -13,10 +19,88 @@
       padding-top: 13px;
       padding-bottom: 14px;
       background-color: var(--grey-light-color);
+
+      @include tablet {
+        & {
+          padding-top: 16px;
+          padding-bottom: 18.5px;
+        }
+      }
+
+      & .nav__info {
+        width: 55.46875%;
+
+        @include tablet {
+          & {
+            display: none;
+          }
+        }
+      }
+
+      @include tablet {
+        & {
+          margin-bottom: 0;
+          background-color: transparent;
+        }
+      }
+    }
+
+    &-second {
+      @include tablet {
+        & {
+          margin-bottom: 32px;
+          padding-top: 11px;
+          padding-bottom: 10.5px;
+          background-color: var(--grey-light-color);
+        }
+      }
+
+      & .nav__info {
+        & {
+          display: none;
+        }
+
+        @include tablet {
+          & {
+            display: block;
+            width: 74.5798319328%;
+          }
+        }
+      }
+
+      & .usershop__wrapper {
+        & {
+          display: none;
+        }
+
+        @include tablet {
+          & {
+            display: flex;
+          }
+        }
+      }
     }
 
     &-third {
       margin-bottom: 29px;
+
+      @include tablet {
+        & {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    &-fourth {
+
+      & .usershop__wrapper {
+
+        @include tablet {
+          & {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

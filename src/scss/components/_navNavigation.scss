@@ -7,6 +7,14 @@
       & .nav__navigation {
         width: 74.35%;
         padding-right: 3px;
+
+        @include tablet {
+          & {
+            width: 73.65%;
+            padding-right: 2px;
+            padding-bottom: 4px;
+          }
+        }
       }
 
       & .nav__navigation-list {

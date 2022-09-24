@@ -6,6 +6,12 @@
     width: 29%;
     height: 60px;
 
+    @include tablet {
+      & {
+        width: 31.5%;
+      }
+    }
+
     & .choices__inner {
       display: flex;
       align-items: center;
@@ -14,6 +20,12 @@
       border-radius: 0px 10px 10px 0px;
       background-color: var(--white-color);
       transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+      @include tablet {
+        & {
+          padding: 0 0 0 25.6px;
+        }
+      }
     }
 
     & .choices[data-type*=select-one] .choices__inner {
