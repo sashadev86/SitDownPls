@@ -6,6 +6,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
 
       @include small-tablet {
         & {
@@ -119,7 +120,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        z-index: 500;
+        z-index: 39;
         overflow-y: auto;
         width: 100%;
         height: var(--vh);
