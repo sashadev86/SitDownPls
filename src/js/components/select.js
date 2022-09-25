@@ -1,8 +1,21 @@
 //Селект Москва
-const choosingRegionFirst = document.querySelector('.choosing__region-wrap--first');
+const choosingRegionFirst = document.querySelector('.choosing__region-wrap-first');
 
 if (choosingRegionFirst) {
   const select = choosingRegionFirst.querySelector('.choosing__region-select');
+
+  const choices = new Choices(select, {
+    allowHTML: false,
+    searchEnabled: false,
+    shouldSort: false,
+    itemSelectText: '',
+  });
+}
+
+const choosingRegionSecond = document.querySelector('.choosing__region-wrap-second');
+
+if (choosingRegionSecond) {
+  const select = choosingRegionSecond.querySelector('.choosing__region-select');
 
   const choices = new Choices(select, {
     allowHTML: false,

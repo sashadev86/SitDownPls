@@ -7,6 +7,12 @@
     }
   }
 
+  @include mobile {
+    & {
+      padding-left: 4px;
+    }
+  }
+
   &__img {
     width: 24px;
     height: 24px;

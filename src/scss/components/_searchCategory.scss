@@ -12,6 +12,12 @@
       }
     }
 
+    @include mobile {
+      & {
+        width: 100%;
+      }
+    }
+
     & .choices__inner {
       display: flex;
       align-items: center;
@@ -24,6 +30,12 @@
       @include tablet {
         & {
           padding: 0 0 0 25.6px;
+        }
+      }
+
+      @include mobile {
+        & {
+          border-radius: 10px;
         }
       }
     }
@@ -96,6 +108,13 @@
         & {
           font-size: 12px;
           line-height: 18px;
+        }
+      }
+
+      @include mobile {
+        & {
+          padding-left: 25px;
+          font-size: 14px;
         }
       }
     }

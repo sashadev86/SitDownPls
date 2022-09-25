@@ -1,6 +1,12 @@
 .header {
   margin-bottom: 32px;
 
+  @include mobile {
+    & {
+      margin-bottom: 32.5px;
+    }
+  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -24,6 +30,8 @@
         & {
           padding-top: 16px;
           padding-bottom: 18.5px;
+          margin-bottom: 0;
+          background-color: transparent;
         }
       }
 
@@ -33,8 +41,39 @@
         }
       }
 
+      @include mobile {
+        & {
+          padding-top: 11px;
+          padding-bottom: 8px;
+          background-color: var(--grey-light-color);
+        }
+      }
+
+      & .header__container {
+        @include mobile {
+          & {
+            justify-content: center;
+          }
+        }
+      }
+
       & .logo__link {
         display: none;
+
+        @include mobile {
+          & {
+            display: block;
+            padding-left: 0;
+          }
+        }
+      }
+
+      & .choosing__region-wrap {
+        @include mobile {
+          & {
+            display: none;
+          }
+        }
       }
 
       & .nav__info {
@@ -47,10 +86,11 @@
         }
       }
 
-      @include tablet {
-        & {
-          margin-bottom: 0;
-          background-color: transparent;
+      & .phone__link {
+        @include mobile {
+          & {
+            display: none;
+          }
         }
       }
     }
@@ -72,6 +112,23 @@
         }
       }
 
+      @include mobile {
+        & {
+          margin-bottom: 12px;
+          padding-top: 18px;
+          background-color: transparent;
+        }
+      }
+
+      & .header__container {
+        @include mobile {
+          & {
+            align-items: flex-start;
+            flex-direction: column;
+          }
+        }
+      }
+
       & .nav__info {
         & {
           display: none;
@@ -88,6 +145,12 @@
           & {
             width: 100%;
             padding-right: 2px;
+          }
+        }
+
+        @include mobile {
+          & {
+            display: none;
           }
         }
       }
@@ -109,14 +172,41 @@
           }
         }
       }
+
+      & .choosing__region-wrap {
+        display: none;
+
+        @include mobile {
+          & {
+            display: flex;
+          }
+        }
+      }
+
+      & .phone__link {
+        display: none;
+
+        @include mobile {
+          & {
+            display: flex;
+          }
+        }
+      }
     }
 
     &-third {
+      position: relative;
       margin-bottom: 29px;
 
       @include tablet {
         & {
           margin-bottom: 30px;
+        }
+      }
+
+      @include mobile {
+        & {
+          margin-bottom: 26px;
         }
       }
 
@@ -126,6 +216,12 @@
         @include small-tablet {
           & {
             margin-right: 0;
+          }
+        }
+
+        @include mobile {
+          & {
+            display: none;
           }
         }
       }
@@ -155,6 +251,26 @@
         @include small-tablet {
           display: flex;
           margin-top: -2px;
+        }
+      }
+
+      @include mobile {
+        & {
+          &::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            width: 100%;
+            border-top: 2px solid var(--grey-light-color);
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            width: 100%;
+            border-bottom: 2px solid var(--grey-light-color);
+          }
         }
       }
     }

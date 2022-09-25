@@ -18,6 +18,13 @@
           width: 72.5%;
         }
       }
+
+      @include mobile {
+        & {
+          margin-bottom: 16px;
+          width: 100%;
+        }
+      }
     }
 
     &-input {
@@ -51,6 +58,12 @@
 
       &:focus + .form__search-search {
         fill: var(--primary-color);
+      }
+
+      @include mobile {
+        & {
+          border-radius: 10px;
+        }
       }
     }
 

@@ -111,10 +111,18 @@
   &__region {
 
     &-wrap {
+      margin-right: 20.5px;
       padding-top: 3.5px;
       position: relative;
       z-index: 40;
-      margin-right: 20.5px;
+
+      @include mobile {
+        & {
+          margin-right: 0;
+          margin-bottom: 17px;
+          padding-top: 0;
+        }
+      }
     }
 
     &-text {
