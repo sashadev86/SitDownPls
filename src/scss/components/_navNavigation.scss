@@ -6,6 +6,27 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include small-tablet {
+        & {
+          display: block;
+          column-count: 2;
+          padding-left: 9.4%;
+          max-width: 344px;
+        }
+      }
+    }
+
+    &-item {
+      @include small-tablet {
+        & {
+          width: 144px;
+        }
+
+        &:not(:nth-child(3n)) {
+          margin-bottom: 41px;
+        }
+      }
     }
 
     &-link {
@@ -56,6 +77,8 @@
       @include small-tablet {
         & {
           display: block;
+          margin-bottom: 31px;
+          padding: 0.3% 0 0 9.4%;
         }
       }
 
@@ -69,10 +92,11 @@
     @include small-tablet {
       & {
         display: flex;
+        align-items: flex-start;
         flex-direction: column;
-        position: fixed;
+        position: absolute;
         left: 0;
-        top: 70px;
+        top: 0;
         z-index: 500;
         overflow-y: auto;
         width: 100%;
@@ -81,6 +105,10 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+        background-image: url(../img/logoBurger.svg);
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-position: top 8.95% right 11.9%;
       }
     }
   }
@@ -90,4 +118,3 @@
   opacity: 1;
   visibility: visible;
 }
-
