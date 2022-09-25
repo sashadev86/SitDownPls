@@ -6,13 +6,22 @@
     padding-top: 80px;
     padding-bottom: 80px;
     height: auto;
+
+    @include mobile {
+      & {
+        margin-bottom: 32px;
+        padding-top: 30px;
+        padding-bottom: 98px;
+      }
+    }
   }
 
   &__pic {
     position: absolute;
     inset: 0;
-    z-index: -1;
     display: block;
+    z-index: -1;
+    background-color: var(--black-color);
   }
 
   &__image {
@@ -23,6 +32,7 @@
   }
 
   &__title {
+    padding-left: 12px;
     margin-bottom: 50px;
     max-width: 496px;
     font-weight: 700;
@@ -47,6 +57,7 @@
   }
 
   &__btn {
+    margin-left: 12px;
     padding: 22px 50px;
     border-radius: 10px;
     font-weight: 700;
@@ -72,10 +83,20 @@
       background-color: var(--primary-shade-color);
     }
 
+    &-mobile {
+      display: none;
+    }
+
     @include mobile {
-      & {
-        margin-top: auto;
-        width: calc(100% - 100px);
+      &-slide {
+        display: none;
+      }
+
+      &-mobile {
+        display: block;
+        margin: 0;
+        padding: 20px 50px;
+        width: 100%;
       }
     }
   }

@@ -43,3 +43,13 @@
   margin: 0px var(--swiper-pagination-bullet-horizontal-gap, 7px);
   opacity: 1;
 }
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 15px;
+
+  @include mobile {
+    & {
+      bottom: 32px;
+    }
+  }
+}
