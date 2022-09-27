@@ -1,5 +1,11 @@
+.site-container--catalog {
+  & .header {
+    margin-bottom: 19px;
+  }
+}
+
 .catalog {
-  padding-bottom: 70px;
+  padding-bottom: 102px;
 
   &__content {
     display: grid;
@@ -92,6 +98,7 @@
   }
 
   &__right {
+    position: relative;
     grid-column: 4/13;
 
     &-title {

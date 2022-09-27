@@ -1,6 +1,9 @@
 .catalog {
   &__colors {
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     &-title {
       margin-bottom: 9px;

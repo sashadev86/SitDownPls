@@ -1,7 +1,7 @@
 .catalog {
 
   &__right .catalog__swiper-pagination {
-    bottom: 0;
+    bottom: -32px;
   }
 
   &__right .swiper-pagination-bullet {
@@ -53,6 +53,6 @@
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0px var(--swiper-pagination-bullet-horizontal-gap, 5px);
+  margin: 0px var(--swiper-pagination-bullet-horizontal-gap, 6px);
   opacity: 1;
 }
