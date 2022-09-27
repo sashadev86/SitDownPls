@@ -5,7 +5,7 @@
 
   @include mobile {
     & {
-      padding-top: 13px;
+      padding-top: 70px;
       padding-bottom: 60px;
     }
   }
@@ -19,6 +19,7 @@
   &__title {
     @include mobile {
       & {
+        margin-bottom: 25.3px;
         font-size: 24px;
       }
     }
@@ -108,6 +109,38 @@
     &--center {
       width: calc((624 + 32) / 1280 * 100% - 32px);
     }
+
+    @include high-desktop {
+      &,
+      &--center {
+        width: calc(34.1% - 32px);
+      }
+    }
+
+    @include tablet {
+      &,
+      &--center {
+        width: calc((296 + 32) / 952 * 100% - 32px);
+      }
+    }
+
+    @include high-tablet {
+      & {
+        width: 47.9%;
+      }
+    }
+
+    @include small-tablet {
+      & {
+        width: 47.1%;
+      }
+    }
+
+    @include mobile {
+      & {
+        width: 100%;
+      }
+    }
   }
 
   &__content {
@@ -154,6 +187,34 @@
       width: 100%;
       height: 245px;
       margin-bottom: 17.5px;
+
+      @include tablet {
+        &--center {
+          width: 254px;
+          margin-left: -10px;
+        }
+      }
+
+      @include high-tablet {
+        &--center {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+
+      @include small-tablet {
+        &--center {
+          width: calc(100% + 18px);
+          margin-left: -10px;
+        }
+      }
+
+      @include mobile {
+        &--center {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
     }
 
     &-image {
@@ -163,8 +224,20 @@
       transform: translateX(-50%);
       display: block;
 
-      &-center {
+      &--center {
         left: 50.5%;
+      }
+
+      @include high-desktop {
+        &--center {
+          margin-bottom: 31px;
+        }
+      }
+
+      @include mobile {
+        &--center {
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -182,6 +255,12 @@
         font-size: 24px;
         line-height: 130%;
         color: var(--night-rider-color);
+      }
+
+      @include mobile {
+        & {
+          margin-bottom: 23px;
+        }
       }
     }
 
@@ -212,7 +291,7 @@
       right: 30px;
       bottom: 27px;
 
-      @include big-desktop {
+      @include high-desktop {
         & {
           display: none;
         }
@@ -220,7 +299,6 @@
     }
 
     &-link {
-
       transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
 
       @include hover {

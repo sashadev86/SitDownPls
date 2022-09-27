@@ -48,8 +48,8 @@ if (swiperHero) {
 let swiperSpecial = document.querySelector('.special__swiper');
 if (swiperSpecial) {
   swiperSpecial = new Swiper('.special__swiper', {
-    slidesPerGroup: 1,
     slidesPerView: "auto",
+    direction: "horizontal",
     spaceBetween: 12,
     navigation: {
       nextEl: '.special__controls--next',
@@ -72,9 +72,20 @@ if (swiperSpecial) {
         spaceBetween: 32,
       },
 
-      768: {
+      992: {
+        slidesPerGroup: 3,
         spaceBetween: 32,
       },
+
+      // 1024: {
+      //   slidesPerGroup: 3,
+      //   spaceBetween: 32,
+      // },
+
+      // 1200: {
+      //   slidesPerGroup: 3,
+      //   spaceBetween: 28,
+      // },
 
       1440: {
         slidesPerGroup: 3,
