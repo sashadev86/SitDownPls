@@ -31,9 +31,9 @@ if(firstPrice, secondPrice, inputPrice) {
   rangeSlider.noUiSlider.on("update", function(values,handle) {
     inputPrice[handle].value = Math.round(values[handle])
 
-    // document.getElementById("prc").innerHTML = "До " + document.getElementById("second-price").value
+    document.getElementById("prc").innerHTML = "До " + document.getElementById("second-price").value
 
-    // document.getElementById("price-wrap").classList.add("price-active")
+    document.getElementById("price-wrap").classList.add("price-active")
   })
 
   const setRangeSlider = (i,value) => {

@@ -7,3 +7,4 @@ import './components/map';
 import './components/catalogFurnitures';
 import './components/catalogPrice';
 import './components/catalogColors';
+import './components/catalogTag';
