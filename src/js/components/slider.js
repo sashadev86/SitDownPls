@@ -77,16 +77,6 @@ if (swiperSpecial) {
         spaceBetween: 32,
       },
 
-      // 1024: {
-      //   slidesPerGroup: 3,
-      //   spaceBetween: 32,
-      // },
-
-      // 1200: {
-      //   slidesPerGroup: 3,
-      //   spaceBetween: 28,
-      // },
-
       1440: {
         slidesPerGroup: 3,
         spaceBetween: 32,
