@@ -1,5 +1,4 @@
 .dropfilter {
-
   &__btn {
     position: relative;
     width: 100%;
@@ -9,7 +8,7 @@
     border-radius: 10px;
     text-align: left;
     padding-left: 13px;
-    transition: .2s ease-in-out;
+    transition: border-color .3s ease-in-out;
     z-index: 12;
 
     &::before {
@@ -23,7 +22,7 @@
       border-right: 1px solid var(--primary-color);
       background-color: transparent;
       transform: rotate(45deg);
-      transition: .2s ease-in-out;
+      transition: border-color .3s ease-in-out;
     }
   }
 

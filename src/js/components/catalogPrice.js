@@ -50,5 +50,29 @@ if(firstPrice, secondPrice, inputPrice) {
   });
 }
 
+const priceDiv = document.querySelector(".catalog__tag-prc")
+
+  document.querySelectorAll(".second-price").forEach(function(sp) {
+    sp.addEventListener("input", function() {
+      let data = sp.value;
+
+      priceDiv.innerHTML = "До " + data;
+    })
+  })
+
+  const inp = document.querySelectorAll('input[type=number]');
+  Array.from(inp).forEach(input => {
+      const min = +input.min;
+      const max = +input.max;
+
+      input.addEventListener('input', (e) => {
+          const value = input.value;
+          if (value > max) {
+            input.value = max }
+          else if (value < min) {
+            input.value = min
+          }
+      })
+  });
 
 
