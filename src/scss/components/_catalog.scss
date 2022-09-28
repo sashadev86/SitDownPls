@@ -11,6 +11,12 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 32px;
+
+    @include high-desktop {
+      & {
+        grid-template-columns: repeat(9, 1fr);
+      }
+    }
   }
 
   &__form {
@@ -20,6 +26,12 @@
 
   &__left {
     grid-column: 1/4;
+
+    @include high-desktop {
+      & {
+        display: none;
+      }
+    }
 
     &-title {
       margin-bottom: 20px;
@@ -100,6 +112,12 @@
   &__right {
     position: relative;
     grid-column: 4/13;
+
+    @include high-desktop {
+      & {
+        grid-column: 1/10;
+      }
+    }
 
     &-title {
       display: inline-block;

@@ -1,6 +1,8 @@
 .card {
 
   &__item {
+    box-sizing: border-box;
+    height: auto;
     border-radius: 10px;
     background-color: var(--grey-light-color);
   }
@@ -63,6 +65,8 @@
   }
 
   &__link {
+    margin-top: auto;
+
     @include hover {
       +& {
         color: var(--white-color);
