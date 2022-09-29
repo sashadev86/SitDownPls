@@ -161,6 +161,30 @@ if (swiperCatalog) {
       },
     },
 
+     breakpoints: {
+      577: {
+        spaceBetween: 32,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+
+        grid: {
+          fill: 'row',
+          rows: 3,
+        },
+      },
+
+      831: {
+        spaceBetween: 32,
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+
+        grid: {
+          fill: 'row',
+          rows: 3,
+        },
+      },
+    },
+
     on: {
       init() {
         focusVisibleSlide(this.slides, 'ui-slide-visible');
