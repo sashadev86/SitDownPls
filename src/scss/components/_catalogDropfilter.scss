@@ -7,7 +7,7 @@
       & {
         display: flex;
         align-items: center;
-        margin-bottom: 32px;
+        margin-bottom: 31.5px;
       }
     }
   }
@@ -25,15 +25,15 @@
 
     &__item {
       position: relative;
-      width: 19.6%;
+      width: 20%;
     }
 
     &__item:first-child {
       width: max-content;
-      margin-right: 44px;
+      margin-right: 43px;
     }
 
-    &__item:not(:last-child) {
+    &__item:not(:last-child):not(:first-child) {
       margin-right: 32px;
     }
 
@@ -47,19 +47,19 @@
       border-radius: 0 0 10px 10px;
       background-color: var(--white-color);
       padding: 50px 10px 20px 20px;
-      z-index: 10;
-      transition: .2s ease-in-out;
+      z-index: 5;
+      transition: .3s ease-in-out;
 
       &.is-active {
         display: block;
         animation-name: dropdownOpen;
-        animation-duration: 0.4s;
+        animation-duration: .3s;
       }
 
       &.is-disabled {
         display: block;
         animation-name: dropdownClose;
-        animation-duration: 0.4s;
+        animation-duration: .3s;
       }
     }
 
