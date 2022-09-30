@@ -35,6 +35,13 @@
         gap: 15.5px 32px;
       }
     }
+
+    @include mobile {
+      & {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+    }
   }
 
   .dropfilter {
@@ -63,12 +70,12 @@
 
         &:nth-child(2) {
           grid-area: filtertwo;
-          z-index: 13;
+          z-index: 7;
         }
 
         &:nth-child(3) {
           grid-area: filterthree;
-          z-index: 13;
+          z-index: 7;
         }
 
         &:nth-child(4) {

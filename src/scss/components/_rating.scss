@@ -54,9 +54,6 @@
 
     & .card__item {
       @include tablet {
-        & {
-          padding: 30.3px 30px 30px 30px;
-        }
 
         & .card__picture {
           margin-bottom: 16.5px;
@@ -64,8 +61,9 @@
       }
 
       @include mobile {
-        & {
-          padding: 16.4px 16px 16px 16px;
+
+        & .card__content {
+          padding: 16px;
         }
 
         & .card__rating {

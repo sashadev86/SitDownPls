@@ -1,6 +1,12 @@
 .site-container--catalog {
   & .header {
     margin-bottom: 19px;
+
+    @include mobile {
+      & {
+        margin-bottom: 32px;
+      }
+    }
   }
 }
 
@@ -140,6 +146,52 @@
           margin-bottom: 26px;
         }
       }
+
+      @include mobile {
+        & {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    & .card__content {
+      padding: 16px 16px 16.8px 16px;
+    }
+
+    & .card__rating {
+      font-size: 12px;
+      line-height: 15.6px;
+    }
+
+    & .card__rating-img {
+      margin-right: 7px;
+      width: 13px;
+      height: 12px;
+    }
+
+    & .card__picture {
+      align-items: center;
+      margin-bottom: 7px;
+      margin-right: 0;
+      margin-left: 0;
+      padding-right: 0;
+      padding-left: 0;
+      min-height: 60.7px;
+    }
+
+    & .card__title {
+      margin-bottom: 16.5px;
+      font-size: 16px;
+    }
+
+    & .card__price {
+      margin-bottom: 14px;
+    }
+
+    & .card__link {
+      padding: 10px 23px;
     }
   }
 }
