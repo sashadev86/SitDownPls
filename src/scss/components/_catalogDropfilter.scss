@@ -10,6 +10,19 @@
         margin-bottom: 31.5px;
       }
     }
+
+    @include high-tablet {
+      & {
+        display: grid;
+        grid-template-columns: repeat(2, 186px);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "filterone filterone"
+        "filtertwo filterthree"
+        "filterfive filterfour";
+        gap: 16px 32px;
+      }
+    }
   }
 
   .dropfilter {
@@ -26,6 +39,34 @@
     &__item {
       position: relative;
       width: 20%;
+
+      @include high-tablet {
+        & {
+          width: 100%;
+        }
+
+        &:nth-child(1) {
+          grid-area: filterone;
+        }
+
+        &:nth-child(2) {
+          grid-area: filtertwo;
+          z-index: 13;
+        }
+
+        &:nth-child(3) {
+          grid-area: filterthree;
+          z-index: 13;
+        }
+
+        &:nth-child(4) {
+          grid-area: filterfour;
+        }
+
+        &:nth-child(4) {
+          grid-area: filterfive;
+        }
+      }
     }
 
     &__item:first-child {
