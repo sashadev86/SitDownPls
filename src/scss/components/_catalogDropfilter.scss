@@ -11,6 +11,12 @@
       }
     }
 
+    @include small-tablet {
+      & {
+        margin-bottom: 32px;
+      }
+    }
+
     @include high-tablet {
       & {
         display: grid;
@@ -21,6 +27,12 @@
         "filtertwo filterthree"
         "filterfive filterfour";
         gap: 16px 32px;
+      }
+    }
+
+    @include small-tablet {
+      & {
+        gap: 15.5px 32px;
       }
     }
   }

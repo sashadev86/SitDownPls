@@ -23,6 +23,15 @@
       background-color: transparent;
       transform: rotate(45deg);
       transition: border-color .3s ease-in-out;
+
+      @include small-tablet {
+        & {
+          top: 12px;
+          right: 16px;
+          width: 7px;
+          height: 7px;
+        }
+      }
     }
   }
 

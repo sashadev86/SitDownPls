@@ -134,6 +134,12 @@
           margin-bottom: 16px;
         }
       }
+
+      @include small-tablet {
+        & {
+          margin-bottom: 26px;
+        }
+      }
     }
   }
 }
