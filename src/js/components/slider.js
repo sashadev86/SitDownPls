@@ -129,9 +129,9 @@ if (swiperUseful) {
 let swiperCatalog = document.querySelector('.catalog__swiper');
 if (swiperCatalog) {
   swiperCatalog = new Swiper('.catalog__swiper', {
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    spaceBetween: 32,
+    spaceBetween: 16,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
     watchSlidesProgress: true,
     slideVisibleClass: 'ui-slide-visible',
     grid: {
@@ -162,7 +162,7 @@ if (swiperCatalog) {
     },
 
      breakpoints: {
-      577: {
+      576: {
         spaceBetween: 32,
         slidesPerView: 2,
         slidesPerGroup: 2,
@@ -173,7 +173,7 @@ if (swiperCatalog) {
         },
       },
 
-      831: {
+      769: {
         spaceBetween: 32,
         slidesPerView: 3,
         slidesPerGroup: 3,
