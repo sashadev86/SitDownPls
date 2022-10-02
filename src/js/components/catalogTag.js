@@ -1,6 +1,10 @@
-const furnitureSofas = document.querySelectorAll(".furniture__sofas");
-  const sofasTags = document.querySelectorAll(".furnitures-sofas");
-  const sofasBtn = document.querySelectorAll(".sofas-btn");
+let catalogContent = document.querySelector('.catalog__content');
+
+if(catalogContent) {
+
+  const furnitureSofas = catalogContent.querySelectorAll(".furniture__sofas");
+  const sofasTags = catalogContent.querySelectorAll(".furnitures-sofas");
+  const sofasBtn = catalogContent.querySelectorAll(".sofas-btn");
 
   furnitureSofas.forEach(function(sofas) {
     sofas.addEventListener("change", function() {
@@ -25,9 +29,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
      })
   })
 
-  const furnitureArmchair = document.querySelectorAll(".furniture__armchair");
-  const archairTags = document.querySelectorAll(".furnitures-armchair");
-  const archairBtn = document.querySelectorAll(".archair-btn");
+  const furnitureArmchair = catalogContent.querySelectorAll(".furniture__armchair");
+  const archairTags = catalogContent.querySelectorAll(".furnitures-armchair");
+  const archairBtn = catalogContent.querySelectorAll(".archair-btn");
 
   furnitureArmchair.forEach(function(archairs) {
     archairs.addEventListener("change", function() {
@@ -50,9 +54,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furniturePoufs = document.querySelectorAll(".furniture__poufs");
-  const poufsTags = document.querySelectorAll(".furnitures-poufs");
-  const poufsBtn = document.querySelectorAll(".poufs-btn");
+  const furniturePoufs = catalogContent.querySelectorAll(".furniture__poufs");
+  const poufsTags = catalogContent.querySelectorAll(".furnitures-poufs");
+  const poufsBtn = catalogContent.querySelectorAll(".poufs-btn");
 
   furniturePoufs.forEach(function(poufs) {
     poufs.addEventListener("change", function() {
@@ -75,9 +79,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureBeds = document.querySelectorAll(".furniture__beds");
-  const bedsTags = document.querySelectorAll(".furnitures-beds");
-  const bedsBtn = document.querySelectorAll(".beds-btn");
+  const furnitureBeds = catalogContent.querySelectorAll(".furniture__beds");
+  const bedsTags = catalogContent.querySelectorAll(".furnitures-beds");
+  const bedsBtn = catalogContent.querySelectorAll(".beds-btn");
 
   furnitureBeds.forEach(function(beds) {
     beds.addEventListener("change", function() {
@@ -100,9 +104,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furniturePedestals = document.querySelectorAll(".furniture__pedestals");
-  const pedestalsTags = document.querySelectorAll(".furnitures-pedestals");
-  const pedestalsBtn = document.querySelectorAll(".pedestals-btn");
+  const furniturePedestals = catalogContent.querySelectorAll(".furniture__pedestals");
+  const pedestalsTags = catalogContent.querySelectorAll(".furnitures-pedestals");
+  const pedestalsBtn = catalogContent.querySelectorAll(".pedestals-btn");
 
   furniturePedestals.forEach(function(pedestals) {
     pedestals.addEventListener("change", function() {
@@ -125,9 +129,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureCommode = document.querySelectorAll(".furniture__commode");
-  const commodeTags = document.querySelectorAll(".furnitures-commode");
-  const commodeBtn = document.querySelectorAll(".commode-btn");
+  const furnitureCommode = catalogContent.querySelectorAll(".furniture__commode");
+  const commodeTags = catalogContent.querySelectorAll(".furnitures-commode");
+  const commodeBtn = catalogContent.querySelectorAll(".commode-btn");
 
   furnitureCommode.forEach(function(commode) {
     commode.addEventListener("change", function() {
@@ -150,9 +154,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureChair = document.querySelectorAll(".furniture__chair");
-  const chairTags = document.querySelectorAll(".furnitures-chairs");
-  const chairBtn = document.querySelectorAll(".chairs-btn");
+  const furnitureChair = catalogContent.querySelectorAll(".furniture__chair");
+  const chairTags = catalogContent.querySelectorAll(".furnitures-chairs");
+  const chairBtn = catalogContent.querySelectorAll(".chairs-btn");
 
   furnitureChair.forEach(function(chair) {
     chair.addEventListener("change", function() {
@@ -175,9 +179,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureDesk = document.querySelectorAll(".furniture__desk");
-  const deskTags = document.querySelectorAll(".furnitures-desk");
-  const deskBtn = document.querySelectorAll(".desk-btn");
+  const furnitureDesk = catalogContent.querySelectorAll(".furniture__desk");
+  const deskTags = catalogContent.querySelectorAll(".furnitures-desk");
+  const deskBtn = catalogContent.querySelectorAll(".desk-btn");
 
   furnitureDesk.forEach(function(desk) {
     desk.addEventListener("change", function() {
@@ -200,9 +204,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureAccessories = document.querySelectorAll(".furniture__accessories");
-  const accessoriesTags = document.querySelectorAll(".furnitures-accessories");
-  const accessoriesBtn = document.querySelectorAll(".accessories-btn");
+  const furnitureAccessories = catalogContent.querySelectorAll(".furniture__accessories");
+  const accessoriesTags = catalogContent.querySelectorAll(".furnitures-accessories");
+  const accessoriesBtn = catalogContent.querySelectorAll(".accessories-btn");
 
   furnitureAccessories.forEach(function(accessories) {
     accessories.addEventListener("change", function() {
@@ -225,9 +229,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureStraightsofas = document.querySelectorAll(".furniture__straightsofas");
-  const straightsofasTags = document.querySelectorAll(".furnitures-straightsofas");
-  const straightsofasBtn = document.querySelectorAll(".straightsofas-btn");
+  const furnitureStraightsofas = catalogContent.querySelectorAll(".furniture__straightsofas");
+  const straightsofasTags = catalogContent.querySelectorAll(".furnitures-straightsofas");
+  const straightsofasBtn = catalogContent.querySelectorAll(".straightsofas-btn");
 
   furnitureStraightsofas.forEach(function(straightsofas) {
     straightsofas.addEventListener("change", function() {
@@ -250,9 +254,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureCornersofas = document.querySelectorAll(".furniture__cornersofas");
-  const cornersofasTags = document.querySelectorAll(".furnitures-cornersofas");
-  const cornersofasBtn = document.querySelectorAll(".cornersofas-btn");
+  const furnitureCornersofas = catalogContent.querySelectorAll(".furniture__cornersofas");
+  const cornersofasTags = catalogContent.querySelectorAll(".furnitures-cornersofas");
+  const cornersofasBtn = catalogContent.querySelectorAll(".cornersofas-btn");
 
   furnitureCornersofas.forEach(function(cornersofas) {
     cornersofas.addEventListener("change", function() {
@@ -275,9 +279,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureModularsofas = document.querySelectorAll(".furniture__modularsofas");
-  const modularsofasTags = document.querySelectorAll(".furnitures-modularsofas");
-  const modularsofasBtn = document.querySelectorAll(".modularsofas-btn");
+  const furnitureModularsofas = catalogContent.querySelectorAll(".furniture__modularsofas");
+  const modularsofasTags = catalogContent.querySelectorAll(".furnitures-modularsofas");
+  const modularsofasBtn = catalogContent.querySelectorAll(".modularsofas-btn");
 
   furnitureModularsofas.forEach(function(modularsofas) {
     modularsofas.addEventListener("change", function() {
@@ -300,9 +304,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureLeatherettesofas = document.querySelectorAll(".furniture__leatherettesofas");
-  const leatherettesofasTags = document.querySelectorAll(".furnitures-leatherettesofas");
-  const leatherettesofasBtn = document.querySelectorAll(".leatherettesofas-btn");
+  const furnitureLeatherettesofas = catalogContent.querySelectorAll(".furniture__leatherettesofas");
+  const leatherettesofasTags = catalogContent.querySelectorAll(".furnitures-leatherettesofas");
+  const leatherettesofasBtn = catalogContent.querySelectorAll(".leatherettesofas-btn");
 
   furnitureLeatherettesofas.forEach(function(leatherettesofas) {
     leatherettesofas.addEventListener("change", function() {
@@ -325,9 +329,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureUpholsteredarmchairs = document.querySelectorAll(".furniture__upholsteredarmchairs");
-  const upholsteredarmchairsTags = document.querySelectorAll(".furnitures-upholsteredarmchairs");
-  const upholsteredarmchairsBtn = document.querySelectorAll(".upholsteredarmchairs-btn");
+  const furnitureUpholsteredarmchairs = catalogContent.querySelectorAll(".furniture__upholsteredarmchairs");
+  const upholsteredarmchairsTags = catalogContent.querySelectorAll(".furnitures-upholsteredarmchairs");
+  const upholsteredarmchairsBtn = catalogContent.querySelectorAll(".upholsteredarmchairs-btn");
 
   furnitureUpholsteredarmchairs.forEach(function(upholsteredarmchairs) {
     upholsteredarmchairs.addEventListener("change", function() {
@@ -350,9 +354,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureChairbeds = document.querySelectorAll(".furniture__chairbeds");
-  const chairbedsTags = document.querySelectorAll(".furnitures-chairbeds");
-  const chairbedsBtn = document.querySelectorAll(".chairbeds-btn");
+  const furnitureChairbeds = catalogContent.querySelectorAll(".furniture__chairbeds");
+  const chairbedsTags = catalogContent.querySelectorAll(".furnitures-chairbeds");
+  const chairbedsBtn = catalogContent.querySelectorAll(".chairbeds-btn");
 
   furnitureChairbeds.forEach(function(chairbeds) {
     chairbeds.addEventListener("change", function() {
@@ -375,9 +379,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureSinglebeds = document.querySelectorAll(".furniture__singlebeds");
-  const singlebedsTags = document.querySelectorAll(".furnitures-singlebeds");
-  const singlebedsBtn = document.querySelectorAll(".singlebeds-btn");
+  const furnitureSinglebeds = catalogContent.querySelectorAll(".furniture__singlebeds");
+  const singlebedsTags = catalogContent.querySelectorAll(".furnitures-singlebeds");
+  const singlebedsBtn = catalogContent.querySelectorAll(".singlebeds-btn");
 
   furnitureSinglebeds.forEach(function(singlebeds) {
     singlebeds.addEventListener("change", function() {
@@ -400,9 +404,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureDoublebeds = document.querySelectorAll(".furniture__doublebeds");
-  const doublebedsTags = document.querySelectorAll(".furnitures-doublebeds");
-  const doublebedsBtn = document.querySelectorAll(".doublebeds-btn");
+  const furnitureDoublebeds = catalogContent.querySelectorAll(".furniture__doublebeds");
+  const doublebedsTags = catalogContent.querySelectorAll(".furnitures-doublebeds");
+  const doublebedsBtn = catalogContent.querySelectorAll(".doublebeds-btn");
 
   furnitureDoublebeds.forEach(function(doublebeds) {
     doublebeds.addEventListener("change", function() {
@@ -425,9 +429,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureWoodenchairs = document.querySelectorAll(".furniture__woodenchairs");
-  const woodenchairsTags = document.querySelectorAll(".furnitures-woodenchairs");
-  const woodenchairsBtn = document.querySelectorAll(".woodenchairs-btn");
+  const furnitureWoodenchairs = catalogContent.querySelectorAll(".furniture__woodenchairs");
+  const woodenchairsTags = catalogContent.querySelectorAll(".furnitures-woodenchairs");
+  const woodenchairsBtn = catalogContent.querySelectorAll(".woodenchairs-btn");
 
   furnitureWoodenchairs.forEach(function(woodenchairs) {
     woodenchairs.addEventListener("change", function() {
@@ -450,9 +454,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureMetalchairs = document.querySelectorAll(".furniture__metalchairs");
-  const metalchairsTags = document.querySelectorAll(".furnitures-metalchairs");
-  const metalchairsBtn = document.querySelectorAll(".metalchairs-btn");
+  const furnitureMetalchairs = catalogContent.querySelectorAll(".furniture__metalchairs");
+  const metalchairsTags = catalogContent.querySelectorAll(".furnitures-metalchairs");
+  const metalchairsBtn = catalogContent.querySelectorAll(".metalchairs-btn");
 
   furnitureMetalchairs.forEach(function(metalchairs) {
     metalchairs.addEventListener("change", function() {
@@ -475,9 +479,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureAlarmclocks = document.querySelectorAll(".furniture__alarmclocks");
-  const alarmclocksTags = document.querySelectorAll(".furnitures-alarmclocks");
-  const alarmclocksBtn = document.querySelectorAll(".alarmclocks-btn");
+  const furnitureAlarmclocks = catalogContent.querySelectorAll(".furniture__alarmclocks");
+  const alarmclocksTags = catalogContent.querySelectorAll(".furnitures-alarmclocks");
+  const alarmclocksBtn = catalogContent.querySelectorAll(".alarmclocks-btn");
 
   furnitureAlarmclocks.forEach(function(alarmclocks) {
     alarmclocks.addEventListener("change", function() {
@@ -500,9 +504,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const furnitureSculptures = document.querySelectorAll(".furniture__sculptures");
-  const sculpturesTags = document.querySelectorAll(".furnitures-sculptures");
-  const sculpturesBtn = document.querySelectorAll(".sculptures-btn");
+  const furnitureSculptures = catalogContent.querySelectorAll(".furniture__sculptures");
+  const sculpturesTags = catalogContent.querySelectorAll(".furnitures-sculptures");
+  const sculpturesBtn = catalogContent.querySelectorAll(".sculptures-btn");
 
   furnitureSculptures.forEach(function(sculptures) {
     sculptures.addEventListener("change", function() {
@@ -525,9 +529,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const inputPrc = document.getElementById("second-price");
-  const priceTags = document.querySelectorAll(".tag-price");
-  const priceBtn = document.querySelectorAll(".prc-btn");
+  const inputPrc = catalogContent.querySelector(".second-price");
+  const priceTags = catalogContent.querySelectorAll(".tag-price");
+  const priceBtn = catalogContent.querySelectorAll(".prc-btn");
 
   inputPrc.addEventListener("change", function() {
       priceTags.forEach(function(priceTag) {
@@ -544,9 +548,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const morediscount = document.querySelectorAll(".catalog__more");
-  const morediscountTags = document.querySelectorAll(".morediscount");
-  const morediscountBtn = document.querySelectorAll(".morediscount-btn");
+  const morediscount = catalogContent.querySelectorAll(".catalog__more");
+  const morediscountTags = catalogContent.querySelectorAll(".morediscount");
+  const morediscountBtn = catalogContent.querySelectorAll(".morediscount-btn");
 
   morediscount.forEach(function(morediscount) {
     morediscount.addEventListener("change", function() {
@@ -569,9 +573,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const lessdiscount = document.querySelectorAll(".catalog__less");
-  const lessdiscountTags = document.querySelectorAll(".lessdiscount");
-  const lessdiscountBtn = document.querySelectorAll(".lessdiscount-btn");
+  const lessdiscount = catalogContent.querySelectorAll(".catalog__less");
+  const lessdiscountTags = catalogContent.querySelectorAll(".lessdiscount");
+  const lessdiscountBtn = catalogContent.querySelectorAll(".lessdiscount-btn");
 
   lessdiscount.forEach(function(lessdiscount) {
     lessdiscount.addEventListener("change", function() {
@@ -594,9 +598,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const nodiscount = document.querySelectorAll(".catalog__nodiscount");
-  const nodiscountTags = document.querySelectorAll(".nodiscount");
-  const nodiscountBtn = document.querySelectorAll(".nodiscount-btn");
+  const nodiscount = catalogContent.querySelectorAll(".catalog__nodiscount");
+  const nodiscountTags = catalogContent.querySelectorAll(".nodiscount");
+  const nodiscountBtn = catalogContent.querySelectorAll(".nodiscount-btn");
 
   nodiscount.forEach(function(nodiscount) {
     nodiscount.addEventListener("change", function() {
@@ -620,9 +624,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
   })
 
 
-  const colorBrown = document.querySelectorAll(".color__brown");
-  const brownTags = document.querySelectorAll(".color-brown");
-  const brownBtn = document.querySelectorAll(".brown-btn");
+  const colorBrown = catalogContent.querySelectorAll(".color__brown");
+  const brownTags = catalogContent.querySelectorAll(".color-brown");
+  const brownBtn = catalogContent.querySelectorAll(".brown-btn");
 
   colorBrown.forEach(function(brown) {
     brown.addEventListener("change", function() {
@@ -645,9 +649,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorBlack = document.querySelectorAll(".color__black");
-  const blackTags = document.querySelectorAll(".color-black");
-  const blackBtn = document.querySelectorAll(".black-btn");
+  const colorBlack = catalogContent.querySelectorAll(".color__black");
+  const blackTags = catalogContent.querySelectorAll(".color-black");
+  const blackBtn = catalogContent.querySelectorAll(".black-btn");
 
   colorBlack.forEach(function(black) {
     black.addEventListener("change", function() {
@@ -670,9 +674,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorBeige = document.querySelectorAll(".color__beige");
-  const beigeTags = document.querySelectorAll(".color-beige");
-  const beigeBtn = document.querySelectorAll(".beige-btn");
+  const colorBeige = catalogContent.querySelectorAll(".color__beige");
+  const beigeTags = catalogContent.querySelectorAll(".color-beige");
+  const beigeBtn = catalogContent.querySelectorAll(".beige-btn");
 
   colorBeige.forEach(function(beige) {
     beige.addEventListener("change", function() {
@@ -695,9 +699,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorGray = document.querySelectorAll(".color__gray");
-  const grayTags = document.querySelectorAll(".color-gray");
-  const grayBtn = document.querySelectorAll(".gray-btn");
+  const colorGray = catalogContent.querySelectorAll(".color__gray");
+  const grayTags = catalogContent.querySelectorAll(".color-gray");
+  const grayBtn = catalogContent.querySelectorAll(".gray-btn");
 
   colorGray.forEach(function(gray) {
     gray.addEventListener("change", function() {
@@ -721,9 +725,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
   })
 
 
-  const colorWhite = document.querySelectorAll(".color__white");
-  const whiteTags = document.querySelectorAll(".color-white");
-  const whiteBtn = document.querySelectorAll(".white-btn");
+  const colorWhite = catalogContent.querySelectorAll(".color__white");
+  const whiteTags = catalogContent.querySelectorAll(".color-white");
+  const whiteBtn = catalogContent.querySelectorAll(".white-btn");
 
   colorWhite.forEach(function(white) {
     white.addEventListener("change", function() {
@@ -746,9 +750,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorNavy = document.querySelectorAll(".color__navy");
-  const navyTags = document.querySelectorAll(".color-navy");
-  const navyBtn = document.querySelectorAll(".navy-btn");
+  const colorNavy = catalogContent.querySelectorAll(".color__navy");
+  const navyTags = catalogContent.querySelectorAll(".color-navy");
+  const navyBtn = catalogContent.querySelectorAll(".navy-btn");
 
   colorNavy.forEach(function(navy) {
     navy.addEventListener("change", function() {
@@ -772,9 +776,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
   })
 
 
-  const colorOrange = document.querySelectorAll(".color__orange");
-  const orangeTags = document.querySelectorAll(".color-orange");
-  const orangeBtn = document.querySelectorAll(".orange-btn");
+  const colorOrange = catalogContent.querySelectorAll(".color__orange");
+  const orangeTags = catalogContent.querySelectorAll(".color-orange");
+  const orangeBtn = catalogContent.querySelectorAll(".orange-btn");
 
   colorOrange.forEach(function(orange) {
     orange.addEventListener("change", function() {
@@ -797,9 +801,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorYellow = document.querySelectorAll(".color__yellow");
-  const yellowTags = document.querySelectorAll(".color-yellow");
-  const yellowBtn = document.querySelectorAll(".yellow-btn");
+  const colorYellow = catalogContent.querySelectorAll(".color__yellow");
+  const yellowTags = catalogContent.querySelectorAll(".color-yellow");
+  const yellowBtn = catalogContent.querySelectorAll(".yellow-btn");
 
   colorYellow.forEach(function(yellow) {
     yellow.addEventListener("change", function() {
@@ -822,9 +826,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorGreen = document.querySelectorAll(".color__green");
-  const greenTags = document.querySelectorAll(".color-green");
-  const greenBtn = document.querySelectorAll(".green-btn");
+  const colorGreen = catalogContent.querySelectorAll(".color__green");
+  const greenTags = catalogContent.querySelectorAll(".color-green");
+  const greenBtn = catalogContent.querySelectorAll(".green-btn");
 
   colorGreen.forEach(function(green) {
     green.addEventListener("change", function() {
@@ -847,9 +851,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorRed = document.querySelectorAll(".color__red");
-  const redTags = document.querySelectorAll(".color-red");
-  const redBtn = document.querySelectorAll(".red-btn");
+  const colorRed = catalogContent.querySelectorAll(".color__red");
+  const redTags = catalogContent.querySelectorAll(".color-red");
+  const redBtn = catalogContent.querySelectorAll(".red-btn");
 
   colorRed.forEach(function(red) {
     red.addEventListener("change", function() {
@@ -872,9 +876,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorPurple = document.querySelectorAll(".color__purple");
-  const purpleTags = document.querySelectorAll(".color-purple");
-  const purpleBtn = document.querySelectorAll(".purple-btn");
+  const colorPurple = catalogContent.querySelectorAll(".color__purple");
+  const purpleTags = catalogContent.querySelectorAll(".color-purple");
+  const purpleBtn = catalogContent.querySelectorAll(".purple-btn");
 
   colorPurple.forEach(function(purple) {
     purple.addEventListener("change", function() {
@@ -897,9 +901,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorPink = document.querySelectorAll(".color__pink");
-  const pinkTags = document.querySelectorAll(".color-pink");
-  const pinkBtn = document.querySelectorAll(".pink-btn");
+  const colorPink = catalogContent.querySelectorAll(".color__pink");
+  const pinkTags = catalogContent.querySelectorAll(".color-pink");
+  const pinkBtn = catalogContent.querySelectorAll(".pink-btn");
 
   colorPink.forEach(function(pink) {
     pink.addEventListener("change", function() {
@@ -922,9 +926,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorBlue = document.querySelectorAll(".color__blue");
-  const blueTags = document.querySelectorAll(".color-blue");
-  const blueBtn = document.querySelectorAll(".blue-btn");
+  const colorBlue = catalogContent.querySelectorAll(".color__blue");
+  const blueTags = catalogContent.querySelectorAll(".color-blue");
+  const blueBtn = catalogContent.querySelectorAll(".blue-btn");
 
   colorBlue.forEach(function(blue) {
     blue.addEventListener("change", function() {
@@ -947,9 +951,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorLightgreen = document.querySelectorAll(".color__lightgreen");
-  const lightgreenTags = document.querySelectorAll(".color-lightgreen");
-  const lightgreenBtn = document.querySelectorAll(".lightgreen-btn");
+  const colorLightgreen = catalogContent.querySelectorAll(".color__lightgreen");
+  const lightgreenTags = catalogContent.querySelectorAll(".color-lightgreen");
+  const lightgreenBtn = catalogContent.querySelectorAll(".lightgreen-btn");
 
   colorLightgreen.forEach(function(lightgreen) {
     lightgreen.addEventListener("change", function() {
@@ -972,9 +976,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorAquamarine = document.querySelectorAll(".color__aquamarine");
-  const aquamarineTags = document.querySelectorAll(".color-aquamarine");
-  const aquamarineBtn = document.querySelectorAll(".aquamarine-btn");
+  const colorAquamarine = catalogContent.querySelectorAll(".color__aquamarine");
+  const aquamarineTags = catalogContent.querySelectorAll(".color-aquamarine");
+  const aquamarineBtn = catalogContent.querySelectorAll(".aquamarine-btn");
 
   colorAquamarine.forEach(function(aquamarine) {
     aquamarine.addEventListener("change", function() {
@@ -997,9 +1001,9 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
     })
   })
 
-  const colorGrayc = document.querySelectorAll(".color__grayc");
-  const graycTags = document.querySelectorAll(".color-grayc");
-  const graycBtn = document.querySelectorAll(".grayc-btn");
+  const colorGrayc = catalogContent.querySelectorAll(".color__grayc");
+  const graycTags = catalogContent.querySelectorAll(".color-grayc");
+  const graycBtn = catalogContent.querySelectorAll(".grayc-btn");
 
   colorGrayc.forEach(function(grayc) {
     grayc.addEventListener("change", function() {
@@ -1021,3 +1025,5 @@ const furnitureSofas = document.querySelectorAll(".furniture__sofas");
       })
     })
   })
+}
+

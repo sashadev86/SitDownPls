@@ -24,9 +24,10 @@ if(rangeSlider) {
 
 const firstPrice = document.getElementById("first-price");
 const secondPrice = document.getElementById("second-price");
-const inputPrice = [firstPrice, secondPrice];
 
-if(firstPrice, secondPrice, inputPrice) {
+if(firstPrice && secondPrice) {
+
+  const inputPrice = [firstPrice, secondPrice];
 
   rangeSlider.noUiSlider.on("update", function(values,handle) {
     inputPrice[handle].value = Math.round(values[handle])
