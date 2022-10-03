@@ -1,0 +1,25 @@
+.product {
+
+  &__info {
+    &-large {
+      &-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-btn {
+        cursor: zoom-in;
+      }
+    }
+
+    &-box {
+      &-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.product {
+  &__info {
+    &-first {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: minmax(245px, auto) minmax(81px, auto);
+      column-gap: 32px;
+      row-gap: 16px;
+    }
+
+    &-large {
+      max-width: 100%;
+      grid-column: 1/7;
+    }
+
+    &-box {
+      max-width: 100%;
+      grid-column: 1/7;
+      grid-row: 2/3;
+      padding: 10px 25px;
+      background-color: var(--grey-light-color);
+    }
+
+    &-buy {
+      grid-column: 7/13;
+    }
+  }
+}
