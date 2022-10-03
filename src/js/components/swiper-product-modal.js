@@ -2,7 +2,7 @@ import Swiper, { Pagination, Autoplay, Keyboard, A11y, Navigation, Grid, Thumbs 
 Swiper.use([Pagination, Autoplay, Keyboard, A11y, Navigation, Grid, Thumbs]);
 
 let swiperModalLarge = document.querySelector('.product-large-modal');
-let swiperModaleSmall = document.querySelector('.product-small-mobile');
+let swiperModaleSmall = document.querySelector('.product-small-modal');
 
 let additionalSwiper = new Swiper(swiperModaleSmall, {
   spaceBetween: 10,

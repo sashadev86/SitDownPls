@@ -10,5 +10,5 @@ import './components/catalogColors';
 import './components/catalogTag';
 import './components/catalogDropfilter';
 import './components/swiper-product-page';
-import './components/swiper-product-mobile';
+import './components/swiper-product-modal';
 import './components/productModalImage';

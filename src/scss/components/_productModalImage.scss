@@ -1,0 +1,56 @@
+.product {
+  &__modal {
+    background-color: var(--night-rider-03-color);
+
+    & .graph-modal__container {
+      width: 100%;
+      padding: 0;
+      background-color: var(--white-color);
+    }
+
+    &-wrap {
+      &-large {
+        padding: 50px 107px;
+      }
+    }
+
+    &-large {
+      &-wrapper {
+        align-items: center;
+      }
+
+      &-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &-small {
+      padding: 20px 51px;
+    }
+
+    &-small {
+      &-wrapper {
+        align-items: center;
+      }
+
+      &-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &-btn {
+      top: 20px;
+      right: 20px;
+
+      &-img {
+        width: 20px;
+        height: 20px;
+        fill: var(--grey-color);
+      }
+    }
+  }
+}

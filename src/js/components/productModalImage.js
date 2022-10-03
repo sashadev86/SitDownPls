@@ -1,5 +1,5 @@
 import GraphModal from 'graph-modal';
-import primarySwiper from './swiper-product-mobile';
+import primarySwiper from './swiper-product-modal';
 
 const swiperLargeBtns = document.querySelectorAll('.product-button');
 
