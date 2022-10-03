@@ -23,6 +23,10 @@
 
     &-buy {
       grid-column: 7/13;
+      grid-row: 1/3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 }
