@@ -23,7 +23,7 @@ if (productInfo) {
       1071: {
         direction: 'horizontal',
         slidesPerView: 4,
-        spaceBetween: 38,
+        spaceBetween: 20,
       },
 
       993: {

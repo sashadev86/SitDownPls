@@ -1,6 +1,7 @@
 .product {
   &__info {
     &-first {
+      margin-bottom: 32px;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: minmax(245px, auto) minmax(81px, auto);

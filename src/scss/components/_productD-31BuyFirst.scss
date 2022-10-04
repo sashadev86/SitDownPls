@@ -1,0 +1,41 @@
+.product {
+  &__info {
+    &-buy {
+
+      &-rating {
+        margin-bottom: 5px;
+      }
+
+      &-title {
+        margin-bottom: 5px;
+      }
+
+      &-text {
+        margin-bottom: 21px;
+        font-size: 14px;
+        line-height: 100%;
+        color: var(--grey-color);
+      }
+
+      &-price {
+        margin-bottom: 21px;
+        font-size: 36px;
+        line-height: 130%;
+        color: var(--night-rider-color);
+      }
+
+      &-click-btn {
+        margin-bottom: 12px;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+      }
+
+      &-basket-btn {
+        transform: translateX(30px);
+        font-size: 16px;
+        line-height: 130%;
+        color: var(--primary-color);
+      }
+    }
+  }
+}
