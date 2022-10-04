@@ -7,7 +7,7 @@
 
           &-name {
             font-size: 14px;
-            line-height: 180%;
+            line-height: 25px;
             color: var(--grey-color);
           }
 
@@ -15,13 +15,13 @@
             margin: 0 4px;
             flex-grow: 1;
             height: 18px;
-            border-bottom: 2px dotted var(--grey-color);
+            border-bottom: 1.7px dotted var(--grey-color);
           }
 
           &-value {
             width: 296px;
             font-size: 14px;
-            line-height: 180%;
+            line-height: 25px;
             color: var(--night-rider-color);
           }
         }

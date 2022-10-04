@@ -3,28 +3,29 @@
     &-buy {
 
       &-rating {
-        margin-bottom: 5px;
+        margin-bottom: 3px;
       }
 
       &-title {
-        margin-bottom: 5px;
+        margin-bottom: 4px;
       }
 
       &-text {
-        margin-bottom: 21px;
+        margin-bottom: 20.25px;
         font-size: 14px;
         line-height: 100%;
         color: var(--grey-color);
       }
 
       &-price {
-        margin-bottom: 21px;
+        margin-bottom: 22px;
         font-size: 36px;
         line-height: 130%;
         color: var(--night-rider-color);
       }
 
       &-click-btn {
+        padding: 16.8px 33px;
         margin-bottom: 12px;
         background-color: var(--primary-color);
         color: var(--white-color);

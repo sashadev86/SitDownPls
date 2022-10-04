@@ -2,12 +2,14 @@
   margin-bottom: 70px;
 
   &__wrap {
-    margin-bottom: 24px;
+    margin-bottom: 23px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     &-title {
+      padding-top: 0.5px;
+      padding-left: 1px;
       font-weight: 400;
       font-size: 24px;
       line-height: 130%;
@@ -16,6 +18,7 @@
   }
 
   &__controls {
+    margin-top: -2px;
     width: 77px;
     display: flex;
     align-items: center;
