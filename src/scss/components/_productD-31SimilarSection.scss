@@ -1,0 +1,93 @@
+.similar {
+  margin-bottom: 70px;
+
+  &__wrap {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: var(--night-rider-color);
+    }
+  }
+
+  &__controls {
+    width: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      & {
+        position: absolute;
+        left: 37.8%;
+        bottom: 12px;
+      }
+    }
+
+    &-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 100px;
+      border: 2px solid var(--primary-color);
+      transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+      @include hover {
+        +& {
+          background-color: var(--primary-color);
+        }
+
+        +& .similar__controls-img {
+          stroke: var(--white-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        background-color: var(--primary-light-color);
+      }
+
+      &:focus-visible:not(:hover):not(:active) .similar__controls-img {
+        stroke: var(--white-color);
+      }
+
+      &:active {
+        background-color: var(--primary-shade-color);
+        border-color: var(--primary-shade-color);
+      }
+
+      &:active .similar__controls-img {
+        stroke: var(--white-color);
+      }
+    }
+
+    &-btn.swiper-button-disabled {
+      border-color: var(--grey-color);
+
+      @include hover {
+        +& {
+          background-color: transparent;
+        }
+      }
+
+      & .similar__controls-img {
+        stroke: var(--grey-color);
+      }
+    }
+
+    &-img {
+      width: 8px;
+      height: 28px;
+      fill: transparent;
+      stroke: var(--primary-color);
+      transition: stroke .3s ease-in-out;
+    }
+
+    &-prev-img {
+      transform: rotate(180deg);
+    }
+  }
+}
