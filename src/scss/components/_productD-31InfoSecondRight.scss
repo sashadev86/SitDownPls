@@ -1,0 +1,31 @@
+.product {
+  &__info {
+    &-second {
+      &-right {
+        &-item {
+          display: flex;
+
+          &-name {
+            font-size: 14px;
+            line-height: 180%;
+            color: var(--grey-color);
+          }
+
+          &-border {
+            margin: 0 4px;
+            flex-grow: 1;
+            height: 18px;
+            border-bottom: 2px dotted var(--grey-color);
+          }
+
+          &-value {
+            width: 296px;
+            font-size: 14px;
+            line-height: 180%;
+            color: var(--night-rider-color);
+          }
+        }
+      }
+    }
+  }
+}
