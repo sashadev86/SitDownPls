@@ -3,7 +3,8 @@ import primarySwiper from './swiper-product-modal';
 
 const swiperLargeBtns = document.querySelectorAll('.product-button');
 
-const productModalImage = new GraphModal({
+let productModalImage = document.querySelector('.product__modal')
+productModalImage = new GraphModal({
 	isOpen: (productModalImage) => {
 		[...swiperLargeBtns].forEach((button, index) => {
       button.setAttribute('data-index', index);
@@ -15,4 +16,3 @@ const productModalImage = new GraphModal({
     });
 	},
 });
-

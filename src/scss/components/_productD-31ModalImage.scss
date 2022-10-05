@@ -2,7 +2,7 @@
   &__modal {
     background-color: var(--night-rider-03-color);
 
-    & .graph-modal__container {
+    &-container {
       width: 100%;
       padding: 0;
       background-color: var(--white-color);
