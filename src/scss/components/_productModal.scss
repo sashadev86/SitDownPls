@@ -1,5 +1,16 @@
 .product {
   &__modal {
     background-color: var(--night-rider-03-color);
+
+    &-btn {
+      top: 20px;
+      right: 20px;
+
+      &-img {
+        width: 20px;
+        height: 20px;
+        fill: var(--grey-color);
+      }
+    }
   }
 }

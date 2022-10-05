@@ -1,9 +1,31 @@
 .product {
   &__buy {
+
     &-container {
       padding: 30px;
       max-width: 624px;
       min-height: 424px;
+    }
+
+    &-title {
+      margin-bottom: 8px;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 100%;
+      color: var(--night-rider-color);
+    }
+
+    &-text {
+      max-width: 374px;
+      font-size: 14px;
+      line-height: 19px;
+      color: var(--night-rider-color);
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
     }
   }
 }
