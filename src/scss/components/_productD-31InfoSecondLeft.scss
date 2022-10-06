@@ -26,6 +26,20 @@
           padding-bottom: 0.5px;
           display: flex;
           column-gap: 32px;
+
+          @include high-desktop {
+            & {
+              column-gap: 28px;
+            }
+          }
+        }
+
+        &-image {
+          @include high-desktop {
+            & {
+              width: 243px;
+            }
+          }
         }
       }
     }

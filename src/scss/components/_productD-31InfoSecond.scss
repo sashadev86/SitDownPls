@@ -6,16 +6,35 @@
       grid-auto-rows: auto;
       column-gap: 32px;
 
+      @include high-desktop {
+        & {
+          grid-template-columns: repeat(9, 1fr);
+        }
+      }
+
       &-left {
         grid-column: 1/7;
         min-height: 375px;
         display: flex;
         flex-direction: column;
+
+        @include high-desktop {
+          & {
+            grid-column: 1/6;
+            padding-left: 1px;
+          }
+        }
       }
 
       &-right {
         grid-column: 7/13;
         padding-top: 0.5px;
+
+        @include high-desktop {
+          & {
+            grid-column: 6/10;
+          }
+        }
       }
     }
   }

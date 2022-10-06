@@ -11,6 +11,14 @@
       &-btn {
         cursor: zoom-in;
       }
+
+      &-image {
+        @include high-desktop {
+          & {
+            height: 201px;
+          }
+        }
+      }
     }
 
     &-box {

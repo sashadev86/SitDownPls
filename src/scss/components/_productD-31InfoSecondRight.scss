@@ -23,6 +23,12 @@
             font-size: 14px;
             line-height: 25px;
             color: var(--night-rider-color);
+
+            @include high-desktop {
+              & {
+                width: 216px;
+              }
+            }
           }
         }
       }
