@@ -30,14 +30,6 @@
     align-items: center;
     justify-content: space-between;
 
-    @include mobile {
-      & {
-        position: absolute;
-        left: 37.8%;
-        bottom: 12px;
-      }
-    }
-
     &-btn {
       width: 32px;
       height: 32px;

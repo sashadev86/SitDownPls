@@ -10,7 +10,7 @@ if (productInfo) {
 
   const additionalSwiper = new Swiper(productCardSmall, {
     slidesPerView: 2.6,
-    spaceBetween: 38,
+    spaceBetween: 15,
 
     a11y: {
       prevSlideMessage: 'Предыдущий слайд',

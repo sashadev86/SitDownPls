@@ -12,6 +12,12 @@
         }
       }
 
+      @include high-tablet {
+        & {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }
+
       &-left {
         grid-column: 1/7;
         min-height: 375px;
@@ -24,6 +30,14 @@
             padding-left: 1px;
           }
         }
+
+        @include high-tablet {
+          & {
+            margin-bottom: 31.5px;
+            grid-column: 1/7;
+            min-height: 325px;
+          }
+        }
       }
 
       &-right {
@@ -33,6 +47,12 @@
         @include high-desktop {
           & {
             grid-column: 6/10;
+          }
+        }
+
+        @include high-tablet {
+          & {
+            grid-column: 1/7;
           }
         }
       }

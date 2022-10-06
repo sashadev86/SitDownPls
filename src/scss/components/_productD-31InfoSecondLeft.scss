@@ -19,6 +19,12 @@
           &--first {
             margin-bottom: 8px;
           }
+
+          @include high-tablet {
+            & {
+              max-width: 514px;
+            }
+          }
         }
 
         &-img {

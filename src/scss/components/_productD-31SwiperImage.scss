@@ -18,10 +18,30 @@
             height: 201px;
           }
         }
+
+        @include high-tablet {
+          & {
+            height: 242.5px;
+          }
+        }
+
+        @include small-tablet {
+          & {
+            height: auto;
+          }
+        }
       }
     }
 
     &-box {
+      &-swiper {
+        @include high-tablet {
+          & {
+            height: 100%;
+          }
+        }
+      }
+
       &-slide {
         display: flex;
         align-items: center;

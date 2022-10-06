@@ -28,4 +28,10 @@
       margin-bottom: 71.3px;
     }
   }
+
+  @include high-tablet {
+    & {
+      margin-bottom: 32.5px;
+    }
+  }
 }
