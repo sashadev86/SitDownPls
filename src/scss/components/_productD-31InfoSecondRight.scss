@@ -5,10 +5,27 @@
         &-item {
           display: flex;
 
+          @include mobile {
+            & {
+              flex-direction: column;
+            }
+
+            &:not(:last-child) {
+              margin-bottom: 8px;
+            }
+          }
+
           &-name {
             font-size: 14px;
             line-height: 25px;
             color: var(--grey-color);
+
+            @include mobile {
+              & {
+                font-size: 10px;
+                line-height: 14px;
+              }
+            }
           }
 
           &-border {
@@ -16,6 +33,12 @@
             flex-grow: 1;
             height: 18px;
             border-bottom: 1.7px dotted var(--grey-color);
+
+            @include mobile {
+              & {
+                display: none;
+              }
+            }
           }
 
           &-value {
@@ -27,6 +50,12 @@
             @include high-desktop {
               & {
                 width: 216px;
+              }
+            }
+
+            @include mobile {
+              & {
+                line-height: 19px;
               }
             }
           }

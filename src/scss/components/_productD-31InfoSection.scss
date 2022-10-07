@@ -14,7 +14,13 @@
 
     @include high-desktop {
       & {
-        margin-bottom: 31.2px;
+        margin-bottom: 32px;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        margin-bottom: 31.5px;
       }
     }
   }

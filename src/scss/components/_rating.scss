@@ -59,51 +59,6 @@
           margin-bottom: 16.5px;
         }
       }
-
-      @include mobile {
-
-        & .card__content {
-          padding: 16px;
-        }
-
-        & .card__rating {
-          font-size: 12px;
-        }
-
-        & .card__rating-img {
-          margin-right: 6px;
-          width: 13px;
-          height: 12px;
-        }
-
-        & .card__picture {
-          margin-bottom: 7px;
-          min-height: 60.9px;
-          align-items: center;
-          margin-right: -15px;
-          margin-left: -15px;
-          padding-right: 0;
-          padding-left: 0;
-        }
-
-        & .card__picture-image {
-          width: 78%;
-        }
-
-        & .card__title {
-          margin-bottom: 16px;
-          max-width: 108px;
-          font-size: 16px;
-        }
-
-        & .card__price {
-          margin-bottom: 16px;
-        }
-
-        & .card__link {
-          padding: 10px 23px;
-        }
-      }
     }
 
     & .card__item:nth-child(n + 9) {

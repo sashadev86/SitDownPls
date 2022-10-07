@@ -18,6 +18,12 @@
         }
       }
 
+      @include mobile {
+        & {
+          margin-bottom: 70.5px;
+        }
+      }
+
       &-left {
         grid-column: 1/7;
         min-height: 375px;
@@ -36,6 +42,12 @@
             margin-bottom: 31.5px;
             grid-column: 1/7;
             min-height: 325px;
+          }
+        }
+
+        @include mobile {
+          & {
+            min-height: 403px;
           }
         }
       }

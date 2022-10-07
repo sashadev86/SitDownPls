@@ -25,6 +25,12 @@
               max-width: 514px;
             }
           }
+
+          @include mobile {
+            & {
+              margin-bottom: 7.4px;
+            }
+          }
         }
 
         &-img {
@@ -38,12 +44,24 @@
               column-gap: 28px;
             }
           }
+
+          @include mobile {
+            & {
+              column-gap: 16px;
+            }
+          }
         }
 
         &-image {
           @include high-desktop {
             & {
               width: 243px;
+            }
+          }
+
+          @include mobile {
+            & {
+              width: 47.23%;
             }
           }
         }

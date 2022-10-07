@@ -30,6 +30,26 @@
     align-items: center;
     justify-content: space-between;
 
+    @include mobile {
+      &--desktop {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include mobile {
+        & {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          gap: 14px;
+        }
+      }
+    }
+
     &-btn {
       width: 32px;
       height: 32px;
@@ -89,6 +109,14 @@
 
     &-prev-img {
       transform: rotate(180deg);
+    }
+  }
+
+  &__produts {
+    @include mobile {
+      & {
+        margin-bottom: 18px;
+      }
     }
   }
 }

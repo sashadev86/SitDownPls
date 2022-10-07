@@ -15,19 +15,19 @@
       &-image {
         @include high-desktop {
           & {
-            height: 201px;
+            width: 514px;
           }
         }
 
         @include high-tablet {
           & {
-            height: 242.5px;
+            width: 623px;
           }
         }
 
-        @include small-tablet {
+        @include mobile {
           & {
-            height: auto;
+            width: 296px;
           }
         }
       }

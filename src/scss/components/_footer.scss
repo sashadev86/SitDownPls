@@ -11,6 +11,12 @@
         padding-bottom: 24px;
       }
     }
+
+    @include mobile {
+      & {
+        padding-top: 23.5px;
+      }
+    }
   }
 
   &__container {
