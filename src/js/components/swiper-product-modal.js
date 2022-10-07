@@ -7,6 +7,11 @@ let swiperModaleSmall = document.querySelector('.product-small-modal');
 let additionalSwiper = new Swiper(swiperModaleSmall, {
   spaceBetween: 10,
 
+  navigation: {
+    nextEl: '.product__modal-small--next',
+    prevEl: '.product__modal-small--prev',
+  },
+
   a11y: {
     prevSlideMessage: 'Предыдущий слайд',
     nextSlideMessage: 'Следующий слайд',
@@ -40,6 +45,8 @@ let primarySwiper = new Swiper(swiperModalLarge, {
   thumbs: {
     swiper: additionalSwiper,
   },
+
+  spaceBetween: 30,
 
   a11y: {
     prevSlideMessage: 'Предыдущий слайд',
