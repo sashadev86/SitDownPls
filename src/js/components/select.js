@@ -1,5 +1,5 @@
 //Селект Москва
-const choosingRegionFirst = document.querySelector('.choosing__region-wrap-first');
+const choosingRegionFirst = document.querySelector('.choosing-region-wrap-first');
 
 if (choosingRegionFirst) {
   const select = choosingRegionFirst.querySelector('.choosing__region-select');
@@ -12,7 +12,7 @@ if (choosingRegionFirst) {
   });
 }
 
-const choosingRegionSecond = document.querySelector('.choosing__region-wrap-second');
+const choosingRegionSecond = document.querySelector('.choosing-region-wrap-second');
 
 if (choosingRegionSecond) {
   const select = choosingRegionSecond.querySelector('.choosing__region-select');

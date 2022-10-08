@@ -1,11 +1,9 @@
 .usershop {
+  width: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  &__wrapper {
-    width: 99px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 
   &__user {
     position: relative;

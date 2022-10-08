@@ -1,14 +1,13 @@
 .logo {
+  @include small-tablet {
+    & {
+      padding-left: 74px;
+      padding-top: 1px;
+    }
+  }
 
   &__link {
     transition: outline .1s ease-in-out;
-
-    @include small-tablet {
-      & {
-        padding-left: 74px;
-        padding-top: 1px;
-      }
-    }
   }
 
   &__link:focus-visible {

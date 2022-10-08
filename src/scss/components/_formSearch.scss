@@ -1,21 +1,18 @@
 .form {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  width: 82.890625%;
 
-  &__search {
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    width: 82.890625%;
-
-    @include tablet {
-      & {
-        width: 100%;
-      }
+  @include tablet {
+    & {
+      width: 100%;
     }
+  }
 
-    @include mobile {
-      & {
-        flex-direction: column;
-      }
+  @include mobile {
+    & {
+      flex-direction: column;
     }
   }
 }

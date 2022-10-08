@@ -63,7 +63,7 @@
         }
       }
 
-      & .logo__link {
+      & .logo {
         display: none;
 
         @include mobile {
@@ -82,7 +82,7 @@
         }
       }
 
-      & .nav__info {
+      & .nav {
         width: 55.46875%;
 
         @include tablet {
@@ -135,7 +135,7 @@
         }
       }
 
-      & .nav__info {
+      & .nav {
         & {
           display: none;
         }
@@ -161,7 +161,7 @@
         }
       }
 
-      & .usershop__wrapper {
+      & .usershop {
         & {
           display: none;
         }
@@ -189,7 +189,7 @@
         }
       }
 
-      & .phone__link {
+      & .phone {
         display: none;
 
         @include mobile {
@@ -216,7 +216,7 @@
         }
       }
 
-      & .logo__link {
+      & .logo {
         margin-right: auto;
 
         @include small-tablet {
@@ -232,7 +232,7 @@
         }
       }
 
-      & .nav__navigation {
+      & .navigation {
         width: 74.35%;
         padding-right: 3px;
 
@@ -251,7 +251,15 @@
         }
       }
 
-      & .usershop__wrapper {
+      & .nav {
+        display: none;
+
+        @include mobile {
+          display: block;
+        }
+      }
+
+      & .usershop {
         display: none;
 
         @include small-tablet {
@@ -283,7 +291,7 @@
 
     &-fourth {
 
-      & .usershop__wrapper {
+      & .usershop {
 
         @include tablet {
           & {

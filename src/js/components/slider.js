@@ -52,8 +52,8 @@ if (swiperSpecial) {
     direction: "horizontal",
     spaceBetween: 12,
     navigation: {
-      nextEl: '.special__controls--next',
-      prevEl: '.special__controls--prev',
+      nextEl: '.special-controls-next',
+      prevEl: '.special-controls-prev',
     },
     keyboard: {
       enabled: true,
@@ -91,8 +91,8 @@ if (swiperUseful) {
     slidesPerView: "auto",
     spaceBetween: 32,
     navigation: {
-      nextEl: '.useful__controls--next',
-      prevEl: '.useful__controls--prev',
+      nextEl: '.useful-controls-next',
+      prevEl: '.useful-controls-prev',
     },
     keyboard: {
       enabled: true,
