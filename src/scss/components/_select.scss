@@ -40,6 +40,10 @@
   padding: 10px;
 }
 
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+  padding-right: 0;
+}
+
 .choices__placeholder {
   opacity: 1;
 }
