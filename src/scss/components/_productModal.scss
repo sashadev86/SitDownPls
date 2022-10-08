@@ -18,6 +18,7 @@
         width: 20px;
         height: 20px;
         fill: var(--grey-color);
+        transition: fill .3s ease-in-out;
 
         @include mobile {
           & {
@@ -25,6 +26,16 @@
             height: 12px;
           }
         }
+      }
+
+      @include hover {
+        +& .product__modal-btn-img {
+          fill: var(--primary-color);
+        }
+      }
+
+      &:active .product__modal-btn-img {
+        fill: var(--primary-shade-color);
       }
     }
   }
