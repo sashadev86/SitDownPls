@@ -1,5 +1,6 @@
 <section class="catalog">
   <div class="container catalog__container">
+    <h1 class="visually-hidden">Каталог мебельного интернет-магазина SitDownPls</h1>
     <div class="catalog__content">
       <div class="catalog__left">
         <h2 class="catalog__left-title">Фильтровать по:</h2>
@@ -13,7 +14,7 @@
         <h2 class="catalog__right-title">Каталог</h2>
         @include('catalogTag.html')
         @include('catalogDropfilter.html')
-        <div class="catalog__swiper swiper">
+        <div class="catalog__swiper swiper card">
           @include('catalogCard.html')
         </div>
         <div class="swiper-pagination catalog__swiper-pagination"></div>
