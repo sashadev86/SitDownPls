@@ -8,8 +8,8 @@ let additionalSwiper = new Swiper(swiperModaleSmall, {
   spaceBetween: 10,
 
   navigation: {
-    nextEl: '.product__modal-small--next',
-    prevEl: '.product__modal-small--prev',
+    nextEl: '.product-modal-small-next',
+    prevEl: '.product-modal-small-prev',
   },
 
   a11y: {

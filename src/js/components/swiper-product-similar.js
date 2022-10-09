@@ -14,8 +14,8 @@ if (similarProductSection) {
     slideVisibleClass: 'ui-slide-visible',
 
     navigation: {
-      nextEl: '.similar__controls--next',
-      prevEl: '.similar__controls--prev',
+      nextEl: '.similar-controls-next',
+      prevEl: '.similar-controls-prev',
     },
 
     a11y: {
