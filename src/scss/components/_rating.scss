@@ -33,7 +33,7 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 32px;
 
-      @include tablet {
+      @include high-desktop {
         & {
           grid-template-columns: repeat(3, 1fr);
         }
@@ -53,22 +53,20 @@
     }
 
     & .card__item {
-      @include tablet {
+      display: none;
 
+      &.product-card-active {
+        display: list-item;
+        opacity: 1;
+        animation: fade-in .3s ease-in-out;
+      }
+
+      @include tablet {
         & .card__picture {
           margin-bottom: 16.5px;
         }
       }
-    }
 
-    & .card__item:nth-child(n + 9) {
-      display: none;
-    }
-
-    @include tablet {
-      & .card__item:nth-child(n + 7) {
-        display: none;
-      }
     }
   }
 
@@ -107,5 +105,24 @@
         padding: 20px 34.5px;
       }
     }
+
+    &.show-more-hidden {
+      display: none;
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: list-item;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
