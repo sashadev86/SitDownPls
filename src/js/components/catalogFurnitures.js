@@ -1,6 +1,9 @@
 import { gsap } from "gsap";
 
-let furnitureItems = gsap.timeline({ paused: true });
+let catalog = document.querySelector('.catalog');
+
+if(catalog) {
+  let furnitureItems = gsap.timeline({ paused: true });
 
 furnitureItems
   .to(".furniture-hidden", { duration: .3, opacity: 1, visibility: "visible", display: "block" })
@@ -44,3 +47,6 @@ document.querySelectorAll(".catalog__closefurniture").forEach(function (butClose
     furnitureItems.timeScale(2).reverse()
   })
 })
+
+}
+
