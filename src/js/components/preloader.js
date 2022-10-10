@@ -8,13 +8,13 @@ addFillGapTarget(preloader);
 
 window.addEventListener('load', () => {
   window.setTimeout(() => {
-    siteBody.classList.add('ui-preloader-hidden');
-    siteBody.classList.add('ui-scroll-visible');
+    siteBody.classList.add('preloader-hidden');
+    siteBody.classList.add('scroll-visible');
     enablePageScroll(preloader);
   }, 1500);
 
   window.setTimeout(() => {
-    siteBody.classList.add('ui-site-loaded');
-    siteBody.classList.remove('ui-preloader-hidden');
+    siteBody.classList.add('site-loaded');
+    siteBody.classList.remove('preloader-hidden');
   }, 2000);
 });

@@ -203,7 +203,7 @@
     }
   }
 
-  .ui-preloader-hidden & {
+  .preloader-hidden & {
     opacity: 0;
     visibility: hidden;
     transition-property: opacity, visibility;
@@ -211,7 +211,11 @@
     transition-timing-function: ease-in-out;
   }
 
-  .ui-site-loaded & {
+  .site-loaded & {
     display: none;
+  }
+
+  .scroll-visible {
+    background-color: var(--whisper-color);
   }
 }
