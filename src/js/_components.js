@@ -1,3 +1,4 @@
+import './components/preloader';
 import './components/select';
 import './components/slider';
 import './components/cardMore';
