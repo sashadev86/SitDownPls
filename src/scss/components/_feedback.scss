@@ -10,6 +10,7 @@
   }
 
   &__wrapper {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 32px;
@@ -42,19 +43,40 @@
       }
     }
 
-    &-picture {
+    &:after {
       grid-column: 7/13;
-      align-self: center;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../img/feedback/feedback1920.webp");
+      background-position: 0 50.5%;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include big-desktop {
+        & {
+          background-image: url("../img/feedback/feedback1024.webp");
+        }
+      }
 
       @include tablet {
-        & {
-          grid-column: 5/10;
-        }
+        grid-column: 5/10;
+        background-position: 0 49.6%;
       }
 
       @include high-tablet {
         & {
           grid-column: 5/7;
+          background-image: url("../img/feedback/feedback768.webp");
+        }
+      }
+
+      @include small-tablet {
+        & {
+          background-position: 0 48%;
         }
       }
 
@@ -64,6 +86,29 @@
         }
       }
     }
+
+    // &-picture {
+    //   grid-column: 7/13;
+    //   align-self: center;
+
+    //   @include tablet {
+    //     & {
+    //       grid-column: 5/10;
+    //     }
+    //   }
+
+    //   @include high-tablet {
+    //     & {
+    //       grid-column: 5/7;
+    //     }
+    //   }
+
+    //   @include mobile {
+    //     & {
+    //       display: none;
+    //     }
+    //   }
+    // }
 
     &-title {
       margin-bottom: 9px;
@@ -107,15 +152,22 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
 
     &-label {
       position: relative;
-      margin-bottom: 30px;
+      margin-bottom: 29.8px;
       width: 100%;
+
+      @include mobile {
+        & {
+          margin-bottom: 30px;
+        }
+      }
     }
 
     &-input {
-      padding-left: 18px;
+      padding-left: 17px;
       width: 100%;
       height: 54px;
       border-radius: 10px;
@@ -125,7 +177,7 @@
       color: var(--night-rider-color);
       outline: none;
       border: 1px solid transparent;
-      transition: background-color .3s ease-in-out, border .3s ease-in-out;
+      transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 
       &::placeholder {
         font-size: 16px;
@@ -134,7 +186,7 @@
       }
 
       @include hover {
-        +& {
+        + & {
           background-color: var(--md-grey-color);
         }
       }
@@ -175,7 +227,7 @@
       }
 
       @include hover {
-        +& {
+        + & {
           border-color: var(--primary-light-color);
           background-color: var(--primary-light-color);
         }
@@ -194,6 +246,10 @@
 
     &-checkbox {
       position: relative;
+
+      & .just-validate-error-label {
+        top: -12px;
+      }
 
       &-text[for] {
         cursor: pointer;
@@ -220,14 +276,14 @@
         }
       }
 
-      &-hidden:checked+.feedback__form-checkbox-text::before {
+      &-hidden:checked + .feedback__form-checkbox-text::before {
         border-color: var(--primary-color);
         background-image: url(../img/checkbox.svg);
         background-color: var(--primary-color);
       }
 
       &-text::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 5px;
         top: 50%;
@@ -240,13 +296,12 @@
         background-size: 11px 9px;
         background-repeat: no-repeat;
         transform: translateY(-50%);
-        transition: border-color .3s ease-in-out, background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+        transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       }
 
       .feedback__form-checkbox-hidden:focus-visible:not(:active):not(:hover) + .feedback__form-checkbox-text {
         box-shadow: 0px 0px 7px 3px var(--primary-light-color);
       }
-
 
       &-link {
         padding: 0 2px;
@@ -254,7 +309,7 @@
         border-radius: 5px;
         text-decoration: underline;
         color: var(--primary-color);
-        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+        transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
         @include hover {
           + & {

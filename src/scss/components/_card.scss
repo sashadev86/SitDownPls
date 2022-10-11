@@ -14,6 +14,12 @@
     align-items: flex-start;
     height: 100%;
 
+    @include high-desktop {
+      & {
+        padding: 30px 30px 30.2px 30px;
+      }
+    }
+
     @include mobile {
       & {
         padding: 16px;

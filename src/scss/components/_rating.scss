@@ -19,7 +19,17 @@
   }
 
   &__items {
-    margin-bottom: 32px;
+    margin-bottom: 31px;
+
+    @include high-desktop {
+      & {
+        margin-bottom: 32px;
+      }
+
+    //   & .card__content {
+    //     padding: 30px 30px 30.2px 30px;
+    //   }
+    }
 
     @include mobile {
       & {
@@ -63,7 +73,13 @@
 
       @include tablet {
         & .card__picture {
-          margin-bottom: 16.5px;
+          margin-bottom: 17px;
+        }
+      }
+
+      @include mobile {
+        & .card__picture {
+          margin-bottom: 7.5px;
         }
       }
 

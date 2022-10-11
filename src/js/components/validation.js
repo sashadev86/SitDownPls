@@ -43,6 +43,15 @@ const rules = [
       }
     ]
   },
+  {
+    ruleSelector: '.input-checkbox',
+    rules: [
+      {
+        rule: 'required',
+        errorMessage: 'Это поле обязательное!',
+      },
+    ]
+  },
 ];
 const rules1 = [
   {

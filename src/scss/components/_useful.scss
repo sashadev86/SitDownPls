@@ -2,6 +2,12 @@
   padding-top: 34px;
   padding-bottom: 35px;
 
+  @include high-desktop {
+    & {
+      padding-top: 34.7px;
+    }
+  }
+
   @include mobile {
     & {
       position: relative;
@@ -25,7 +31,7 @@
   &__title {
     @include tablet {
       & {
-        margin-bottom: 26.2px;
+        margin-bottom: 26px;
       }
     }
 
@@ -64,6 +70,10 @@
         fill: transparent;
         stroke: var(--primary-color);
         transition: stroke .3s ease-in-out;
+
+        &-prev {
+          transform: rotate(180deg);
+        }
       }
 
       @include hover {
@@ -106,10 +116,6 @@
           }
         }
       }
-    }
-
-    &--prev {
-      transform: rotate(180deg);
     }
   }
 

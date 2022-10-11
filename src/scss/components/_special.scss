@@ -235,6 +235,9 @@
       }
 
       @include mobile {
+        bottom: -0.5px;
+        left: 49.8%;
+
         &--center {
           margin-bottom: 0;
         }
@@ -246,6 +249,12 @@
       flex-direction: column;
       flex: 1 1 auto;
       margin-bottom: 24px;
+
+      @include high-desktop {
+        & {
+          margin-bottom: 23px;
+        }
+      }
 
       &-title {
         max-width: 222px;
