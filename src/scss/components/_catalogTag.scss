@@ -1,0 +1,119 @@
+.catalog {
+
+  &__tags {
+    position: relative;
+    top: -5px;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 3px;
+    padding: 2px 3.5px 3px 8.5px;
+    margin-bottom: 10px;
+
+    @include small-tablet {
+      & {
+        padding-top: 3px;
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+      color: var(--grey-shade-color);
+    }
+
+    &-btn {
+      width: 24px;
+      height: 24px;
+
+      &-img {
+        width: 24px;
+        height: 24px;
+        stroke: var(--grey-shade-color);
+      }
+    }
+
+    &-prc {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+      color: var(--grey-shade-color);
+    }
+
+  }
+
+  .tag-furnitures {
+    background-color: #daffd1;
+    margin-right: 20px;
+    display: none;
+  }
+
+  .tag-price {
+    background-color: #fff5d1;
+    margin-right: 20px;
+    display: none;
+  }
+
+  .tag-discount {
+    background-color: #ebd1ff;
+    margin-right: 19px;
+    display: none;
+  }
+
+  .tag-color {
+    background-color: #eaeaea;
+    margin-right: 19px;
+    display: none;
+  }
+
+  .sofas-active,
+  .chair-active,
+  .poufs-active,
+  .beds-active,
+  .pedestals-active,
+  .commode-active,
+  .chairs-active,
+  .archair-active,
+  .desk-active,
+  .accessories-active,
+  .straightsofas-active,
+  .cornersofas-active,
+  .modularsofas-active,
+  .leatherettesofas-active,
+  .upholsteredarmchairs-active,
+  .chairbeds-active,
+  .singlebeds-active,
+  .doublebeds-active,
+  .woodenchairs-active,
+  .metalchairs-active,
+  .alarmclocks-active,
+  .sculptures-active,
+  .price-active,
+  .nodiscount-active,
+  .lessdiscount-active,
+  .morediscount-active,
+  .brown-active,
+  .black-active,
+  .beige-active,
+  .gray-active,
+  .white-active,
+  .navy-active,
+  .orange-active,
+  .yellow-active,
+  .green-active,
+  .red-active,
+  .purple-active,
+  .pink-active,
+  .blue-active,
+  .lightgreen-active,
+  .aquamarine-active,
+  .grayc-active {
+    display: inline-flex;
+  }
+}

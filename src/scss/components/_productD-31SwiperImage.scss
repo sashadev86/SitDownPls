@@ -1,0 +1,57 @@
+.product {
+
+  &__info {
+    &-large {
+      &-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-btn {
+        cursor: zoom-in;
+      }
+
+      &-image {
+        @include high-desktop {
+          & {
+            width: auto;
+            height: 202px;
+          }
+        }
+
+        @include high-tablet {
+          & {
+            width: auto;
+            height: 245px;
+            object-fit: contain;
+          }
+        }
+
+        @include mobile {
+          & {
+            width: auto;
+            height: 116px;
+          }
+        }
+      }
+    }
+
+    &-box {
+      &-swiper {
+        @include high-tablet {
+          & {
+            height: 100%;
+          }
+        }
+      }
+
+      &-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+  }
+}

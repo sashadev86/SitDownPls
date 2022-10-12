@@ -1,0 +1,227 @@
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  /* фоновый цвет */
+  background: var(--white-color);
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > .preloader-box {
+    display: flex;
+    perspective: 195px;
+    -o-perspective: 195px;
+    -ms-perspective: 195px;
+    -webkit-perspective: 195px;
+    -moz-perspective: 195px;
+  }
+
+  & .preloader-box > div {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background: var(--very-light-grey-color);
+    font-family: "Verdana";
+    font-size: 21px;
+    line-height: 32px;
+    text-align: center;
+    color: var(--white-color);
+
+    @include mobile {
+      width: 16px;
+      height: 16px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  & .preloader-box > div:nth-child(1) {
+    background: var(--primary-color);
+    border-radius: 3px;
+    margin-right: 15px;
+    animation: movement 690ms ease-in-out 0ms infinite alternate;
+    -o-animation: movement 690ms ease-in-out 0ms infinite alternate;
+    -ms-animation: movement 690ms ease-in-out 0ms infinite alternate;
+    -webkit-animation: movement 690ms ease-in-out 0ms infinite alternate;
+    -moz-animation: movement 690ms ease-in-out 0ms infinite alternate;
+  }
+
+  & .preloader-box > div:nth-child(2) {
+    background: var(--primary-color);
+    border-radius: 3px;
+    margin-right: 15px;
+    animation: movement 690ms ease-in-out 86.25ms infinite alternate;
+    -o-animation: movement 690ms ease-in-out 86.25ms infinite alternate;
+    -ms-animation: movement 690ms ease-in-out 86.25ms infinite alternate;
+    -webkit-animation: movement 690ms ease-in-out 86.25ms infinite alternate;
+    -moz-animation: movement 690ms ease-in-out 86.25ms infinite alternate;
+  }
+
+  & .preloader-box > div:nth-child(3) {
+    background: var(--primary-color);
+    border-radius: 3px;
+    margin-right: 15px;
+    animation: movement 690ms ease-in-out 172.5ms infinite alternate;
+    -o-animation: movement 690ms ease-in-out 172.5ms infinite alternate;
+    -ms-animation: movement 690ms ease-in-out 172.5ms infinite alternate;
+    -webkit-animation: movement 690ms ease-in-out 172.5ms infinite alternate;
+    -moz-animation: movement 690ms ease-in-out 172.5ms infinite alternate;
+  }
+
+  & .preloader-box > div:nth-child(4) {
+    background: var(--primary-color);
+    border-radius: 3px;
+    margin-right: 15px;
+    animation: movement 690ms ease-in-out 258.75ms infinite alternate;
+    -o-animation: movement 690ms ease-in-out 258.75ms infinite alternate;
+    -ms-animation: movement 690ms ease-in-out 258.75ms infinite alternate;
+    -webkit-animation: movement 690ms ease-in-out 258.75ms infinite alternate;
+    -moz-animation: movement 690ms ease-in-out 258.75ms infinite alternate;
+  }
+
+  & .preloader-box > div:nth-child(5) {
+    background: var(--primary-color);
+    border-radius: 3px;
+    margin-right: 15px;
+    animation: movement 690ms ease-in-out 345ms infinite alternate;
+    -o-animation: movement 690ms ease-in-out 345ms infinite alternate;
+    -ms-animation: movement 690ms ease-in-out 345ms infinite alternate;
+    -webkit-animation: movement 690ms ease-in-out 345ms infinite alternate;
+    -moz-animation: movement 690ms ease-in-out 345ms infinite alternate;
+  }
+
+  & .preloader-box > div:nth-child(6) {
+    background: var(--primary-color);
+    border-radius: 3px;
+    margin-right: 15px;
+    animation: movement 690ms ease-in-out 431.25ms infinite alternate;
+    -o-animation: movement 690ms ease-in-out 431.25ms infinite alternate;
+    -ms-animation: movement 690ms ease-in-out 431.25ms infinite alternate;
+    -webkit-animation: movement 690ms ease-in-out 431.25ms infinite alternate;
+    -moz-animation: movement 690ms ease-in-out 431.25ms infinite alternate;
+  }
+
+  & .preloader-box > div:nth-child(7) {
+    background: var(--primary-color);
+    border-radius: 3px;
+    margin-right: 15px;
+    animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -o-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -ms-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -webkit-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -moz-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+  }
+
+  & .preloader-box > div:nth-child(8) {
+    background: var(--primary-color);
+    border-radius: 3px;
+    margin-right: 15px;
+    animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -o-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -ms-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -webkit-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -moz-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+  }
+
+  & .preloader-box > div:nth-child(9) {
+    background: var(--primary-color);
+    border-radius: 3px;
+    margin-right: 15px;
+    animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -o-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -ms-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -webkit-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -moz-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+  }
+
+  & .preloader-box > div:nth-child(10) {
+    background: var(--primary-color);
+    border-radius: 3px;
+    animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -o-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -ms-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -webkit-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+    -moz-animation: movement 690ms ease-in-out 517.5ms infinite alternate;
+  }
+
+  @keyframes movement {
+    from {
+      transform: scale(1) translateY(0px) rotateX(0deg);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    to {
+      transform: scale(1.5) translateY(-24px) rotateX(45deg);
+      box-shadow: 0 24px 39px var(--primary-color);
+      background: var(--primary-color);
+    }
+  }
+
+  @-o-keyframes movement {
+    from {
+      -o-transform: scale(1) translateY(0px) rotateX(0deg);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    to {
+      -o-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+      box-shadow: 0 24px 39px var(--primary-color);
+      background: var(--primary-color);
+    }
+  }
+
+  @-ms-keyframes movement {
+    from {
+      -ms-transform: scale(1) translateY(0px) rotateX(0deg);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    to {
+      -ms-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+      box-shadow: 0 24px 39px var(--primary-color);
+      background: var(--primary-color);
+    }
+  }
+
+  @-webkit-keyframes movement {
+    from {
+      -webkit-transform: scale(1) translateY(0px) rotateX(0deg);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    to {
+      -webkit-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+      box-shadow: 0 24px 39px var(--primary-color);
+      background: var(--primary-color);
+    }
+  }
+
+  @-moz-keyframes movement {
+    from {
+      -moz-transform: scale(1) translateY(0px) rotateX(0deg);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    to {
+      -moz-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+      box-shadow: 0 24px 39px var(--primary-color);
+      background: var(--primary-color);
+    }
+  }
+
+  .preloader-hidden & {
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .site-loaded & {
+    display: none;
+  }
+
+  .scroll-visible {
+    background-color: var(--whisper-color);
+  }
+}

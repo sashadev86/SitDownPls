@@ -1,0 +1,304 @@
+.header {
+  margin-bottom: 32px;
+
+  @include small-tablet {
+    & {
+      margin-bottom: 31px;
+    }
+  }
+
+  @include mobile {
+    & {
+      margin-bottom: 32.5px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      & {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__line {
+
+    &-first {
+      margin-bottom: 32px;
+      padding-top: 13px;
+      padding-bottom: 14px;
+      background-color: var(--grey-light-color);
+
+      @include tablet {
+        & {
+          padding-top: 16px;
+          padding-bottom: 18.5px;
+          margin-bottom: 0;
+          background-color: transparent;
+        }
+      }
+
+      @include small-tablet {
+        & {
+          padding-bottom: 19px;
+        }
+      }
+
+      @include mobile {
+        & {
+          padding-top: 11px;
+          padding-bottom: 8px;
+          background-color: var(--grey-light-color);
+        }
+      }
+
+      & .header__container {
+        @include mobile {
+          & {
+            justify-content: center;
+          }
+        }
+      }
+
+      & .logo {
+        display: none;
+
+        @include mobile {
+          & {
+            display: block;
+            padding-left: 0;
+          }
+        }
+      }
+
+      & .choosing__region-wrap {
+        @include mobile {
+          & {
+            display: none;
+          }
+        }
+      }
+
+      & .nav {
+        width: 55.46875%;
+
+        @include tablet {
+          & {
+            display: none;
+          }
+        }
+      }
+
+      & .phone__link {
+        @include mobile {
+          & {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-second {
+      @include tablet {
+        & {
+          margin-bottom: 32px;
+          padding-top: 11px;
+          padding-bottom: 10.5px;
+          background-color: var(--grey-light-color);
+        }
+      }
+
+      @include small-tablet {
+        & {
+          padding-top: 15px;
+          padding-bottom: 16.5px;
+        }
+      }
+
+      @include mobile {
+        & {
+          margin-bottom: 12px;
+          padding-top: 18px;
+          background-color: transparent;
+        }
+      }
+
+      & .header__container {
+        @include mobile {
+          & {
+            align-items: flex-start;
+            flex-direction: column;
+          }
+        }
+      }
+
+      & .nav {
+        & {
+          display: none;
+        }
+
+        @include tablet {
+          & {
+            display: block;
+            width: 74.5798319328%;
+          }
+        }
+
+        @include small-tablet {
+          & {
+            width: 100%;
+            padding-right: 2px;
+          }
+        }
+
+        @include mobile {
+          & {
+            display: none;
+          }
+        }
+      }
+
+      & .usershop {
+        & {
+          display: none;
+        }
+
+        @include tablet {
+          & {
+            display: flex;
+          }
+        }
+
+        @include small-tablet {
+          & {
+            display: none;
+          }
+        }
+      }
+
+      & .choosing {
+        display: none;
+
+        @include mobile {
+          & {
+            display: flex;
+          }
+        }
+      }
+
+      & .phone {
+        display: none;
+
+        @include mobile {
+          & {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    &-third {
+      position: relative;
+      margin-bottom: 29px;
+
+      @include tablet {
+        & {
+          margin-bottom: 30px;
+        }
+      }
+
+      @include mobile {
+        & {
+          margin-bottom: 26px;
+        }
+      }
+
+      & .logo {
+        margin-right: auto;
+
+        @include small-tablet {
+          & {
+            margin-right: 0;
+          }
+        }
+
+        @include mobile {
+          & {
+            display: none;
+          }
+        }
+      }
+
+      & .navigation {
+        width: 74.35%;
+        padding-right: 3px;
+
+        @include tablet {
+          & {
+            width: 73.65%;
+            padding-right: 2px;
+            padding-bottom: 4px;
+          }
+        }
+
+        @include small-tablet {
+          & {
+            width: 100%;
+          }
+        }
+      }
+
+      & .nav {
+        display: none;
+
+        @include mobile {
+          display: block;
+        }
+      }
+
+      & .usershop {
+        display: none;
+
+        @include small-tablet {
+          display: flex;
+          margin-top: -2px;
+        }
+      }
+
+      @include mobile {
+        & {
+          &::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            width: 100%;
+            border-top: 2px solid var(--grey-light-color);
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            width: 100%;
+            border-bottom: 2px solid var(--grey-light-color);
+          }
+        }
+      }
+    }
+
+    &-fourth {
+
+      & .usershop {
+
+        @include tablet {
+          & {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

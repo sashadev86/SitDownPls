@@ -1,0 +1,120 @@
+.noUi {
+
+  &-base {
+    height: 3px;
+    background-color: var(--md-grey-color);
+    cursor: pointer;
+  }
+
+  &-connect {
+    background-color: var( --primary-color);
+  }
+
+  &-horizontal {
+    height: auto;
+  }
+
+  &-target {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-color: var(--md-grey-color);
+  }
+
+  &-handle {
+    border: none;
+  }
+
+  &-horizontal .noUi-handle-lower {
+    top: 0;
+    right: -97.5%;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 7.5px 14px 7.5px;
+    border-color: transparent transparent var(--primary-color) transparent;
+    border-radius: 4px;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    outline: none;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      border-bottom-color: var(--primary-light-color);
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      border-bottom-color: var(--primary-shade-color);
+    }
+
+    &:active {
+      border-bottom-color: var(--primary-shade-color);
+    }
+  }
+
+  &-state-tap{
+    -webkit-transition: transform 100ms;
+      transition: transform 100ms;
+  }
+
+  &-origin {
+    outline: none;
+  }
+
+  &-origin.noUi-state-tap{
+    -webkit-transition: transform 100ms;
+    transition: transform 100ms;
+  }
+
+  &-connect {
+    -webkit-transition: transform 100ms;
+    transition: transform 100ms;
+  }
+
+  &-horizontal .noUi-handle-upper {
+    top: 0;
+    right: -97.5%;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 7.5px 14px 7.5px;
+    border-color: transparent transparent var(--primary-color) transparent;
+    border-radius: 4px;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    outline: none;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      border-bottom-color: var(--primary-light-color);
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      border-bottom-color: var(--primary-shade-color);
+    }
+
+    &:active {
+      border-bottom-color: var(--primary-shade-color);
+    }
+  }
+}

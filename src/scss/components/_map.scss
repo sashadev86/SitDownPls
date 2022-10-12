@@ -1,0 +1,285 @@
+.contacts {
+
+  &__form {
+
+    &-map {
+
+      .ymaps-2-1-79-copyright__content {
+        display: none;
+      }
+
+      .ymaps-2-1-79-map-copyrights-promo {
+        display: none;
+      }
+
+      .ymaps-2-1-79-controls__control {
+        display: none;
+      }
+
+      .ymaps-2-1-79-controls__control_toolbar {
+        display: none;
+      }
+
+      .ymaps-2-1-79-map .ymaps-2-1-79-balloon__close .ymaps-2-1-79-balloon__close-button {
+        position: relative;
+        width: 12px;
+        height: 12px;
+        background: 0 0;
+        opacity: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 5px;
+          width: 6px;
+          height: 6px;
+          border-bottom: 2px solid var(--grey-color);
+          border-right: 2px solid var(--grey-color);
+          transform: rotate(135deg);
+          transition: border-color .3s ease-in-out;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 8px;
+          width: 6px;
+          height: 6px;
+          border-top: 2px solid var(--grey-color);
+          border-left: 2px solid var(--grey-color);
+          transform: rotate(135deg);
+          transition: border-color .3s ease-in-out;
+        }
+
+        @include hover {
+          +&::before {
+            border-color: var(--primary-color);
+          }
+
+          +&::after {
+            border-color: var(--primary-color);
+          }
+        }
+
+        &:active {
+          &::before {
+            border-color: var(--primary-shade-color);
+          }
+
+          &::after {
+            border-color: var(--primary-shade-color);
+          }
+        }
+      }
+
+      .ymaps-2-1-79-balloon__layout {
+        border-radius: 10px;
+      }
+
+      .ymaps-2-1-79-map .ymaps-2-1-79-balloon {
+        box-shadow: 0 0 30px rgba(0, 0, 0, .25);
+        border-radius: 10px;
+        margin: 0;
+        // left: -147px !important;
+
+        @include mobile {
+          & {
+            // left: 0 !important;
+            width: 232px;
+          }
+        }
+      }
+
+      .ymaps-2-1-79-balloon__close {
+        margin-top: 18px;
+        margin-right: 16px;
+      }
+
+      .ymaps-2-1-79-map .ymaps-2-1-79-balloon .ymaps-2-1-79-balloon__content {
+        overflow: visible;
+        padding: 0;
+        margin-right: 0;
+
+        @include mobile {
+          & {
+            width: 232px !important;
+          }
+        }
+      }
+
+      .ymaps-2-1-79-balloon_to_top .ymaps-2-1-79-balloon__tail {
+        top: -2px;
+        left: 20%;
+        transform: rotate(-45deg) translateX(-50%);
+
+        @include mobile {
+          & {
+            left: 30%;
+          }
+        }
+      }
+
+      // .ymaps-2-1-79-balloon-overlay {
+      //   @include mobile {
+      //     & {
+      //       left: 192px !important;
+      //     }
+      //   }
+      // }
+
+      .balloon {
+        display: flex;
+        flex-direction: column;
+        max-width: 283px;
+        padding: 30px;
+
+        @include mobile {
+          & {
+            width: 192px;
+            padding: 20px;
+          }
+        }
+
+        &__top {
+
+          &-title {
+            margin-bottom: 7px;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            color: var(--night-rider-color);
+
+            @include mobile {
+              & {
+                margin-bottom: 5px;
+                font-size: 14px;
+                line-height: 19px;
+              }
+            }
+          }
+
+          &-address {
+            margin-bottom: 12px;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 180%;
+            color: var(--night-rider-color);
+
+            @include mobile {
+              & {
+                font-size: 12px;
+                line-height: 16px;
+              }
+            }
+          }
+
+          &-link-svg {
+            fill: var(--secondary-color);
+          }
+
+          &-link {
+            margin-bottom: 13px;
+            display: flex;
+            align-items: center;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            color: var(--secondary-color);
+            transition: color .3s ease-in-out;
+
+            &-svg {
+              fill: var(--secondary-color);
+              transition: fill .3s ease-in-out;
+            }
+
+            @include hover {
+              +& {
+                color: var(--secondary-light-color);
+              }
+
+              +& .balloon__top-link-svg {
+                fill: var(--secondary-light-color);
+              }
+            }
+
+            &:active {
+              color: var(--secondary-shade-color);
+
+              & .balloon__top-link-svg {
+                fill: var(--secondary-shade-color);
+              }
+            }
+
+            @include mobile {
+              & {
+                margin-bottom: 12px;
+              }
+            }
+          }
+        }
+
+        &__center {
+          border-top: 1px solid var(--grey-light-color);
+          border-bottom: 1px solid var(--grey-light-color);
+          padding: 13px 0;
+          margin-bottom: 9px;
+
+          @include mobile {
+            & {
+              padding: 5px 0;
+            }
+          }
+
+          &-clockwork {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 180%;
+            color: var(--night-rider-color);
+
+            &-span {
+              color: var(--grey-color);
+            }
+
+            @include mobile {
+              & {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
+        &__bottom {
+          &-descr {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 180%;
+            color: var(--night-rider-color);
+
+            &-span {
+              color: var(--grey-color);
+            }
+
+            @include mobile {
+              & {
+                font-size: 12px;
+                line-height: 140%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.nav__info {
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &-link {
+    position: relative;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--grey-color);
+    transition: color .3s ease-in-out;
+    outline: none;
+    z-index: 0;
+
+    @include hover {
+      +& {
+        color: var(--primary-color);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: 0;
+      bottom: 0;
+      left: -10px;
+      width: calc(100% + 20px);
+      height: calc(100% + 2px);
+      background-color: var(--pink-violet-color);
+      z-index: -1;
+      transform: translate(0, 0) scaleX(0);
+      transform-origin: center;
+      transition: transform .3s ease-in-out;
+    }
+
+    &:focus-visible:not(:hover):not(:active)::before {
+      transform: translate(0, 0) scaleX(1);
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      color: var(--primary-shade-color);
+    }
+
+    &:active {
+      color: var(--primary-shade-color);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<div class="graph-modal__container product__buy-container" role="dialog" aria-modal="true" data-graph-target="buyOneClick">
+  <button class="btn-reset js-modal-close graph-modal__close product__modal-btn" aria-label="Закрыть модальное окно">
+    <svg class="product__modal-btn-img">
+      <use xlink:href="img/sprite.svg#closeModal"></use>
+    </svg>
+  </button>
+  <div class="graph-modal__content product__buy-content">
+    <h2 class="product__buy-title">Купить в один клик</h2>
+    <p class="product__buy-text">
+      Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.
+    </p>
+
+    <form action="#" class="product__buy-form buy-form">
+      <label class="product__buy-form-label">
+        <input type="text" name="Имя" class="input-reset product__buy-form-input input-name" placeholder="Как вас зовут?">
+      </label>
+      <label class="product__buy-form-label">
+        <input type="tel" name="Телефон" class="input-reset product__buy-form-input input-tel" placeholder="Ваш телефон">
+      </label>
+      <button class="btn-reset btn-all product__buy-form-btn" type="submit">Отправить</button>
+      <div class="product__buy-form-checkbox">
+        <input class="visually-hidden product__buy-form-checkbox-hidden" id="product__buy-form-checkbox-hidden" type="checkbox" name="feedbackFormAgreement" value="yes" checked required>
+        <label class="btn-reset product__buy-form-checkbox-text" for="product__buy-form-checkbox-hidden">
+            Принимаю
+          <a href="#no-scrolling" class="product__buy-form-checkbox-link">пользовательское соглашение</a>
+        </label>
+      </div>
+    </form>
+  </div>
+</div>

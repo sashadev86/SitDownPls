@@ -1,0 +1,6 @@
+.catalog__right {
+
+  & .catalog__discount-form-label:not(:nth-last-child(1)) {
+    margin-bottom: 11px;
+  }
+}

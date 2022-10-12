@@ -1,0 +1,55 @@
+/* svg style */
+.circ {
+  transform: scale(.5) rotate(-90deg);
+  transition: transform .3s ease-in-out;
+}
+
+.circ1 {
+  stroke-dasharray: 440px;
+  stroke-dashoffset: 440px;
+}
+
+/* customize swiper */
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  background: 0;
+  outline: none
+}
+
+.swiper-pagination-bullet:focus-visible:not(:hover):not(:active) .circ {
+  transform: scale(1) rotate(-90deg);
+}
+
+.swiper-pagination-bullet-active .circ {
+  transform: rotate(-90deg);
+}
+
+.swiper-pagination-bullet-active .circ1 {
+  stroke-dashoffset: 220px;
+  transition: linear 10s stroke-dashoffset;
+}
+
+.circ-bg {
+  stroke: var(--white-color);
+}
+
+.hero .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0px var(--swiper-pagination-bullet-horizontal-gap, 7px);
+  opacity: 1;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 15px;
+
+  @include mobile {
+    & {
+      bottom: 32px;
+    }
+  }
+}

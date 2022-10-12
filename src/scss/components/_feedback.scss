@@ -1,0 +1,303 @@
+.feedback {
+  padding-top: 35px;
+  padding-bottom: 69.5px;
+
+  @include mobile {
+    & {
+      padding-top: 58px;
+      padding-bottom: 70px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+
+    @include tablet {
+      & {
+        grid-template-columns: repeat(9, 1fr);
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    &-content {
+      grid-column: 1/7;
+
+      @include tablet {
+        & {
+          grid-column: 1/5;
+        }
+      }
+
+      @include mobile {
+        & {
+          grid-column: 1/7;
+        }
+      }
+    }
+
+    &:after {
+      grid-column: 7/13;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../img/feedback/feedback1920.webp");
+      background-position: 0 50.5%;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include big-desktop {
+        & {
+          background-image: url("../img/feedback/feedback1024.webp");
+        }
+      }
+
+      @include tablet {
+        grid-column: 5/10;
+        background-position: 0 49.6%;
+      }
+
+      @include high-tablet {
+        & {
+          grid-column: 5/7;
+          background-image: url("../img/feedback/feedback768.webp");
+        }
+      }
+
+      @include small-tablet {
+        & {
+          background-position: 0 48%;
+        }
+      }
+
+      @include mobile {
+        & {
+          display: none;
+        }
+      }
+    }
+
+    &-title {
+      margin-bottom: 9px;
+
+      @include mobile {
+        & {
+          font-size: 24px;
+        }
+      }
+    }
+
+    &-text {
+      position: relative;
+      margin-bottom: 16px;
+      font-size: 14px;
+      line-height: 19px;
+      color: var(--grey-shade-color);
+
+      @include mobile {
+        & {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    &-image {
+      vertical-align: bottom;
+      height: auto;
+      max-width: 100%;
+
+      @include high-tablet {
+        & {
+          width: 187px;
+          height: 444px;
+        }
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    &-label {
+      position: relative;
+      margin-bottom: 29.8px;
+      width: 100%;
+
+      @include mobile {
+        & {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    &-input {
+      padding-left: 17px;
+      width: 100%;
+      height: 54px;
+      border-radius: 10px;
+      background-color: var(--grey-light-color);
+      font-size: 16px;
+      line-height: 40px;
+      color: var(--night-rider-color);
+      outline: none;
+      border: 1px solid transparent;
+      transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+
+      &::placeholder {
+        font-size: 16px;
+        line-height: 40px;
+        color: var(--grey-color);
+      }
+
+      @include hover {
+        + & {
+          background-color: var(--md-grey-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        border-color: var(--primary-color);
+        background-color: var(---pink-light-color);
+      }
+
+      &.just-validate-success-field {
+        border-color: var(--green-input-color);
+      }
+
+      &.just-validate-error-field {
+        border-color: var(--red-input-color);
+      }
+    }
+
+    & .just-validate-error-label {
+      position: absolute;
+      top: -18px;
+      left: 18px;
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--red-input-color) !important;
+    }
+
+    &-btn {
+      margin-bottom: 12px;
+      padding: 17px 33.5px;
+      background-color: var(--primary-color);
+      color: var(--white-color);
+
+      @include mobile {
+        & {
+          margin-bottom: 10px;
+        }
+      }
+
+      @include hover {
+        + & {
+          border-color: var(--primary-light-color);
+          background-color: var(--primary-light-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        border-color: var(--primary-shade-color);
+        background-color: var(--primary-light-color);
+      }
+
+      &:active {
+        border-color: var(--primary-shade-color);
+        background-color: var(--primary-shade-color);
+      }
+    }
+
+    &-checkbox {
+      position: relative;
+
+      & .just-validate-error-label {
+        top: -12px;
+      }
+
+      &-text[for] {
+        cursor: pointer;
+      }
+
+      &-text {
+        position: relative;
+        z-index: 0;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        font-size: 14px;
+        line-height: 19px;
+        color: var(--night-rider-color);
+        border-radius: 5px;
+        padding: 0 5px 0 27px;
+        margin-left: -5px;
+
+        @include mobile {
+          & {
+            padding: 0 5px 0 25px;
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      &-hidden:checked + .feedback__form-checkbox-text::before {
+        border-color: var(--primary-color);
+        background-image: url(../img/checkbox.svg);
+        background-color: var(--primary-color);
+      }
+
+      &-text::before {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        display: inline-block;
+        border: 1px solid var(--grey-color);
+        border-radius: 2px;
+        width: 14px;
+        height: 14px;
+        background-position: center;
+        background-size: 11px 9px;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+        transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .feedback__form-checkbox-hidden:focus-visible:not(:active):not(:hover) + .feedback__form-checkbox-text {
+        box-shadow: 0px 0px 7px 3px var(--primary-light-color);
+      }
+
+      &-link {
+        padding: 0 2px;
+        margin-left: -2px;
+        border-radius: 5px;
+        text-decoration: underline;
+        color: var(--primary-color);
+        transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        @include hover {
+          + & {
+            color: var(--primary-light-color);
+          }
+        }
+
+        &:focus-visible:not(:hover):not(:active) {
+          box-shadow: 0px 0px 7px 3px var(--primary-light-color);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.logo {
+  @include small-tablet {
+    & {
+      padding-left: 74px;
+      padding-top: 1px;
+    }
+  }
+
+  &__link {
+    transition: outline .1s ease-in-out;
+  }
+
+  &__link:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 5px;
+  }
+}
+

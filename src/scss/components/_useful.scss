@@ -1,0 +1,196 @@
+.useful {
+  padding-top: 34px;
+  padding-bottom: 35px;
+
+  @include high-desktop {
+    & {
+      padding-top: 34.7px;
+    }
+  }
+
+  @include mobile {
+    & {
+      position: relative;
+      padding-top: 38px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include tablet {
+      & {
+        margin-bottom: 0.5px;
+      }
+    }
+  }
+
+  &__title {
+    @include tablet {
+      & {
+        margin-bottom: 26px;
+      }
+    }
+
+    @include mobile {
+      & {
+        margin-bottom: 25.5px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 77px;
+
+    @include mobile {
+      & {
+        position: absolute;
+        bottom: 12px;
+        left: 38.2%;
+      }
+    }
+
+    &-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 100px;
+      border: 2px solid var(--primary-color);
+      transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+      &-img {
+        width: 8px;
+        height: 28px;
+        fill: transparent;
+        stroke: var(--primary-color);
+        transition: stroke .3s ease-in-out;
+
+        &-prev {
+          transform: rotate(180deg);
+        }
+      }
+
+      @include hover {
+        +& {
+          background-color: var(--primary-color);
+        }
+
+        +& .useful__controls-btn-img {
+          stroke: var(--white-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        background-color: var(--primary-light-color);
+      }
+
+      &:focus-visible:not(:hover):not(:active) .useful__controls-btn-img {
+        stroke: var(--white-color);
+      }
+
+      &:active {
+        background-color: var(--primary-shade-color);
+        border-color: var(--primary-shade-color);
+      }
+
+      &:active .useful__controls-btn-img {
+        stroke: var(--white-color);
+      }
+
+      &.swiper-button-disabled {
+        border-color: var(--grey-color);
+
+        & .useful__controls-btn-img {
+          stroke: var(--grey-color);
+        }
+
+        @include hover {
+          +& {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--grey-light-color);
+
+    &-picture {
+      display: block;
+    }
+
+    &-image {
+      vertical-align: bottom;
+      height: 426px;
+      max-width: 100%;
+      border-radius: 10px 10px 0px 0px;
+
+      @include tablet {
+        & {
+          height: 202px;
+        }
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex: 1 0 auto;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px;
+      min-height: 190px;
+    }
+
+    &-text {
+      margin: 0 0 auto;
+      font-size: 24px;
+      line-height: 33px;
+      color: var(--night-rider-color);
+
+      @include tablet {
+        & {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    &-link {
+      margin-top: 30px;
+
+      @include tablet {
+        & {
+          padding: 17px 33.4px;
+        }
+      }
+
+      @include hover {
+        +& {
+          color: var(--white-color);
+          background-color: var(--primary-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        color: var(--white-color);
+        background-color: var(--primary-light-color);
+      }
+
+      &:active {
+        border-color: var(--primary-shade-color);
+        background-color: var(--primary-shade-color);
+      }
+    }
+  }
+}

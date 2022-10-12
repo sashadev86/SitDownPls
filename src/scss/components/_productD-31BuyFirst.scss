@@ -1,0 +1,111 @@
+.product {
+  &__info {
+    &-buy {
+
+      &-rating {
+        margin-bottom: 3px;
+
+        @include mobile {
+          & {
+            margin-bottom: 2px;
+            font-size: 16px;
+          }
+
+          &-img {
+            width: 16px;
+            height: 15px;
+          }
+        }
+      }
+
+      &-title {
+        margin-bottom: 4px;
+
+        @include mobile {
+          & {
+            margin-bottom: 8px;
+            max-width: 100%;
+            font-size: 16px;
+          }
+        }
+      }
+
+      &-text {
+        margin-bottom: 20.25px;
+        font-size: 14px;
+        line-height: 100%;
+        color: var(--grey-color);
+
+        @include high-tablet {
+          & {
+            margin-bottom: 21px;
+          }
+        }
+
+        @include mobile {
+          & {
+            margin-bottom: 17.2px;
+            max-width: 244px;
+          }
+        }
+      }
+
+      &-price {
+        margin-bottom: 22px;
+        font-size: 36px;
+        line-height: 130%;
+        color: var(--night-rider-color);
+
+        @include high-tablet {
+          & {
+            margin-bottom: 21.3px;
+          }
+        }
+
+        @include mobile {
+          & {
+            margin-bottom: 15px;
+            font-size: 24px;
+          }
+        }
+      }
+
+      &-click-btn {
+        padding: 16.8px 33px;
+        margin-bottom: 12px;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+
+        @include high-tablet {
+          & {
+            margin-bottom: 12.8px;
+          }
+        }
+
+        @include mobile {
+          & {
+            margin-left: -0.2px;
+            padding: 17px 33px;
+            width: 100%;
+          }
+        }
+      }
+
+      &-basket-btn {
+        transform: translateX(30px);
+        font-size: 16px;
+        line-height: 130%;
+        color: var(--primary-color);
+
+        @include mobile {
+          & {
+            transform: translateX(0);
+            display: flex;
+            justify-content: center;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

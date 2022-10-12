@@ -1,0 +1,334 @@
+.special {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 35px;
+
+  @include mobile {
+    & {
+      padding-top: 70px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include mobile {
+      & {
+        margin-bottom: 25.3px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__controls {
+    width: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      & {
+        position: absolute;
+        left: 37.8%;
+        bottom: 12px;
+      }
+    }
+
+    &-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 100px;
+      border: 2px solid var(--primary-color);
+      transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+      @include hover {
+        +& {
+          background-color: var(--primary-color);
+        }
+
+        +& .special__controls-img {
+          stroke: var(--white-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        background-color: var(--primary-light-color);
+      }
+
+      &:focus-visible:not(:hover):not(:active) .special__controls-img {
+        stroke: var(--white-color);
+      }
+
+      &:active {
+        background-color: var(--primary-shade-color);
+        border-color: var(--primary-shade-color);
+      }
+
+      &:active .special__controls-img {
+        stroke: var(--white-color);
+      }
+    }
+
+    &-btn.swiper-button-disabled {
+      border-color: var(--grey-color);
+
+      @include hover {
+        +& {
+          background-color: transparent;
+        }
+      }
+
+      & .special__controls-img {
+        stroke: var(--grey-color);
+      }
+    }
+
+    &-img {
+      width: 8px;
+      height: 28px;
+      fill: transparent;
+      stroke: var(--primary-color);
+      transition: stroke .3s ease-in-out;
+    }
+
+    &-prev-img {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__slide {
+    box-sizing: border-box;
+    width: calc((296 + 32) / 1280 * 100% - 32px);
+    height: auto;
+
+    &--center {
+      width: calc((624 + 32) / 1280 * 100% - 32px);
+    }
+
+    @include high-desktop {
+      &,
+      &--center {
+        width: calc(34.1% - 32px);
+      }
+    }
+
+    @include tablet {
+      &,
+      &--center {
+        width: calc((296 + 32) / 952 * 100% - 32px);
+      }
+    }
+
+    @include high-tablet {
+      & {
+        width: 47.9%;
+      }
+    }
+
+    @include small-tablet {
+      & {
+        width: 47.1%;
+      }
+    }
+
+    @include mobile {
+      & {
+        width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 511px;
+    padding: 37px 30px 29px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    height: 100%;
+
+    &-discount {
+      position: absolute;
+      top: 36px;
+      left: 0;
+      z-index: 1;
+
+      &-text {
+        padding: 6.2px 0 0 19px;
+        position: relative;
+        top: 0;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        color: var(--white-color);
+      }
+
+      &-img {
+        position: absolute;
+        top: -0.1px;
+        left: 0;
+        width: 92px;
+        height: 34px;
+        fill: var(--secondary-color);
+        z-index: -1;
+      }
+    }
+
+    &-wrap-img {
+      position: relative;
+      width: 100%;
+      height: 245px;
+      margin-bottom: 17.5px;
+
+      @include tablet {
+        &--center {
+          width: 254px;
+          margin-left: -10px;
+        }
+      }
+
+      @include high-tablet {
+        &--center {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+
+      @include small-tablet {
+        &--center {
+          width: calc(100% + 18px);
+          margin-left: -10px;
+        }
+      }
+
+      @include mobile {
+        &--center {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+
+    &-image {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+
+      &--center {
+        left: 50.5%;
+      }
+
+      @include high-desktop {
+        &--center {
+          margin-bottom: 31px;
+        }
+      }
+
+      @include mobile {
+        bottom: -0.5px;
+        left: 49.8%;
+
+        &--center {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      margin-bottom: 24px;
+
+      @include high-desktop {
+        & {
+          margin-bottom: 23px;
+        }
+      }
+
+      &-title {
+        max-width: 222px;
+        margin-bottom: 19px;
+        flex: 1 1 auto;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: var(--night-rider-color);
+      }
+
+      @include mobile {
+        & {
+          margin-bottom: 23px;
+        }
+      }
+    }
+
+    &-offer {
+      display: flex;
+      align-items: flex-end;
+      column-gap: 30px;
+      row-gap: 10px;
+
+      &-new {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 130%;
+        text-decoration: none;
+        color: var(--secondary-color);
+      }
+
+      &-old {
+        font-size: 16px;
+        line-height: 130%;
+        text-decoration-line: line-through;
+        color: var(--grey-color);
+      }
+    }
+
+    &-bgSofa {
+      position: absolute;
+      right: 30px;
+      bottom: 27px;
+
+      @include high-desktop {
+        & {
+          display: none;
+        }
+      }
+    }
+
+    &-link {
+      transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+
+      @include hover {
+        +& {
+          background-color: var(--primary-color);
+          color: var(--white-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        border: 2px solid var(--primary-color);
+        border-radius: 10px;
+        color: var(--white-color);
+        background-color: var(--primary-light-color);
+      }
+
+      &:active {
+        border-color: var(--primary-shade-color);
+        color: var(--white-color);
+        background-color: var(--primary-shade-color);
+      }
+    }
+  }
+}

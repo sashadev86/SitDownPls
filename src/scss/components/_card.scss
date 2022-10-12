@@ -1,0 +1,153 @@
+.card {
+
+  &__item {
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--grey-light-color);
+  }
+
+  &__content {
+    padding: 30px 30px 30.5px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+
+    @include high-desktop {
+      & {
+        padding: 30px 30px 30.2px 30px;
+      }
+    }
+
+    @include mobile {
+      & {
+        padding: 16px;
+      }
+    }
+  }
+
+  &__rating {
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--secondary-color);
+
+    @include mobile {
+      & {
+        font-size: 12px;
+      }
+    }
+
+    &-img {
+      margin-right: 6.76px;
+      width: 15.73px;
+      height: 15px;
+      fill: var(--secondary-color);
+
+      @include mobile {
+        & {
+          margin-right: 6px;
+          width: 13px;
+          height: 12px;
+        }
+      }
+    }
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-self: center;
+    margin-bottom: 17px;
+    margin-right: -32px;
+    margin-left: -32px;
+    padding-right: 13px;
+    padding-left: 13px;
+    min-height: 133px;
+
+    @include mobile {
+      & {
+        margin-bottom: 7px;
+        min-height: 60.9px;
+        align-items: center;
+        margin-right: -15px;
+        margin-left: -15px;
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+    &-image {
+      @include mobile {
+        & {
+          width: 78%;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 21px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--night-rider-color);
+
+    @include mobile {
+      & {
+        margin-bottom: 16px;
+        max-width: 108px;
+        font-size: 16px;
+      }
+    }
+
+    &-model {
+      display: inline-block;
+    }
+  }
+
+  &__price {
+    margin-bottom: 24px;
+    display: block;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--grey-shade-color);
+
+    @include mobile {
+      & {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__link {
+    margin-top: auto;
+
+    @include hover {
+      +& {
+        color: var(--white-color);
+        background-color: var(--primary-color);
+      }
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      color: var(--white-color);
+      background-color: var(--primary-light-color);
+    }
+
+    &:active {
+      border-color: var(--primary-shade-color);
+      background-color: var(--primary-shade-color);
+    }
+
+    @include mobile {
+      & {
+        padding: 10px 23px;
+      }
+    }
+  }
+}

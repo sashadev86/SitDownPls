@@ -1,0 +1,24 @@
+<section class="catalog">
+  <div class="container catalog__container">
+    <h1 class="visually-hidden">Полный каталог мебельного интернет-магазина SitDownPls</h1>
+    <div class="catalog__content">
+      <div class="catalog__left">
+        <h2 class="catalog__left-title">Фильтровать по:</h2>
+        @include('catalogFurnitures.html')
+        @include('catalogPrice.html')
+        @include('catalogDiscount.html')
+        @include('catalogColors.html')
+        @include('catalogOksford.html')
+      </div>
+      <div class="catalog__right">
+        <h2 class="catalog__right-title">Каталог</h2>
+        @include('catalogTag.html')
+        @include('catalogDropfilter.html')
+        <div class="catalog__swiper swiper card">
+          @include('catalogCard.html')
+        </div>
+        <div class="swiper-pagination catalog__swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>

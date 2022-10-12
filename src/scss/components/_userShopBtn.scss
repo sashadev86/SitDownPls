@@ -1,0 +1,116 @@
+.usershop {
+  width: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+  &__user {
+    position: relative;
+    width: 26px;
+    height: 29px;
+
+    &-img {
+      width: 26px;
+      height: 28px;
+      fill: var(--primary-color);
+      transition: fill .3s ease-in-out;
+
+      @include hover {
+        +& {
+          fill: var(--primary-light-color);
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      right: 0;
+      bottom: 0;
+      left: -4px;
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+      background-color: var(--primary-light-color);
+      transform: translate(0, 0) scaleX(0);
+      transform-origin: center;
+      transition: transform .3s ease-in-out;
+      z-index: -1;
+    }
+
+    &:focus-visible:not(:active):not(:hover)::before {
+      transform: translate(0, 0) scaleX(1);
+    }
+
+    &:focus-visible:not(:active):not(:hover) .usershop__user-img {
+      fill: var(--white-color);
+    }
+
+    &:active .usershop__user-img {
+      fill: var(--primary-shade-color);
+    }
+  }
+
+  &__shop {
+    position: relative;
+    width: 30px;
+    height: 28px;
+
+    &-count {
+      position: absolute;
+      top: 5px;
+      left: -11px;
+      padding-top: 2.4px;
+      width: 14px;
+      height: 15px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 100%;
+      color: var(--white-color);
+      background-color: var(--secondary-color);
+    }
+
+    &-img {
+      width: 30px;
+      height: 28px;
+      fill: var(--primary-color);
+      transition: fill .3s ease-in-out;
+
+      @include hover {
+        +& {
+          fill: var(--primary-light-color);
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      right: 0;
+      bottom: 0;
+      left: -14px;
+      width: calc(100% + 18px);
+      height: calc(100% + 8px);
+      background-color: var(--primary-light-color);
+      transform: translate(0, 0) scaleX(0);
+      transform-origin: center;
+      transition: transform .3s ease-in-out;
+      z-index: -1;
+    }
+
+    &:focus-visible:not(:active):not(:hover)::before {
+      transform: translate(0, 0) scaleX(1);
+    }
+
+    &:focus-visible:not(:active):not(:hover) .usershop__shop-img {
+      fill: var(--white-color);
+    }
+
+    &:active .usershop__shop-img {
+      fill: var(--primary-shade-color);
+    }
+  }
+}

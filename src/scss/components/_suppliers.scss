@@ -1,0 +1,61 @@
+.suppliers {
+  @include mobile {
+    & {
+      padding-top: 12px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+
+    @include mobile {
+      & {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: 32px;
+    max-width: 842px;
+
+    @include tablet {
+      & {
+        margin-bottom: 33px;
+      }
+    }
+
+    @include mobile {
+      & {
+        margin-bottom: 29px;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--night-rider-color);
+
+    @include mobile {
+      & {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 180%;
+    color: var(--grey-shade-color);
+
+    @include mobile {
+      & {
+        font-size: 14px;
+      }
+    }
+  }
+}

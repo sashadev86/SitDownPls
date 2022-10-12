@@ -1,0 +1,42 @@
+.product {
+  &__modal {
+    background-color: var(--night-rider-03-color);
+
+    &-btn {
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+
+      @include mobile {
+        & {
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      &-img {
+        width: 20px;
+        height: 20px;
+        fill: var(--grey-color);
+        transition: fill .3s ease-in-out;
+
+        @include mobile {
+          & {
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+
+      @include hover {
+        +& .product__modal-btn-img {
+          fill: var(--primary-color);
+        }
+      }
+
+      &:active .product__modal-btn-img {
+        fill: var(--primary-shade-color);
+      }
+    }
+  }
+}

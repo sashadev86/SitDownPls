@@ -1,0 +1,144 @@
+.rating {
+  padding-top: 35px;
+  padding-bottom: 70px;
+
+  @include mobile {
+    & {
+      padding-top: 58px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 26px;
+
+    @include mobile {
+      & {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__items {
+    margin-bottom: 31px;
+
+    @include high-desktop {
+      & {
+        margin-bottom: 32px;
+      }
+
+    //   & .card__content {
+    //     padding: 30px 30px 30.2px 30px;
+    //   }
+    }
+
+    @include mobile {
+      & {
+        margin-bottom: 32px;
+      }
+    }
+
+    & .card__list {
+      display: grid;
+      grid-auto-flow: dense;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+
+      @include high-desktop {
+        & {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @include high-tablet {
+        & {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @include mobile {
+        & {
+          gap: 16px;
+        }
+      }
+    }
+
+    & .card__item {
+      display: none;
+
+      &.product-card-active {
+        display: list-item;
+        opacity: 1;
+        animation: fade-in .3s ease-in-out;
+      }
+
+      @include tablet {
+        & .card__picture {
+          margin-bottom: 17px;
+        }
+      }
+
+      @include mobile {
+        & .card__picture {
+          margin-bottom: 7.5px;
+        }
+      }
+
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    max-width: 298px;
+    padding: 20px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+
+    @include hover {
+      +& {
+        border-color: var(--primary-light-color);
+        background-color: var(--primary-light-color);
+      }
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      border-color: var(--primary-shade-color);
+      background-color: var(--primary-light-color);
+    }
+
+    &:active {
+      border-color: var(--primary-shade-color);
+      background-color: var(--primary-shade-color);
+    }
+
+    @include mobile {
+      & {
+        padding: 20px 34.5px;
+      }
+    }
+
+    &.show-more-hidden {
+      display: none;
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: list-item;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,51 @@
+.profit {
+
+  &__content {
+    margin-bottom: 32px;
+    max-width: 624px;
+  }
+
+  &__subtitle {
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--night-rider-color);
+
+    @include mobile {
+      & {
+        margin-bottom: 13px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &-img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__text {
+    max-width: 587px;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--grey-shade-color);
+
+    @include mobile {
+      & {
+        padding-left: 12px;
+        font-size: 14px;
+      }
+    }
+  }
+}

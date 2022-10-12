@@ -1,0 +1,124 @@
+.choosing {
+
+  &-category {
+    position: relative;
+    z-index: 10;
+    width: 29%;
+    height: 60px;
+
+    @include tablet {
+      & {
+        width: 31.5%;
+      }
+    }
+
+    @include mobile {
+      & {
+        width: 100%;
+      }
+    }
+
+    & .choices__inner {
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 26.6px;
+      border: 2px solid var(--grey-light-color);
+      border-radius: 0px 10px 10px 0px;
+      background-color: var(--white-color);
+      transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+      @include tablet {
+        & {
+          padding: 0 0 0 25.6px;
+        }
+      }
+
+      @include mobile {
+        & {
+          border-radius: 10px;
+        }
+      }
+    }
+
+    & .choices[data-type*=select-one] .choices__inner {
+      padding-bottom: 0;
+      height: 60px;
+
+      @include hover {
+        +& {
+          border: 2px solid var(--primary-color);
+        }
+      }
+    }
+
+    & .choices:focus-visible:not(:hover):not(:active) .choices__inner {
+      background-color: var(--pink-light-color);
+      border-color: var(--primary-color);
+    }
+
+    & .choices__list--single {
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--primary-color);
+    }
+
+    & .choices__list--dropdown, .choosing-category .choices__list[aria-expanded] {
+      left: 0;
+      top: 0;
+      margin-top: 0;
+      border: 2px solid #F7F7F7;
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+    & .choices__list--dropdown .choices__list, .choosing-category .choices__list[aria-expanded] .choices__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 58px 0 10px 0;
+      max-height: 300px;
+    }
+
+    & .choices__list--dropdown .choices__item, .choosing-category .choices__list[aria-expanded] .choices__item {
+      font-size: 16px;
+      line-height: 21px;
+      color: var(--night-rider-color);
+    }
+
+    & .choices__list--dropdown .choices__item, .choosing-category .choosing-category .choices__list[aria-expanded] .choices__item {
+      font-size: 16px;
+      line-height: 21px;
+      color: var(--night-rider-color);
+      transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+      @include hover {
+        +& {
+          color: var(--primary-light-color);
+        }
+      }
+
+      @include high-tablet {
+        & {
+          padding-left: 5px;
+        }
+      }
+
+      @include small-tablet {
+        & {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+
+      @include mobile {
+        & {
+          padding-left: 25px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    & .choices[data-type*=select-one]:after {
+      right: 34px;
+    }
+  }
+}

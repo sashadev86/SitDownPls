@@ -1,0 +1,122 @@
+.similar {
+  margin-bottom: 70px;
+
+  &__wrap {
+    margin-bottom: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+      padding-top: 0.5px;
+      padding-left: 1px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: var(--night-rider-color);
+
+      @include high-desktop {
+        & {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  &__controls {
+    margin-top: -2px;
+    width: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      &--desktop {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include mobile {
+        & {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          gap: 14px;
+        }
+      }
+    }
+
+    &-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 100px;
+      border: 2px solid var(--primary-color);
+      transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+      @include hover {
+        +& {
+          background-color: var(--primary-color);
+        }
+
+        +& .similar__controls-img {
+          stroke: var(--white-color);
+        }
+      }
+
+      &:focus-visible:not(:hover):not(:active) {
+        background-color: var(--primary-light-color);
+      }
+
+      &:focus-visible:not(:hover):not(:active) .similar__controls-img {
+        stroke: var(--white-color);
+      }
+
+      &:active {
+        background-color: var(--primary-shade-color);
+        border-color: var(--primary-shade-color);
+      }
+
+      &:active .similar__controls-img {
+        stroke: var(--white-color);
+      }
+    }
+
+    &-btn.swiper-button-disabled {
+      border-color: var(--grey-color);
+
+      @include hover {
+        +& {
+          background-color: transparent;
+        }
+      }
+
+      & .similar__controls-img {
+        stroke: var(--grey-color);
+      }
+    }
+
+    &-img {
+      width: 8px;
+      height: 28px;
+      fill: transparent;
+      stroke: var(--primary-color);
+      transition: stroke .3s ease-in-out;
+    }
+
+    &-prev-img {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__produts {
+    @include mobile {
+      & {
+        margin-bottom: 18px;
+      }
+    }
+  }
+}

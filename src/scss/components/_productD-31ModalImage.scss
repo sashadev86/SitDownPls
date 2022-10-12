@@ -1,0 +1,176 @@
+.product {
+  &__modal {
+    background-color: var(--night-rider-03-color);
+
+    &-container {
+      width: 100%;
+      padding: 0;
+      background-color: var(--white-color);
+
+      @include big-desktop {
+        & {
+          width: 90%;
+        }
+      }
+    }
+
+    &-wrap {
+      &-large {
+        padding: 30px 40px;
+
+        @include small-tablet {
+          & {
+            padding: 40px 37px;
+          }
+        }
+
+        @include mobile {
+          & {
+            padding: 30px 17px;
+          }
+        }
+      }
+    }
+
+    &-large {
+      &-wrapper {
+        align-items: center;
+      }
+
+      &-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-image {
+        @include small-tablet {
+          & {
+            width: auto;
+          }
+
+          &-mobile3 {
+            height: 275px;
+          }
+        }
+
+        @include mobile {
+          & {
+            width: auto;
+          }
+
+          &-mobile3 {
+            height: 168px;
+          }
+        }
+      }
+    }
+
+    &-small {
+      position: relative;
+      padding: 20px 66px;
+      border-radius: 0 0 10px 10px;
+      background-color: var(--grey-light-color);
+
+      @include small-tablet {
+        & {
+          padding: 10px 66px;
+        }
+      }
+
+      @include mobile {
+        & {
+          padding: 10px 60px;
+        }
+      }
+
+      &-wrapper {
+        align-items: center;
+      }
+
+      &-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-btn {
+        display: none;
+
+        @include tablet {
+          & {
+            display: block;
+            position: absolute;
+            top: 40%;
+            width: 32px;
+            height: 32px;
+            border-radius: 100px;
+            border: 2px solid var(--primary-color);
+            transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+            @include hover {
+              +& {
+                background-color: var(--primary-color);
+              }
+
+              +& .product__modal-small-img {
+                stroke: var(--white-color);
+              }
+            }
+
+            &:focus-visible:not(:hover):not(:active) {
+              background-color: var(--primary-light-color);
+            }
+
+            &:focus-visible:not(:hover):not(:active) .product__modal-small-img {
+              stroke: var(--white-color);
+            }
+
+            &:active {
+              background-color: var(--primary-shade-color);
+              border-color: var(--primary-shade-color);
+            }
+
+            &:active .product__modal-small-img {
+              stroke: var(--white-color);
+            }
+          }
+
+          &--prev {
+            left: 16px;
+          }
+
+          &--next {
+            right: 16px;
+          }
+        }
+
+        &-img {
+          width: 8px;
+          height: 28px;
+          fill: transparent;
+          stroke: var(--primary-color);
+          transition: stroke .3s ease-in-out;
+
+          &--prev {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      &-btn.swiper-button-disabled {
+        border-color: var(--grey-color);
+
+        @include hover {
+          +& {
+            background-color: transparent;
+          }
+        }
+
+        & .product__modal-small-img {
+          stroke: var(--grey-color);
+        }
+      }
+    }
+  }
+}

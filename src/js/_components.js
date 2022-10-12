@@ -1,0 +1,16 @@
+import './components/preloader';
+import './components/select';
+import './components/slider';
+import './components/cardMore';
+import './components/validation';
+import './components/tooltip';
+import './components/map';
+import './components/catalogFurnitures';
+import './components/catalogPrice';
+import './components/catalogColors';
+import './components/catalogTag';
+import './components/catalogDropfilter';
+import './components/swiper-product-page';
+import './components/swiper-product-modal';
+import './components/productModalImage';
+import './components/swiper-product-similar';

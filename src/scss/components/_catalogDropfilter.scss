@@ -1,0 +1,152 @@
+.catalog {
+
+  &__dropfilter {
+    display: none;
+
+    @include high-desktop {
+      & {
+        display: flex;
+        align-items: center;
+        margin-bottom: 31.5px;
+      }
+    }
+
+    @include small-tablet {
+      & {
+        margin-bottom: 32px;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        display: grid;
+        grid-template-columns: repeat(2, 186px);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "filterone filterone"
+        "filtertwo filterthree"
+        "filterfive filterfour";
+        gap: 16px 32px;
+      }
+    }
+
+    @include small-tablet {
+      & {
+        gap: 15.5px 32px;
+      }
+    }
+
+    @include mobile {
+      & {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+    }
+  }
+
+  .dropfilter {
+
+    @include high-desktop {
+      &__heading {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: var(--night-rider-color);
+      }
+    }
+
+    &__item {
+      position: relative;
+      width: 20%;
+
+      @include high-tablet {
+        & {
+          width: 100%;
+        }
+
+        &:nth-child(1) {
+          grid-area: filterone;
+        }
+
+        &:nth-child(2) {
+          grid-area: filtertwo;
+          z-index: 7;
+        }
+
+        &:nth-child(3) {
+          grid-area: filterthree;
+          z-index: 7;
+        }
+
+        &:nth-child(4) {
+          grid-area: filterfour;
+        }
+
+        &:nth-child(4) {
+          grid-area: filterfive;
+        }
+      }
+    }
+
+    &__item:first-child {
+      width: max-content;
+      margin-right: 43px;
+    }
+
+    &__item:not(:last-child):not(:first-child) {
+      margin-right: 32px;
+    }
+
+    &__content {
+      position: absolute;
+      display: none;
+      width: 100%;
+      top: 10px;
+      border: 1px solid #eaeaea;
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      background-color: var(--white-color);
+      padding: 50px 10px 20px 20px;
+      z-index: 5;
+      transition: .3s ease-in-out;
+
+      &.is-active {
+        display: block;
+        animation-name: dropdownOpen;
+        animation-duration: .3s;
+      }
+
+      &.is-disabled {
+        display: block;
+        animation-name: dropdownClose;
+        animation-duration: .3s;
+      }
+    }
+
+    &__btn.is-active {
+      border-color: var(--primary-shade-color);
+      &::before {
+        margin-top: 6px;
+        transform: rotate(225deg);
+      }
+    }
+
+    @keyframes dropdownOpen {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes dropdownClose {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+  }
+}

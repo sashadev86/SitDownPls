@@ -1,0 +1,12 @@
+.catalog {
+  &__right {
+    .catalog__form-price {
+      flex-direction: column;
+    }
+
+    .catalog__form-label:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+

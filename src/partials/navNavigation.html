@@ -1,0 +1,19 @@
+<nav class="navigation" title="Навигация по сайту" data-menu>
+
+  <button class="btn-reset navigation__close" data-menu-close>
+    <svg class="navigation__close-img">
+      <use xlink:href="img/sprite.svg#burgerClose"></use>
+    </svg>
+  </button>
+
+  <ul class="list-reset navigation__list">
+    <li class="navigation__item"><a href="catalog.html" class="navigation__link" data-menu-item data-scroll>Каталог</a></li>
+    <li class="navigation__item"><a href="#" class="navigation__link" data-menu-item data-scroll>Магазины</a></li>
+    <li class="navigation__item"><a href="#" class="navigation__link" data-menu-item data-scroll>Шоу-рум</a></li>
+    <li class="navigation__item"><a href="#" class="navigation__link" data-menu-item data-scroll>Доставка и оплата</a></li>
+    <li class="navigation__item"><a href="#" class="navigation__link" data-menu-item data-scroll>Дисконт</a></li>
+    <li class="navigation__item"><a href="contacts.html" class="navigation__link" data-menu-item data-scroll>Контакты</a></li>
+  </ul>
+
+  @include('navInfo.html')
+</nav>
