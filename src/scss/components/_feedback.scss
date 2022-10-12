@@ -87,29 +87,6 @@
       }
     }
 
-    // &-picture {
-    //   grid-column: 7/13;
-    //   align-self: center;
-
-    //   @include tablet {
-    //     & {
-    //       grid-column: 5/10;
-    //     }
-    //   }
-
-    //   @include high-tablet {
-    //     & {
-    //       grid-column: 5/7;
-    //     }
-    //   }
-
-    //   @include mobile {
-    //     & {
-    //       display: none;
-    //     }
-    //   }
-    // }
-
     &-title {
       margin-bottom: 9px;
 

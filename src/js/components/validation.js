@@ -1,4 +1,5 @@
 import { validateForms } from '../functions/validate-forms';
+import GraphModal from 'graph-modal';
 
 const rules = [
   {
@@ -84,7 +85,14 @@ const rules1 = [
 ];
 
 const afterForm = () => {
-  console.log('Произошла отправка, тут можно писать любые действия');
+  let buyOneClickModal = document.querySelector('[data-graph-target="buyOneClick"]')
+  let buyOneClickModalClose = buyOneClickModal.querySelector('.js-modal-close')
+
+  buyOneClickModalClose.click()
+  
+  new GraphModal().open('success');
+  // console.log(buyOneClickModal);
+  // console.log('Произошла отправка, тут можно писать любые действия');
 };
 
 let feedbackForm = document.querySelector('.feedback__form');
