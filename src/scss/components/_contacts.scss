@@ -1,8 +1,26 @@
 .contacts {
   padding-bottom: 70px;
 
+  @include tablet {
+    & {
+      padding-bottom: 71px;
+    }
+  }
+
+  @include small-tablet {
+    & {
+      padding-bottom: 70px;
+    }
+  }
+
   &__title {
     margin-bottom: 16px;
+
+    @include mobile {
+      & {
+        font-size: 24px;
+      }
+    }
   }
 
   &__wrapper {
@@ -39,7 +57,7 @@
     }
 
     &-input {
-      margin-right: 32px;
+      margin-right: 28.2px;
       width: 624px;
       height: 100%;
       padding-left: 18px;
@@ -80,7 +98,7 @@
 
       @include high-tablet {
         & {
-          width: 64%;
+          width: 65%;
         }
       }
 

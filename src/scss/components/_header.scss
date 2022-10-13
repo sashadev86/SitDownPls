@@ -302,3 +302,51 @@
     }
   }
 }
+
+.site-container--catalog {
+  & .header {
+    margin-bottom: 19px;
+
+    @include mobile {
+      & {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+.site-container--product {
+  .header {
+    margin-bottom: 17px;
+
+    @include tablet {
+      & {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.site-container--interpreter {
+  & .header {
+    margin-bottom: 19px;
+
+    @include mobile {
+      & {
+        margin-bottom: 20.5px;
+      }
+    }
+  }
+}
+
+.site-container--contact {
+  & .header {
+    margin-bottom: 19px;
+
+    @include mobile {
+      & {
+        margin-bottom: 32.5px;
+      }
+    }
+  }
+}

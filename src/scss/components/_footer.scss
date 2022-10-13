@@ -54,6 +54,12 @@
       }
     }
 
+    @include small-tablet {
+      & {
+        margin-bottom: 20px;
+      }
+    }
+
     @include mobile {
       & {
         margin-bottom: 19.5px;
@@ -171,6 +177,13 @@
         & {
           margin-top: -2px;
           padding-left: 7.4px;
+        }
+      }
+
+      @include small-tablet {
+        & {
+          margin-top: -1.9px;
+          padding-left: 0px;
         }
       }
 

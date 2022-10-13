@@ -8,8 +8,15 @@
   &__title {
     margin-bottom: 32px;
 
+    @include tablet {
+      & {
+        margin-bottom: 33px;
+      }
+    }
+
     @include mobile {
       & {
+        margin-bottom: 32px;
         font-size: 24px;
       }
     }

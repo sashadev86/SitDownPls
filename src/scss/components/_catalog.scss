@@ -1,17 +1,17 @@
-.site-container--catalog {
-  & .header {
-    margin-bottom: 19px;
-
-    @include mobile {
-      & {
-        margin-bottom: 32px;
-      }
-    }
-  }
-}
-
 .catalog {
   padding-bottom: 102px;
+
+  @include tablet {
+    & {
+      padding-bottom: 101px;
+    }
+  }
+
+  @include small-tablet {
+    & {
+      padding-bottom: 102px;
+    }
+  }
 
   &__content {
     display: grid;
@@ -40,7 +40,7 @@
     }
 
     &-title {
-      margin-bottom: 20px;
+      margin-bottom: 21px;
       font-weight: 400;
       font-size: 18px;
       line-height: 130%;
@@ -155,9 +155,13 @@
     }
   }
 
+  & .card__content {
+    padding: 30.3px 30px 30px 30px;
+  }
+
   @include mobile {
     & .card__content {
-      padding: 16px 16px 16.8px 16px;
+      padding: 16px 16px 16.9px 16px;
     }
 
     & .card__rating {
@@ -173,9 +177,9 @@
 
     & .card__picture {
       align-items: center;
-      margin-bottom: 7px;
-      margin-right: 0;
-      margin-left: 0;
+      margin-bottom: 7.3px;
+      margin-right: -15px;
+      margin-left: -15px;
       padding-right: 0;
       padding-left: 0;
       min-height: 60.7px;

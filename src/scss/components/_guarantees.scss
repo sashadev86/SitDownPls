@@ -1,6 +1,12 @@
 .guarantees {
   padding-bottom: 70px;
 
+  @include small-tablet {
+    & {
+      padding-bottom: 69.5px;
+    }
+  }
+
   &__subtitle {
     margin-bottom: 13px;
     font-weight: 400;
