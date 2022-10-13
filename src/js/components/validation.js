@@ -82,6 +82,15 @@ const rules1 = [
       }
     ]
   },
+  {
+    ruleSelector: '.input-checkbox',
+    rules: [
+      {
+        rule: 'required',
+        errorMessage: 'Это поле обязательное!',
+      },
+    ]
+  },
 ];
 
 const afterForm = () => {
@@ -89,7 +98,7 @@ const afterForm = () => {
   let buyOneClickModalClose = buyOneClickModal.querySelector('.js-modal-close')
 
   buyOneClickModalClose.click()
-  
+
   new GraphModal().open('success');
   // console.log(buyOneClickModal);
   // console.log('Произошла отправка, тут можно писать любые действия');

@@ -109,6 +109,10 @@
       &-checkbox {
         position: relative;
 
+        & .just-validate-error-label {
+          top: -12px;
+        }
+
         &-text[for] {
           cursor: pointer;
         }
