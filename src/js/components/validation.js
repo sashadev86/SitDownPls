@@ -3,6 +3,23 @@ import GraphModal from 'graph-modal';
 
 const rules = [
   {
+    ruleSelector: '.input-search',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Минимальное количество символов 3'
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите название продукта!'
+      }
+    ]
+  },
+];
+const rules1 = [
+  {
     ruleSelector: '.input-name',
     rules: [
       {
@@ -54,7 +71,7 @@ const rules = [
     ]
   },
 ];
-const rules1 = [
+const rules2 = [
   {
     ruleSelector: '.input-name',
     rules: [
@@ -104,12 +121,17 @@ const afterForm = () => {
   // console.log('Произошла отправка, тут можно писать любые действия');
 };
 
+let formSearch = document.querySelector('.form-header');
+if(formSearch) {
+  validateForms('.form-header', rules, afterForm);
+}
+
 let feedbackForm = document.querySelector('.feedback__form');
 if(feedbackForm) {
-  validateForms('.feedback__form', rules, afterForm);
+  validateForms('.feedback__form', rules1, afterForm);
 }
 
 let buyForm = document.querySelector('.buy-form');
 if(buyForm) {
-  validateForms('.buy-form', rules1, afterForm);
+  validateForms('.buy-form', rules2, afterForm);
 }
