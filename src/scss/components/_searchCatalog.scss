@@ -1,7 +1,5 @@
 .form {
-
   &__search {
-
     &-wrapper {
       position: relative;
       z-index: 0;
@@ -24,6 +22,15 @@
           margin-bottom: 16px;
           width: 100%;
         }
+      }
+
+      & .just-validate-error-label {
+        position: absolute;
+        top: 0;
+        left: 35px;
+        font-size: 12px;
+        line-height: 16px;
+        color: var(--red-input-color) !important;
       }
     }
 
