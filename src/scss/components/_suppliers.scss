@@ -45,6 +45,7 @@
     font-size: 24px;
     line-height: 33px;
     color: var(--night-rider-color);
+    outline: none;
 
     @include mobile {
       & {
@@ -58,6 +59,7 @@
     font-size: 16px;
     line-height: 180%;
     color: var(--grey-shade-color);
+    outline: none;
 
     @include mobile {
       & {

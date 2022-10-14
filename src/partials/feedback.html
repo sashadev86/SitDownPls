@@ -2,10 +2,10 @@
   <div class="container feedback__container">
     <div class="feedback__wrapper">
       <div class="feedback__wrapper-content">
-        <h2 class="section-title feedback__wrapper-title">Мы всегда вам рады!</h2>
+        <h2 class="section-title feedback__wrapper-title" tabindex="0" aria-label="Вы находитесь в секции обратной связи">Мы всегда вам рады!</h2>
         <div class="feedback__wrapper-text">Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность распределения внутренних резервов и ресурсов.
           <div class="tooltip">
-            <button class="btn-reset tooltip__btn tippy-tooltip" data-template="one">
+            <button class="btn-reset tooltip__btn tippy-tooltip" data-template="one" aria-label="Открыть подсказку">
               <svg class="tooltip__btn-image">
                 <use xlink:href="img/sprite.svg#tooltip"></use>
               </svg>
@@ -19,17 +19,17 @@
         </div>
         <form action="#" class="form feedback__form">
           <label class="feedback__form-label">
-            <input type="text" name="Имя" class="input-reset feedback__form-input input-name" placeholder="Как вас зовут?">
+            <input type="text" name="Имя" class="input-reset feedback__form-input input-name" placeholder="Как вас зовут?" aria-label="Введите имя">
           </label>
           <label class="feedback__form-label">
-            <input type="tel" name="Телефон" class="input-reset feedback__form-input input-tel" placeholder="Ваш телефон">
+            <input type="tel" name="Телефон" class="input-reset feedback__form-input input-tel" placeholder="Ваш телефон" aria-label="Введите телефон">
           </label>
           <label class="feedback__form-label">
-            <input type="email" name="E-mail" class="input-reset feedback__form-input input-email" placeholder="Ваш e-mail">
+            <input type="email" name="E-mail" class="input-reset feedback__form-input input-email" placeholder="Ваш e-mail" aria-label="Введите email">
           </label>
-          <button class="btn-reset btn-all feedback__form-btn">Отправить</button>
+          <button class="btn-reset btn-all feedback__form-btn" aria-label="Отправить форму">Отправить</button>
           <div class="feedback__form-checkbox">
-            <input class="visually-hidden feedback__form-checkbox-hidden input-checkbox" id="feedback__form-checkbox-hidden" type="checkbox" name="feedbackFormAgreement" value="yes" checked required>
+            <input class="visually-hidden feedback__form-checkbox-hidden input-checkbox" id="feedback__form-checkbox-hidden" type="checkbox" name="feedbackFormAgreement" value="yes" checked required aria-label="Обязательно для заполнения">
             <label class="btn-reset feedback__form-checkbox-text" for="feedback__form-checkbox-hidden">
                 Принимаю
               <a href="#no-scrolling" class="feedback__form-checkbox-link">пользовательское соглашение</a>
