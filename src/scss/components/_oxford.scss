@@ -2,19 +2,21 @@
   display: grid;
   grid-template-columns: 1fr;
 
+  @include mobile {
+    & {
+      row-gap: 32px;
+    }
+  }
+
   &__picture {
     display: flex;
     grid-column: 1/-1;
     grid-row: 1/2;
+    height: 100%;
 
-    &-image {
-      width: 100%;
-      height: 600px;
-
-      @include mobile {
-        & {
-          height: 210px;
-        }
+    @include mobile {
+      & {
+        min-height: 210px;
       }
     }
   }
@@ -37,6 +39,10 @@
         margin-left: 0;
         padding-top: 32px;
         padding-bottom: 32px;
+      }
+
+      &--mobile {
+        width: 100%;
       }
     }
   }
@@ -68,7 +74,7 @@
     @include mobile {
       & {
         max-width: 235px;
-        margin-bottom: 143px;
+        margin-bottom: 0;
         font-size: 16px;
         line-height: 19px;
       }
@@ -103,6 +109,22 @@
     &:active {
       border-color: var(--primary-shade-color);
       background-color: var(--primary-shade-color);
+    }
+
+    @include mobile {
+      & {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include mobile {
+        & {
+          display: block;
+        }
+      }
     }
   }
 }

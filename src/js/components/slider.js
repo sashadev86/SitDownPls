@@ -51,6 +51,8 @@ if (swiperSpecial) {
     slidesPerView: "auto",
     direction: "horizontal",
     spaceBetween: 12,
+    watchSlidesProgress: true,
+    slideVisibleClass: 'ui-slide-visible',
     navigation: {
       nextEl: '.special-controls-next',
       prevEl: '.special-controls-prev',
@@ -82,6 +84,15 @@ if (swiperSpecial) {
         spaceBetween: 32,
       },
     },
+    on: {
+      init() {
+        focusVisibleSlide(this.slides, 'ui-slide-visible');
+      },
+
+      slideChange() {
+        focusVisibleSlide(this.slides, 'ui-slide-visible');
+      },
+    },
   });
 }
 
@@ -90,6 +101,8 @@ if (swiperUseful) {
   swiperUseful = new Swiper('.useful__swiper', {
     slidesPerView: "auto",
     spaceBetween: 32,
+    watchSlidesProgress: true,
+    slideVisibleClass: 'ui-slide-visible',
     navigation: {
       nextEl: '.useful-controls-next',
       prevEl: '.useful-controls-prev',
@@ -122,7 +135,16 @@ if (swiperUseful) {
         slidesPerView: 2,
         spaceBetween: 32,
       },
-    }
+    },
+    on: {
+      init() {
+        focusVisibleSlide(this.slides, 'ui-slide-visible');
+      },
+
+      slideChange() {
+        focusVisibleSlide(this.slides, 'ui-slide-visible');
+      },
+    },
   });
 }
 

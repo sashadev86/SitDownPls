@@ -21,6 +21,7 @@
   border-top: 1px solid var(--primary-color);
   transform: rotate(135deg);
   transition: border-color .3s ease-in-out;
+  z-index: 10;
 }
 
 .choices[data-type*=select-one].is-open::after {

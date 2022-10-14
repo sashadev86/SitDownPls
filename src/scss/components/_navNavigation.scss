@@ -115,7 +115,7 @@
       align-items: flex-start;
       flex-direction: column;
       position: absolute;
-      left: 0;
+      left: -100%;
       top: 0;
       z-index: 39;
       overflow-y: auto;
@@ -124,7 +124,7 @@
       background-color: var(--white-color);
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform .3s ease-in-out;
       background-image: url(../img/logoBurger.svg);
       background-repeat: no-repeat;
       background-position: center right;
@@ -151,7 +151,7 @@
       & .nav__info-list {
         display: grid;
         grid-template-columns: repeat(2, 145px);
-        padding: 21px 12px 15px 12px;
+        padding: 21px 16px 15px 12px;
         background-color: var(--grey-light-color);
       }
 
@@ -174,4 +174,5 @@
 .menu--active {
   opacity: 1;
   visibility: visible;
+  transform: translateX(100%);
 }

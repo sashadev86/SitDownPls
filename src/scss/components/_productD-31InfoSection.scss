@@ -1,15 +1,5 @@
 .site-container--product {
-  .header {
-    margin-bottom: 17px;
-
-    @include tablet {
-      & {
-        margin-bottom: 20px;
-      }
-    }
-  }
-
-  .breadcrumbs__container {
+  & .breadcrumbs__container {
     margin-bottom: 30px;
 
     @include high-desktop {
