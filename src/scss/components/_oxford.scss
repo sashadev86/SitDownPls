@@ -41,7 +41,7 @@
         padding-bottom: 32px;
       }
 
-      &--mobile {
+      &-mobile {
         width: 100%;
       }
     }
@@ -117,7 +117,7 @@
       }
     }
 
-    &--mobile {
+    &-mobile {
       display: none;
 
       @include mobile {
