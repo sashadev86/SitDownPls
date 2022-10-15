@@ -107,7 +107,6 @@ a {
   @include small-tablet {
     & {
       --content-width: 624px;
-      --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
     }
   }
 }
