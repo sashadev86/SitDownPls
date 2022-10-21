@@ -75,7 +75,7 @@ if (swiperSpecial) {
       },
 
       992: {
-        slidesPerGroup: 3,
+        slidesPerGroup: 2,
         spaceBetween: 32,
       },
 

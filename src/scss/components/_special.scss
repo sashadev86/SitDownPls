@@ -126,13 +126,13 @@
 
     @include high-tablet {
       & {
-        width: 47.9%;
+        width: calc((296 + 32) / 634 * 100% - 32px);
       }
     }
 
     @include small-tablet {
       & {
-        width: 47.1%;
+        width: calc((296 + 32) / 624 * 100% - 32px);
       }
     }
 
