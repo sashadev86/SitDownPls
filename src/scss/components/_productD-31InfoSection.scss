@@ -15,19 +15,3 @@
     }
   }
 }
-
-.product {
-  margin-bottom: 82px;
-
-  @include high-desktop {
-    & {
-      margin-bottom: 71.3px;
-    }
-  }
-
-  @include high-tablet {
-    & {
-      margin-bottom: 32.5px;
-    }
-  }
-}
