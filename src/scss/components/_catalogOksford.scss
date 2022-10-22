@@ -56,6 +56,7 @@
       }
 
       &-image {
+        position: relative;
         padding: 0.5px 0 0 5.5px;
         display: inline-block;
         width: 22px;
@@ -65,8 +66,11 @@
         transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
 
         &-svg {
-          width: 7px;
-          height: 14px;
+          position: absolute;
+          top: 4px;
+          left: 6px;
+          width: 5px;
+          height: 10px;
           fill: transparent;
           stroke: var(--primary-color);
           transition: stroke .3s ease-in-out;
