@@ -70,6 +70,7 @@ if (contacts) {
 
     // Добавляем коллекцию меток на карту.
     myMap.geoObjects.add(myCollection);
+    myCollection.get(0).balloon.open();
 
 
     searchBtn.addEventListener('click', function () {
