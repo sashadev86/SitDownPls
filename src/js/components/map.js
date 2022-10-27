@@ -10,12 +10,12 @@ if (contacts) {
       { coords:
         [55.750819, 37.642411],
         text: "Москва, SitDownPls на Солянке м. Китай-город, ул. Солянка, д.24",
-        info: `<div class="contacts__balloon balloon"><div class="balloon__top"><h2 class="balloon__top-title">SitDownPls на Солянке </h2><address class="balloon__top-address">м. Китай-город, ул. Солянка, д.24</address><a href="tel:+74958854547" class="balloon__top-link"><svg class="balloon__top-link-svg" width="22" height="22"><use xlink:href="https://curator.cf/codepen-images/elephant-svgrepo-com.svg"></use></svg>+7 (495) 885-45-47</a></div><div class="balloon__center"><p class="balloon__center-clockwork"><span class="balloon__center-clockwork-span">Часы работы:</span> с 10:00 до 21:00</p></div><div class="balloon__bottom"><p class="balloon__bottom-descr"><span class="balloon__bottom-descr-span">Что здесь:</span> шоурум, пункт отгрузки, пункт выдачи, пункт обмена-возврата, сервисный центр</p></div></div>`
+        info: `<div class="contacts__balloon balloon"><div class="balloon__top"><h2 class="balloon__top-title">SitDownPls на Солянке </h2><address class="balloon__top-address">м. Китай-город, ул. Солянка, д.24</address><a href="tel:+74958854547" class="balloon__top-link"><svg class="balloon__top-link-svg" width="22" height="22"><use xlink:href="img/sprite.svg#phone"></use></svg>+7 (495) 885-45-47</a></div><div class="balloon__center"><p class="balloon__center-clockwork"><span class="balloon__center-clockwork-span">Часы работы:</span> с 10:00 до 21:00</p></div><div class="balloon__bottom"><p class="balloon__bottom-descr"><span class="balloon__bottom-descr-span">Что здесь:</span> шоурум, пункт отгрузки, пункт выдачи, пункт обмена-возврата, сервисный центр</p></div></div>`
       },
       { coords:
         [55.762865, 37.654071],
         text: "Москва, SitDownPls на Покровке м. Курская, ул. Покровка, д.14",
-        info: `<div class="contacts__balloon balloon"><div class="balloon__top"><h2 class="balloon__top-title">SitDownPls на Покровке </h2><address class="balloon__top-address">м. Курская, ул. Покровка, д.14</address><a href="tel:+74958854547" class="balloon__top-link"><svg class="balloon__top-link-svg" width="22" height="22"><use xlink:href="https://curator.cf/codepen-images/elephant-svgrepo-com.svg"></use></svg>+7 (495) 885-45-47</a></div><div class="balloon__center"><p class="balloon__center-clockwork"><span class="balloon__center-clockwork-span">Часы работы:</span> с 10:00 до 21:00</p></div><div class="balloon__bottom"><p class="balloon__bottom-descr"><span class="balloon__bottom-descr-span">Что здесь:</span> шоурум, пункт отгрузки, пункт выдачи, пункт обмена-возврата, сервисный центр</p></div></div>`
+        info: `<div class="contacts__balloon balloon"><div class="balloon__top"><h2 class="balloon__top-title">SitDownPls на Покровке </h2><address class="balloon__top-address">м. Курская, ул. Покровка, д.14</address><a href="tel:+74958854547" class="balloon__top-link"><svg class="balloon__top-link-svg" width="22" height="22"><use xlink:href="img/sprite.svg#phone"></use></svg>+7 (495) 885-45-47</a></div><div class="balloon__center"><p class="balloon__center-clockwork"><span class="balloon__center-clockwork-span">Часы работы:</span> с 10:00 до 21:00</p></div><div class="balloon__bottom"><p class="balloon__bottom-descr"><span class="balloon__bottom-descr-span">Что здесь:</span> шоурум, пункт отгрузки, пункт выдачи, пункт обмена-возврата, сервисный центр</p></div></div>`
       }
     ];
 
@@ -58,7 +58,7 @@ if (contacts) {
         balloonContentBody: point.info
       }, {
         iconLayout: "default#image",
-        iconImageHref: "img/iconMap.svg",
+        iconImageHref: "./img/iconMap.svg",
         iconImageSize: [32, 21.96],
         iconImageOffset: [-10, -20],
         hideIconOnBalloonOpen: false,
